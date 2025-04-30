@@ -10,9 +10,9 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-6 flex items-center justify-between">
         <div className="flex items-center">
           <a href="/" className="flex items-center gap-2 group">
-            <Zap className="w-5 h-5 text-blue-400 group-hover:text-blue-300 transition-colors" />
-            <span className="text-xl md:text-2xl font-display font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              IkiVibe <span className="text-blue-500 mx-0.5">•</span> Chōka Labs
+            <Zap className="w-5 h-5 text-white/80 group-hover:text-white transition-colors" />
+            <span className="text-xl md:text-2xl font-display font-bold tracking-tight">
+              IkiVibe Chōka Labs
             </span>
           </a>
         </div>

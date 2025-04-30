@@ -16,8 +16,6 @@ const Index = () => {
       <div className="relative z-10">
         <Navbar />
         <Hero />
-      </div>
-      <div className="relative z-0">
         <IkiVibeSection />
         <ChokaSection />
         <WealthSection />

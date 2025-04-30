@@ -26,14 +26,13 @@ const ConnectedDots = () => {
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
-      canvas.height = document.documentElement.scrollHeight; // Use full document height
+      canvas.height = window.innerHeight;
       initParticles();
     };
 
     const initParticles = () => {
       particles.current = [];
-      // Increase particle count for a denser effect across the whole page
-      const particleCount = Math.min(Math.floor(window.innerWidth / 20), 150);
+      const particleCount = Math.min(Math.floor(window.innerWidth / 25), 100);
       
       for (let i = 0; i < particleCount; i++) {
         particles.current.push({
@@ -109,20 +108,12 @@ const ConnectedDots = () => {
 
     const handleMouseMove = (e: MouseEvent) => {
       mousePosition.current.x = e.clientX;
-      mousePosition.current.y = e.clientY + window.scrollY; // Add scroll position to track mouse across full document
-    };
-
-    // Check document height on scroll to update canvas if needed
-    const handleScroll = () => {
-      if (canvas.height !== document.documentElement.scrollHeight) {
-        resizeCanvas();
-      }
+      mousePosition.current.y = e.clientY;
     };
 
     // Initialize
     window.addEventListener("resize", resizeCanvas);
     window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("scroll", handleScroll);
     resizeCanvas();
     draw();
 
@@ -130,7 +121,6 @@ const ConnectedDots = () => {
     return () => {
       window.removeEventListener("resize", resizeCanvas);
       window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("scroll", handleScroll);
       if (animationFrameId.current) {
         cancelAnimationFrame(animationFrameId.current);
       }
@@ -140,8 +130,8 @@ const ConnectedDots = () => {
   return (
     <canvas 
       ref={canvasRef} 
-      className="fixed top-0 left-0 w-full h-full pointer-events-none"
-      style={{ opacity: 0.6, zIndex: 1 }} // Set a specific z-index
+      className="fixed top-0 left-0 w-full h-full pointer-events-none z-0"
+      style={{ opacity: 0.6 }}
     />
   );
 };

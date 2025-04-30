@@ -22,7 +22,7 @@ export default function IkiVibeSection() {
   ];
 
   return (
-    <section id="ikivibe" className="py-24 sm:py-32 bg-studio-black/70 backdrop-blur-sm relative z-2">
+    <section id="ikivibe" className="py-24 sm:py-32 bg-studio-black relative z-10">
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <div className="section-number">01</div>
@@ -39,7 +39,7 @@ export default function IkiVibeSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {ikiVibeCards.map((card, index) => (
-            <Card key={index} className="bg-studio-gray/20 backdrop-blur-sm border-none text-studio-white hover:border-studio-lightgray/40 transition-colors">
+            <Card key={index} className="bg-studio-gray/10 border-none text-studio-white hover:border-studio-lightgray/40 transition-colors">
               <CardContent className="pt-6">
                 <div className="mb-4">
                   {card.icon}

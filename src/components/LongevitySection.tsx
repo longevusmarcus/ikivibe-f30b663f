@@ -1,107 +1,149 @@
 
-import { Lightbulb, Brain, TrendingUp, Infinity, Hexagon } from 'lucide-react';
-import { Card, CardContent } from "@/components/ui/card";
+import React from 'react';
+import { AuroraBackground } from '@/components/ui/aurora-background';
+import { motion } from 'framer-motion';
+import { Infinity, Heart, Rocket, Star } from 'lucide-react';
 
 export default function LongevitySection() {
   return (
-    <section id="longevity" className="py-24 sm:py-32 bg-studio-black/70 backdrop-blur-md relative z-10">
-      <div className="container mx-auto px-4">
-        {/* Decorative elements */}
-        <div className="absolute top-40 right-10 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl -z-10"></div>
-        <div className="absolute bottom-40 left-20 w-60 h-60 bg-blue-500/10 rounded-full blur-3xl -z-10"></div>
-        
-        {/* Hexagon decorative element */}
-        <div className="absolute -top-10 right-10 text-purple-500/20">
-          <Hexagon size={120} className="rotate-12" strokeWidth={1} />
-        </div>
-        
-        <div className="relative">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">
-            The Longevity Ecosystem
-          </h2>
-          
-          <div className="w-32 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mb-12"></div>
-          
-          <p className="text-xl sm:text-2xl font-light mb-8 max-w-3xl">
-            We don't just chase time—we <span className="text-purple-300">reshape</span> it.
-          </p>
-          
-          <div className="mb-12 max-w-3xl">
-            <p className="text-lg leading-relaxed mb-8">
-              By fusing <span className="text-blue-300">Idea Incubation</span>, <span className="text-purple-300">Human Optimization</span>, and <span className="text-pink-300">Wealth Manifestation</span>, we're building a world where longevity isn't a trend—it's a culture.
-            </p>
-            
-            <Card className="bg-studio-black/30 border-studio-gray/20 backdrop-blur-md mb-16">
-              <CardContent className="p-6">
-                <p className="text-lg leading-relaxed text-center font-display">
-                  A future where:
-                </p>
-              </CardContent>
-            </Card>
+    <section id="longevity" className="min-h-screen relative z-10">
+      <AuroraBackground className="!bg-transparent" showRadialGradient={false}>
+        <div className="container mx-auto px-4 pt-16">
+          <div className="mb-12">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="section-number"
+            >
+              04
+            </motion.div>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="section-title bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500"
+            >
+              The Longevity Ecosystem
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="section-subtitle text-white"
+            >
+              We don't just chase time—we reshape it.
+            </motion.p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-            <div className="group relative p-8 border-l-2 border-blue-400/40 transition-all duration-300 hover:border-blue-400 bg-studio-black/30 backdrop-blur-sm rounded-r-lg">
-              <div className="absolute -left-5 top-6 bg-studio-black p-2 rounded-full border border-blue-400/40 group-hover:border-blue-400 transition-all duration-300">
-                <Lightbulb className="w-6 h-6 text-blue-400" />
-              </div>
-              <h3 className="text-2xl font-display font-bold mb-4 text-blue-300">Ideas</h3>
-              <p className="text-studio-lightgray">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="max-w-4xl mx-auto mb-16"
+          >
+            <p className="text-xl leading-relaxed text-white/90 mb-8">
+              By fusing Idea Incubation, Human Optimization, and Wealth Manifestation, 
+              we're building a world where longevity isn't a trend—it's a culture.
+            </p>
+          </motion.div>
+          
+          <motion.h3
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="text-2xl md:text-3xl font-display mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-purple-400"
+          >
+            A future where:
+          </motion.h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="bg-black/30 backdrop-blur-md border border-white/10 p-8 rounded-xl hover:border-blue-500/50 transition-all group"
+            >
+              <Infinity className="text-blue-400 mb-4 group-hover:scale-110 transition-transform" size={32} />
+              <h4 className="text-2xl font-display font-bold mb-4 text-blue-300">Ideas</h4>
+              <p className="text-white/80">
                 don't fade—they evolve, staying sharp, relevant, and future-proof.
               </p>
-              <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-blue-400/5 rounded-full blur-xl"></div>
-            </div>
+            </motion.div>
             
-            <div className="group relative p-8 border-l-2 border-purple-400/40 transition-all duration-300 hover:border-purple-400 bg-studio-black/30 backdrop-blur-sm rounded-r-lg">
-              <div className="absolute -left-5 top-6 bg-studio-black p-2 rounded-full border border-purple-400/40 group-hover:border-purple-400 transition-all duration-300">
-                <Brain className="w-6 h-6 text-purple-400" />
-              </div>
-              <h3 className="text-2xl font-display font-bold mb-4 text-purple-300">Humans</h3>
-              <p className="text-studio-lightgray">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              className="bg-black/30 backdrop-blur-md border border-white/10 p-8 rounded-xl hover:border-purple-500/50 transition-all group"
+            >
+              <Heart className="text-purple-400 mb-4 group-hover:scale-110 transition-transform" size={32} />
+              <h4 className="text-2xl font-display font-bold mb-4 text-purple-300">Humans</h4>
+              <p className="text-white/80">
                 don't just survive—they ignite, fueled by purpose, wellness, and deep connection.
               </p>
-              <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-purple-400/5 rounded-full blur-xl"></div>
-            </div>
+            </motion.div>
             
-            <div className="group relative p-8 border-l-2 border-pink-400/40 transition-all duration-300 hover:border-pink-400 bg-studio-black/30 backdrop-blur-sm rounded-r-lg">
-              <div className="absolute -left-5 top-6 bg-studio-black p-2 rounded-full border border-pink-400/40 group-hover:border-pink-400 transition-all duration-300">
-                <TrendingUp className="w-6 h-6 text-pink-400" />
-              </div>
-              <h3 className="text-2xl font-display font-bold mb-4 text-pink-300">Wealth</h3>
-              <p className="text-studio-lightgray">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              className="bg-black/30 backdrop-blur-md border border-white/10 p-8 rounded-xl hover:border-pink-500/50 transition-all group"
+            >
+              <Star className="text-pink-400 mb-4 group-hover:scale-110 transition-transform" size={32} />
+              <h4 className="text-2xl font-display font-bold mb-4 text-pink-300">Wealth</h4>
+              <p className="text-white/80">
                 doesn't decay—it compounds meaning, aligned with values and built to outlive us.
               </p>
-              <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-pink-400/5 rounded-full blur-xl"></div>
-            </div>
+            </motion.div>
           </div>
           
-          <div className="max-w-3xl mx-auto">
-            <div className="flex items-center mb-6">
-              <Infinity className="text-blue-400 mr-3" size={24} />
-              <h3 className="text-2xl font-display font-bold text-gradient bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.9 }}
+              className="mb-12"
+            >
+              <h3 className="text-3xl font-display font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
                 Adapt. Endure. Thrive.
               </h3>
-            </div>
+              <p className="text-xl text-white/80">
+                Longevity isn't linear—it's layered. It touches how we think, move, connect, build, and rest. 
+                From the cells in our bodies to the stories we leave behind, longevity is a full-spectrum design for life.
+              </p>
+            </motion.div>
             
-            <p className="text-studio-lightgray mb-12 bg-studio-black/30 backdrop-blur-sm p-6 rounded-lg border border-studio-gray/10">
-              Longevity isn't linear—it's layered. It touches how we think, move, connect, build, and rest. 
-              From the cells in our bodies to the stories we leave behind, longevity is a full-spectrum design for life.
-            </p>
-            
-            <div className="text-center">
-              <p className="text-xl font-display font-medium mb-4 text-gradient bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent animate-pulse">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1 }}
+            >
+              <p className="text-2xl font-display font-bold mb-4 text-white">
                 This is more than a vision.
               </p>
-              <p className="text-studio-lightgray mb-4">
-                It's a movement. A revolution. A new human blueprint.
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-blue-500"></div>
+                <Rocket className="text-pink-400 animate-pulse" />
+                <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-purple-500"></div>
+              </div>
+              <p className="text-xl text-white/90">
+                It's a movement. A revolution. A new human blueprint. Let's build the world where ideas 
+                keep pulsing, humans flourish, and legacy lives forever.
               </p>
-              <p className="text-lg font-display font-medium">
-                Let's build the world where ideas keep pulsing, humans flourish, and legacy lives forever.
-              </p>
-            </div>
+            </motion.div>
+            
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.1 }}
+              className="mt-12 px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-full hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-blue-500/20"
+            >
+              Join the Movement
+            </motion.button>
           </div>
         </div>
-      </div>
+      </AuroraBackground>
     </section>
   );
 }

@@ -1,4 +1,7 @@
 
+import { ArrowRight } from "lucide-react";
+import { Button } from "./ui/button";
+
 export default function ChokaSection() {
   return (
     <section id="choka" className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10">
@@ -42,6 +45,16 @@ export default function ChokaSection() {
               <strong>Example:</strong> Chōwa - Mini Courses To Unlock Your Epigenetic Potential
             </p>
           </div>
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <Button 
+            variant="outline" 
+            className="group border border-purple-500/40 bg-studio-black/50 hover:bg-purple-950/30 hover:border-purple-500/70 text-purple-400 hover:text-purple-300 transition-all duration-300 backdrop-blur-sm"
+          >
+            <span>Explore Chōka</span>
+            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Button>
         </div>
       </div>
     </section>

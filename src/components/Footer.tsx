@@ -1,3 +1,4 @@
+
 import { ArrowUp, Sparkles, Twitter, Mail, ExternalLink } from 'lucide-react';
 import { SplashCursor } from './ui/splash-cursor';
 
@@ -32,7 +33,7 @@ export default function Footer() {
           </div>
           
           <div className="backdrop-blur-md bg-studio-black/30 p-6 border border-purple-500/20 rounded-lg">
-            <h4 className="text-2xl font-display font-bold bg-gradient-to-r from-purple-400 to-purple-300 text-transparent bg-clip-text mb-4">Chōka Labs</h4>
+            <h4 className="text-2xl font-display font-bold bg-gradient-to-r from-purple-400 to-purple-300 text-transparent bg-clip-text mb-4">Labs</h4>
             <ul className="space-y-2 text-studio-lightgray">
               <li className="transition-colors">
                 <a href="#ikivibe" className="hover:text-studio-white flex items-center">

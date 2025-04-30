@@ -1,7 +1,7 @@
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-24 sm:py-32 bg-studio-black relative">
+    <section id="contact" className="py-24 sm:py-32 bg-studio-black/70 backdrop-blur-sm relative z-2">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-start md:space-x-12 lg:space-x-24">
           <div className="w-full md:w-1/2 mb-12 md:mb-0">
@@ -24,7 +24,7 @@ export default function ContactSection() {
             </div>
           </div>
           
-          <div className="w-full md:w-1/2 bg-studio-gray/10 p-8">
+          <div className="w-full md:w-1/2 bg-studio-gray/20 backdrop-blur-sm p-8">
             <form>
               <div className="mb-6">
                 <label htmlFor="name" className="block text-sm uppercase tracking-wider mb-2">

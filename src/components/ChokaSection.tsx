@@ -1,7 +1,7 @@
 
 export default function ChokaSection() {
   return (
-    <section id="choka" className="py-24 sm:py-32 bg-studio-black/95">
+    <section id="choka" className="py-24 sm:py-32 bg-studio-black/70 backdrop-blur-sm relative z-2">
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <div className="section-number">02</div>
@@ -17,7 +17,7 @@ export default function ChokaSection() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-studio-gray/10 p-8">
+          <div className="bg-studio-gray/20 backdrop-blur-sm p-8">
             <span className="text-studio-lightgray text-sm uppercase tracking-wider">Digital</span>
             <h3 className="text-2xl font-display font-bold mt-2 mb-4">Chōka Solutions</h3>
             <p className="text-studio-lightgray">
@@ -26,7 +26,7 @@ export default function ChokaSection() {
             </p>
           </div>
           
-          <div className="bg-studio-gray/10 p-8">
+          <div className="bg-studio-gray/20 backdrop-blur-sm p-8">
             <span className="text-studio-lightgray text-sm uppercase tracking-wider">Design</span>
             <h3 className="text-2xl font-display font-bold mt-2 mb-4">Chōka Solutions</h3>
             <p className="text-studio-lightgray">
@@ -35,7 +35,7 @@ export default function ChokaSection() {
             </p>
           </div>
           
-          <div className="bg-studio-gray/10 p-8">
+          <div className="bg-studio-gray/20 backdrop-blur-sm p-8">
             <span className="text-studio-lightgray text-sm uppercase tracking-wider">Academy</span>
             <h3 className="text-2xl font-display font-bold mt-2 mb-4">Chōka Solutions</h3>
             <p className="text-studio-lightgray">

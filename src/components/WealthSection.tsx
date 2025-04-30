@@ -32,7 +32,7 @@ export default function WealthSection() {
   ];
 
   return (
-    <section id="wealth" className="py-24 sm:py-32 bg-studio-black">
+    <section id="wealth" className="py-24 sm:py-32 bg-studio-black/70 backdrop-blur-sm relative z-2">
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <div className="section-number">03</div>
@@ -50,7 +50,7 @@ export default function WealthSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-16">
           {wealthTypes.map((wealth, index) => (
-            <Card key={index} className="bg-studio-gray/10 border-none text-studio-white">
+            <Card key={index} className="bg-studio-gray/20 backdrop-blur-sm border-none text-studio-white">
               <CardContent className="pt-6">
                 <div className="mb-4">
                   {wealth.icon}

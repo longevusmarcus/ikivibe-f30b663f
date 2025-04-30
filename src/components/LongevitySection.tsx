@@ -1,7 +1,7 @@
 
 export default function LongevitySection() {
   return (
-    <section className="py-24 sm:py-32 bg-studio-black/95">
+    <section className="py-24 sm:py-32 bg-studio-black/70 backdrop-blur-sm relative z-2">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-12">
           The Longevity Ecosystem
@@ -22,21 +22,21 @@ export default function LongevitySection() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-          <div className="relative pl-8 border-l-2 border-studio-gray/40 py-2">
+          <div className="relative pl-8 border-l-2 border-studio-gray/60 py-2 bg-studio-gray/10 backdrop-blur-sm p-6">
             <h3 className="text-2xl font-display font-bold mb-2">Ideas</h3>
             <p className="text-studio-lightgray">
               don't fade—they evolve, staying sharp, relevant, and future-proof.
             </p>
           </div>
           
-          <div className="relative pl-8 border-l-2 border-studio-gray/40 py-2">
+          <div className="relative pl-8 border-l-2 border-studio-gray/60 py-2 bg-studio-gray/10 backdrop-blur-sm p-6">
             <h3 className="text-2xl font-display font-bold mb-2">Humans</h3>
             <p className="text-studio-lightgray">
               don't just survive—they ignite, fueled by purpose, wellness, and deep connection.
             </p>
           </div>
           
-          <div className="relative pl-8 border-l-2 border-studio-gray/40 py-2">
+          <div className="relative pl-8 border-l-2 border-studio-gray/60 py-2 bg-studio-gray/10 backdrop-blur-sm p-6">
             <h3 className="text-2xl font-display font-bold mb-2">Wealth</h3>
             <p className="text-studio-lightgray">
               doesn't decay—it compounds meaning, aligned with values and built to outlive us.
@@ -44,7 +44,7 @@ export default function LongevitySection() {
           </div>
         </div>
         
-        <div className="max-w-3xl">
+        <div className="max-w-3xl bg-studio-gray/10 backdrop-blur-sm p-8">
           <h3 className="text-2xl font-display font-bold mb-4">Adapt. Endure. Thrive.</h3>
           <p className="text-studio-lightgray mb-8">
             Longevity isn't linear—it's layered. It touches how we think, move, connect, build, and rest. From the cells in our bodies to the stories we leave behind, longevity is a full-spectrum design for life.

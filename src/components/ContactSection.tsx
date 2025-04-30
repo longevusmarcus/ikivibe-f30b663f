@@ -1,6 +1,7 @@
+
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-24 sm:py-32 bg-studio-black/70 backdrop-blur-md relative z-10">
+    <section id="contact" className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-start md:space-x-12 lg:space-x-24">
           <div className="w-full md:w-1/2 mb-12 md:mb-0">

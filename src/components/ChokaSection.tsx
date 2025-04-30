@@ -21,7 +21,7 @@ export default function ChokaSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-studio-gray/10 p-8">
-            <span className="text-studio-lightgray text-sm uppercase tracking-wider">Digital</span>
+            <span className="text-studio-lightgray text-sm uppercase tracking-wider">Jobs</span>
             <h3 className="text-2xl font-display font-bold mt-2 mb-4">Chōka Solutions</h3>
             <p className="text-studio-lightgray">
               <strong>Example:</strong> Chōka Path - A digital platform that guides individuals to workplaces 
@@ -30,7 +30,7 @@ export default function ChokaSection() {
           </div>
           
           <div className="bg-studio-gray/10 p-8">
-            <span className="text-studio-lightgray text-sm uppercase tracking-wider">Design</span>
+            <span className="text-studio-lightgray text-sm uppercase tracking-wider">Supplements</span>
             <h3 className="text-2xl font-display font-bold mt-2 mb-4">Chōka Solutions</h3>
             <p className="text-studio-lightgray">
               <strong>Example:</strong> Chōka - We design tangible products like Longevity Chocolate, and one-of-a-kind spaces 

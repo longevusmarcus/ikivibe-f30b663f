@@ -51,33 +51,33 @@ export default function Navbar() {
       
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-studio-black/95 backdrop-blur-md z-40 flex flex-col">
+        <div className="md:hidden fixed inset-0 bg-studio-gray z-40 flex flex-col">
           <div className="container mx-auto px-4 pt-24 pb-8 flex flex-col items-start">
             <nav className="flex flex-col w-full space-y-8 text-3xl">
               <a 
                 href="#ikivibe" 
-                className="py-4 font-display font-bold"
+                className="py-4 font-display font-bold text-studio-white"
                 onClick={() => setIsMenuOpen(false)}
               >
                 IkiVibe Labs
               </a>
               <a 
                 href="#choka" 
-                className="py-4 font-display font-bold"
+                className="py-4 font-display font-bold text-studio-white"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Chōka Labs
               </a>
               <a 
                 href="#wealth" 
-                className="py-4 font-display font-bold"
+                className="py-4 font-display font-bold text-studio-white"
                 onClick={() => setIsMenuOpen(false)}
               >
                 360 Wealth Labs
               </a>
               <a 
                 href="#contact" 
-                className="py-4 font-display font-bold"
+                className="py-4 font-display font-bold text-studio-white"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
@@ -87,7 +87,7 @@ export default function Navbar() {
           
           <button 
             onClick={() => setIsMenuOpen(false)}
-            className="absolute top-6 right-4 text-lg font-display font-bold tracking-wider flex items-center gap-2"
+            className="absolute top-6 right-4 text-lg font-display font-bold tracking-wider flex items-center gap-2 text-studio-white"
           >
             CLOSE <X className="w-5 h-5" />
           </button>

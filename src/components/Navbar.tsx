@@ -27,9 +27,9 @@ export default function Navbar() {
         {/* Mobile menu button */}
         <button 
           onClick={() => setIsMenuOpen(!isMenuOpen)} 
-          className="flex md:hidden items-center"
+          className="flex md:hidden items-center justify-center w-10 h-10 rounded-full bg-studio-gray/20 backdrop-blur-sm hover:bg-studio-gray/30 transition-colors"
         >
-          <Menu className="w-6 h-6" />
+          <Menu className="w-5 h-5" />
         </button>
         
         {/* Desktop menu */}

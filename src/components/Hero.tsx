@@ -19,7 +19,7 @@ export default function Hero() {
         <div className="flex flex-col space-y-6 max-w-4xl">
           <h1 className="font-display font-bold tracking-tighter animate-fade-in">
             <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">Ideas • Humans • Legacies</span><br />
-            <span className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-studio-lightgray whitespace-nowrap">build forever things</span>
+            <span className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-studio-lightgray whitespace-nowrap">build forever things</span>
           </h1>
           
           <p className="text-xl md:text-2xl font-light text-studio-lightgray max-w-2xl animate-slide-up">

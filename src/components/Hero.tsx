@@ -23,7 +23,7 @@ export default function Hero() {
           </h1>
           
           <p className="text-xl md:text-2xl font-light text-studio-lightgray max-w-2xl animate-slide-up">
-            The future belongs to those who adapt, endure, and evolve. Our mission is to build a world where ideas survive, 
+            The future belongs to those who connect the dots. Our mission is to build a world where ideas survive, 
             humans thrive, and wealth endures—across generations.
           </p>
         </div>

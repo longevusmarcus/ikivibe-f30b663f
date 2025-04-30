@@ -1,7 +1,23 @@
 
 import { ArrowDown } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 export default function Hero() {
+  const fullText = "The future belongs to those who connect the dots. Our mission is to build a world where ideas survive, humans thrive, and wealth endures—across generations.";
+  const [displayText, setDisplayText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  useEffect(() => {
+    if (currentIndex < fullText.length) {
+      const timeout = setTimeout(() => {
+        setDisplayText(prev => prev + fullText[currentIndex]);
+        setCurrentIndex(currentIndex + 1);
+      }, 40); // Adjust speed of typing here
+      
+      return () => clearTimeout(timeout);
+    }
+  }, [currentIndex, fullText]);
+
   const scrollToNext = () => {
     const heroSection = document.getElementById('hero');
     if (heroSection) {
@@ -22,9 +38,9 @@ export default function Hero() {
             <span className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-studio-lightgray whitespace-nowrap">build forever things</span>
           </h1>
           
-          <p className="text-xl md:text-2xl font-light text-studio-lightgray max-w-2xl animate-slide-up">
-            The future belongs to those who connect the dots. Our mission is to build a world where ideas survive, 
-            humans thrive, and wealth endures—across generations.
+          <p className="text-xl md:text-2xl font-light text-studio-lightgray max-w-2xl">
+            {displayText}
+            <span className="inline-block w-0.5 h-5 bg-studio-lightgray ml-1 animate-pulse"></span>
           </p>
         </div>
         

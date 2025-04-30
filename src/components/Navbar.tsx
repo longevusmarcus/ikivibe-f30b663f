@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Menu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,33 +51,33 @@ export default function Navbar() {
       
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-studio-black z-40 animate-fade-in">
+        <div className="md:hidden fixed inset-0 bg-studio-black/95 backdrop-blur-md z-40 flex flex-col">
           <div className="container mx-auto px-4 pt-24 pb-8 flex flex-col items-start">
-            <nav className="flex flex-col w-full space-y-6 text-2xl">
+            <nav className="flex flex-col w-full space-y-8 text-3xl">
               <a 
                 href="#ikivibe" 
-                className="py-4 border-b border-studio-gray/20"
+                className="py-4 font-display font-bold"
                 onClick={() => setIsMenuOpen(false)}
               >
                 IkiVibe Labs
               </a>
               <a 
                 href="#choka" 
-                className="py-4 border-b border-studio-gray/20"
+                className="py-4 font-display font-bold"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Chōka Labs
               </a>
               <a 
                 href="#wealth" 
-                className="py-4 border-b border-studio-gray/20"
+                className="py-4 font-display font-bold"
                 onClick={() => setIsMenuOpen(false)}
               >
                 360 Wealth Labs
               </a>
               <a 
                 href="#contact" 
-                className="py-4"
+                className="py-4 font-display font-bold"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
@@ -87,9 +87,9 @@ export default function Navbar() {
           
           <button 
             onClick={() => setIsMenuOpen(false)}
-            className="absolute top-6 right-4 text-sm uppercase tracking-wider flex items-center"
+            className="absolute top-6 right-4 text-lg font-display font-bold tracking-wider flex items-center gap-2"
           >
-            Close
+            CLOSE <X className="w-5 h-5" />
           </button>
         </div>
       )}

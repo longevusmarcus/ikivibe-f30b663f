@@ -32,6 +32,11 @@ export default function WealthSection() {
     }
   ];
 
+  // First three items for the top row
+  const firstRowItems = wealthTypes.slice(0, 3);
+  // Remaining two items for the second row
+  const secondRowItems = wealthTypes.slice(3);
+
   return (
     <section id="wealth" className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10">
       <div className="container mx-auto px-4">
@@ -49,8 +54,26 @@ export default function WealthSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-16">
-          {wealthTypes.map((wealth, index) => (
+        {/* First row - 3 cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+          {firstRowItems.map((wealth, index) => (
+            <Card key={index} className="bg-studio-gray/10 border-none text-studio-white">
+              <CardContent className="pt-6">
+                <div className="mb-4">
+                  {wealth.icon}
+                </div>
+                <h3 className="text-xl font-display font-bold mb-3">{wealth.title}</h3>
+                <p className="text-sm text-studio-lightgray">
+                  {wealth.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+        
+        {/* Second row - 2 cards filling the space */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          {secondRowItems.map((wealth, index) => (
             <Card key={index} className="bg-studio-gray/10 border-none text-studio-white">
               <CardContent className="pt-6">
                 <div className="mb-4">

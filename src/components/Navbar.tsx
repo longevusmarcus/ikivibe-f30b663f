@@ -11,6 +11,21 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="fixed inset-0 bg-studio-black/90 backdrop-blur-sm z-50">
           <div className="container mx-auto px-4 pt-24 pb-8 flex flex-col items-start">
+            {/* Logo in mobile menu */}
+            <div className="flex items-center mb-8">
+              <div className="relative w-5 h-5 mr-3">
+                <div className="absolute w-1.5 h-1.5 bg-white/80 rounded-full top-0 left-0"></div>
+                <div className="absolute w-1.5 h-1.5 bg-white/80 rounded-full bottom-0 right-0"></div>
+                <div className="absolute w-1 h-1 bg-white/80 rounded-full top-1/2 right-0 -translate-y-1/2"></div>
+                <div className="absolute w-1 h-1 bg-white/80 rounded-full bottom-0 left-1/3"></div>
+                <div className="absolute inset-0 before:absolute before:w-full before:h-full before:border-t before:border-white/40 before:rotate-[30deg] before:origin-top-left"></div>
+                <div className="absolute inset-0 before:absolute before:w-[70%] before:h-[70%] before:border-r before:border-white/30 before:rotate-[15deg] before:origin-top-right"></div>
+              </div>
+              <span className="text-xl font-display font-bold tracking-tight text-white">
+                IkiVibe Chōka Labs
+              </span>
+            </div>
+            
             <nav className="flex flex-col w-full space-y-6 text-2xl">
               <a 
                 href="#ikivibe" 

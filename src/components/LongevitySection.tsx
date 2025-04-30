@@ -122,7 +122,7 @@ export default function LongevitySection() {
                     {/* Main Content Area */}
                     <div className="col-span-11 pl-6">
                       {/* Page 1 */}
-                      <div className={`book-page transition-all duration-700 ease-in-out ${activePage === 0 ? 'opacity-100 translate-x-0' : 'opacity-0 absolute translate-x-[100px]'}`}>
+                      <div className={`book-page transition-all duration-700 ease-in-out ${activePage === 0 ? 'opacity-100 translate-x-0 relative' : 'opacity-0 absolute translate-x-[100px]'}`}>
                         <div className="flex items-center mb-6">
                           <BookOpen className="w-5 h-5 text-blue-400 mr-3" />
                           <h3 className="text-xl font-display font-bold bg-gradient-to-r from-blue-400 to-blue-300 text-transparent bg-clip-text">Manifesto Introduction</h3>
@@ -159,7 +159,7 @@ export default function LongevitySection() {
                       </div>
                       
                       {/* Page 2 */}
-                      <div className={`book-page transition-all duration-700 ease-in-out ${activePage === 1 ? 'opacity-100 translate-x-0' : 'opacity-0 absolute translate-x-[100px]'}`}>
+                      <div className={`book-page transition-all duration-700 ease-in-out ${activePage === 1 ? 'opacity-100 translate-x-0 relative' : 'opacity-0 absolute translate-x-[100px] top-0 left-0'}`}>
                         <div className="flex items-center mb-6">
                           <Book className="w-5 h-5 text-purple-400 mr-3" />
                           <h3 className="text-xl font-display font-bold bg-gradient-to-r from-purple-400 to-purple-300 text-transparent bg-clip-text">Core Principles</h3>
@@ -206,7 +206,7 @@ export default function LongevitySection() {
                       </div>
                       
                       {/* Page 3 */}
-                      <div className={`book-page transition-all duration-700 ease-in-out ${activePage === 2 ? 'opacity-100 translate-x-0' : 'opacity-0 absolute translate-x-[100px]'}`}>
+                      <div className={`book-page transition-all duration-700 ease-in-out ${activePage === 2 ? 'opacity-100 translate-x-0 relative' : 'opacity-0 absolute translate-x-[100px] top-0 left-0'}`}>
                         <div className="flex items-center mb-6">
                           <Bookmark className="w-5 h-5 text-pink-400 mr-3" />
                           <h3 className="text-xl font-display font-bold bg-gradient-to-r from-pink-400 to-pink-300 text-transparent bg-clip-text">The Movement</h3>

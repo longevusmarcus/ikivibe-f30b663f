@@ -135,18 +135,6 @@ export default function LongevitySection() {
                         
                         <h4 className="font-mono uppercase tracking-wider text-blue-400 mb-3 text-sm">A future where:</h4>
                         
-                        <ul className="space-y-8 mb-12">
-                          <li className="p-6 backdrop-blur-md bg-studio-black/20 border border-blue-500/20 rounded-lg transition-all duration-300 hover:border-blue-500/60">
-                            <div className="flex items-center justify-between mb-4">
-                              <h3 className="text-2xl font-display font-bold bg-gradient-to-r from-blue-400 to-blue-300 text-transparent bg-clip-text">Ideas</h3>
-                              <BookText className="w-5 h-5 text-blue-500" />
-                            </div>
-                            <p className="text-studio-lightgray">
-                              don't fade—they evolve, staying sharp, relevant, and future-proof.
-                            </p>
-                          </li>
-                        </ul>
-                        
                         <div className="mt-6 flex justify-between items-center">
                           <div></div> {/* Empty div for spacing */}
                           <button 
@@ -167,6 +155,16 @@ export default function LongevitySection() {
                         </div>
                         
                         <ul className="space-y-8 mb-12">
+                          <li className="p-6 backdrop-blur-md bg-studio-black/20 border border-blue-500/20 rounded-lg transition-all duration-300 hover:border-blue-500/60">
+                            <div className="flex items-center justify-between mb-4">
+                              <h3 className="text-2xl font-display font-bold bg-gradient-to-r from-blue-400 to-blue-300 text-transparent bg-clip-text">Ideas</h3>
+                              <BookText className="w-5 h-5 text-blue-500" />
+                            </div>
+                            <p className="text-studio-lightgray">
+                              don't fade—they evolve, staying sharp, relevant, and future-proof.
+                            </p>
+                          </li>
+                          
                           <li className="p-6 backdrop-blur-md bg-studio-black/20 border border-purple-500/20 rounded-lg transition-all duration-300 hover:border-purple-500/60">
                             <div className="flex items-center justify-between mb-4">
                               <h3 className="text-2xl font-display font-bold bg-gradient-to-r from-purple-400 to-purple-300 text-transparent bg-clip-text">Humans</h3>
@@ -174,16 +172,6 @@ export default function LongevitySection() {
                             </div>
                             <p className="text-studio-lightgray">
                               don't just survive—they ignite, fueled by purpose, wellness, and deep connection.
-                            </p>
-                          </li>
-                          
-                          <li className="p-6 backdrop-blur-md bg-studio-black/20 border border-pink-500/20 rounded-lg transition-all duration-300 hover:border-pink-500/60">
-                            <div className="flex items-center justify-between mb-4">
-                              <h3 className="text-2xl font-display font-bold bg-gradient-to-r from-pink-400 to-pink-300 text-transparent bg-clip-text">Wealth</h3>
-                              <BookText className="w-5 h-5 text-pink-500" />
-                            </div>
-                            <p className="text-studio-lightgray">
-                              doesn't decay—it compounds meaning, aligned with values and built to outlive us.
                             </p>
                           </li>
                         </ul>
@@ -212,6 +200,18 @@ export default function LongevitySection() {
                           <Bookmark className="w-5 h-5 text-pink-400 mr-3" />
                           <h3 className="text-xl font-display font-bold bg-gradient-to-r from-pink-400 to-pink-300 text-transparent bg-clip-text">The Movement</h3>
                         </div>
+                        
+                        <ul className="space-y-8 mb-8">
+                          <li className="p-6 backdrop-blur-md bg-studio-black/20 border border-pink-500/20 rounded-lg transition-all duration-300 hover:border-pink-500/60">
+                            <div className="flex items-center justify-between mb-4">
+                              <h3 className="text-2xl font-display font-bold bg-gradient-to-r from-pink-400 to-pink-300 text-transparent bg-clip-text">Wealth</h3>
+                              <BookText className="w-5 h-5 text-pink-500" />
+                            </div>
+                            <p className="text-studio-lightgray">
+                              doesn't decay—it compounds meaning, aligned with values and built to outlive us.
+                            </p>
+                          </li>
+                        </ul>
                         
                         <h4 className="text-2xl font-display font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">
                           Adapt. Endure. Thrive.

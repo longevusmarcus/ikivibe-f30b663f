@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "./ui/card";
 import { Lightbulb, Code, Users } from "lucide-react";
 
@@ -22,7 +21,7 @@ export default function IkiVibeSection() {
   ];
 
   return (
-    <section id="ikivibe" className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10">
+    <section id="ikivibe" className="py-24 sm:py-32 bg-studio-black/70 backdrop-blur-md relative z-10">
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <div className="section-number">01</div>

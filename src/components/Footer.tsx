@@ -1,4 +1,3 @@
-
 import { ArrowUp } from 'lucide-react';
 
 export default function Footer() {
@@ -10,7 +9,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-studio-black/80 backdrop-blur-sm pt-20 pb-10 border-t border-studio-gray/20 relative z-10">
+    <footer className="bg-studio-black/70 backdrop-blur-md pt-20 pb-10 border-t border-studio-gray/20 relative z-10">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           <div>

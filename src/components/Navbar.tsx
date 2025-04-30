@@ -9,7 +9,7 @@ export default function Navbar() {
     <>
       {/* Full screen overlay when menu is open */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-black z-40">
+        <div className="fixed inset-0 bg-studio-black/90 backdrop-blur-sm z-40">
           <div className="container mx-auto px-4 pt-24 pb-8 flex flex-col items-start">
             <nav className="flex flex-col w-full space-y-6 text-2xl">
               <a 

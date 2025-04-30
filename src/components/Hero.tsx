@@ -17,9 +17,9 @@ export default function Hero() {
     <section id="hero" className="min-h-screen flex flex-col justify-center pt-24 pb-12 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col space-y-6 max-w-4xl">
-          <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tighter animate-fade-in">
-            Ideas • Humans • Legacies<br />
-            <span className="text-studio-lightgray">build forever things</span>
+          <h1 className="font-display font-bold tracking-tighter animate-fade-in">
+            <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">Ideas • Humans • Legacies</span><br />
+            <span className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-studio-lightgray">build forever things</span>
           </h1>
           
           <p className="text-xl md:text-2xl font-light text-studio-lightgray max-w-2xl animate-slide-up">

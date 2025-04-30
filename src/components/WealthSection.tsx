@@ -32,7 +32,7 @@ export default function WealthSection() {
   ];
 
   return (
-    <section id="wealth" className="py-24 sm:py-32 bg-studio-black">
+    <section id="wealth" className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10">
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <div className="section-number">03</div>

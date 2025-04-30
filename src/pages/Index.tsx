@@ -12,7 +12,9 @@ import ConnectedDots from "../components/ConnectedDots";
 const Index = () => {
   return (
     <div className="min-h-screen bg-studio-black text-studio-white relative">
-      <ConnectedDots />
+      <div className="fixed inset-0 z-0">
+        <ConnectedDots />
+      </div>
       <div className="relative z-10">
         <Navbar />
         <Hero />

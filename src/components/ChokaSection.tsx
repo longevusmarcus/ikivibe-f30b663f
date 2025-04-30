@@ -24,7 +24,7 @@ export default function ChokaSection() {
             <span className="text-studio-lightgray text-sm uppercase tracking-wider">Jobs</span>
             <h3 className="text-2xl font-display font-bold mt-2 mb-4">Chōka Solutions</h3>
             <p className="text-studio-lightgray">
-              <strong>Example:</strong> Chōka Path - A digital platform that guides individuals to workplaces 
+              Chōka Path - A digital platform that guides individuals to workplaces 
               that prioritize health, balance, and long-term well-being.
             </p>
           </div>
@@ -33,7 +33,7 @@ export default function ChokaSection() {
             <span className="text-studio-lightgray text-sm uppercase tracking-wider">Supplements</span>
             <h3 className="text-2xl font-display font-bold mt-2 mb-4">Chōka Solutions</h3>
             <p className="text-studio-lightgray">
-              <strong>Example:</strong> Chōka - We design tangible products like Longevity Chocolate, and one-of-a-kind spaces 
+              Chōka - We design tangible products like Longevity Chocolate, and one-of-a-kind spaces 
               such as Chōka Cafe, each deliberately crafted to support cellular health, mental clarity, and vibrant living.
             </p>
           </div>
@@ -42,7 +42,7 @@ export default function ChokaSection() {
             <span className="text-studio-lightgray text-sm uppercase tracking-wider">Academy</span>
             <h3 className="text-2xl font-display font-bold mt-2 mb-4">Chōka Solutions</h3>
             <p className="text-studio-lightgray">
-              <strong>Example:</strong> Chōwa - Mini Courses To Unlock Your Epigenetic Potential
+              Chōwa - Mini Courses To Unlock Your Epigenetic Potential
             </p>
           </div>
         </div>

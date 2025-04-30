@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Menu, Zap } from 'lucide-react';
+import { Menu } from 'lucide-react';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,10 +9,17 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 w-full z-50 bg-studio-black/90 backdrop-blur-sm">
       <div className="container mx-auto px-4 py-6 flex items-center justify-between">
         <div className="flex items-center">
-          <a href="/" className="flex items-center gap-2 group">
-            <Zap className="w-5 h-5 text-white/80 group-hover:text-white transition-colors" />
+          <a href="/" className="flex items-center gap-3 group">
+            <div className="relative w-5 h-5">
+              <div className="absolute w-1.5 h-1.5 bg-white/80 rounded-full top-0 left-0 group-hover:bg-white transition-colors"></div>
+              <div className="absolute w-1.5 h-1.5 bg-white/80 rounded-full bottom-0 right-0 group-hover:bg-white transition-colors"></div>
+              <div className="absolute w-1 h-1 bg-white/80 rounded-full top-1/2 right-0 -translate-y-1/2 group-hover:bg-white transition-colors"></div>
+              <div className="absolute w-1 h-1 bg-white/80 rounded-full bottom-0 left-1/3 group-hover:bg-white transition-colors"></div>
+              <div className="absolute inset-0 before:absolute before:w-full before:h-full before:border-t before:border-white/40 before:rotate-[30deg] before:origin-top-left"></div>
+              <div className="absolute inset-0 before:absolute before:w-[70%] before:h-[70%] before:border-r before:border-white/30 before:rotate-[15deg] before:origin-top-right"></div>
+            </div>
             <span className="text-xl md:text-2xl font-display font-bold tracking-tight">
-              IkiVibe Chōka Labs
+              IkiVibe • Chōka Labs
             </span>
           </a>
         </div>

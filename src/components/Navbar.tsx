@@ -30,7 +30,6 @@ export default function Navbar() {
           className="flex md:hidden items-center"
         >
           <Menu className="w-6 h-6" />
-          <span className="ml-2 text-sm uppercase tracking-wider">Menu</span>
         </button>
         
         {/* Desktop menu */}

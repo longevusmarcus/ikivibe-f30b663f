@@ -19,7 +19,7 @@ export default function ChokaSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="bg-studio-gray/10 p-8">
             <span className="text-studio-lightgray text-sm uppercase tracking-wider">Jobs</span>
             <h3 className="text-2xl font-display font-bold mt-2 mb-4">Chōka Solutions</h3>
@@ -43,6 +43,14 @@ export default function ChokaSection() {
             <h3 className="text-2xl font-display font-bold mt-2 mb-4">Chōka Solutions</h3>
             <p className="text-studio-lightgray">
               Chōwa - Mini Courses To Unlock Your Epigenetic Potential
+            </p>
+          </div>
+          
+          <div className="bg-studio-gray/10 p-8">
+            <span className="text-studio-lightgray text-sm uppercase tracking-wider">Community</span>
+            <h3 className="text-2xl font-display font-bold mt-2 mb-4">Chōka Solutions</h3>
+            <p className="text-studio-lightgray">
+              Murmur - 1:1 chat with kind strangers, trusted listeners, and our trained Guardians—ready to hold space for whatever you're carrying and help you grow.
             </p>
           </div>
         </div>

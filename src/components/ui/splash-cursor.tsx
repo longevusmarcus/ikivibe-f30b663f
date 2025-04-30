@@ -2,6 +2,22 @@
 "use client";
 import { useEffect, useRef } from "react";
 
+interface Material {
+  vertexShader: any;
+  fragmentShaderSource: string;
+  programs: any[];
+  activeProgram: any;
+  uniforms: any[];
+  setKeywords(keywords: string[]): void;
+  bind(): void;
+}
+
+interface Program {
+  uniforms: any;
+  program: any;
+  bind(): void;
+}
+
 function SplashCursor({
   // Add whatever props you like for customization
   SIM_RESOLUTION = 128,
@@ -58,6 +74,7 @@ function SplashCursor({
 
     let pointers = [new pointerPrototype()];
 
+    // @ts-ignore
     const { gl, ext } = getWebGLContext(canvas);
     if (!ext.supportLinearFiltering) {
       config.DYE_RESOLUTION = 256;
@@ -172,7 +189,14 @@ function SplashCursor({
       return status === gl.FRAMEBUFFER_COMPLETE;
     }
 
+    // @ts-ignore
     class Material {
+      vertexShader: any;
+      fragmentShaderSource: string;
+      programs: any[];
+      activeProgram: any;
+      uniforms: any[];
+
       constructor(vertexShader, fragmentShaderSource) {
         this.vertexShader = vertexShader;
         this.fragmentShaderSource = fragmentShaderSource;
@@ -202,7 +226,11 @@ function SplashCursor({
       }
     }
 
+    // @ts-ignore
     class Program {
+      uniforms: any;
+      program: any;
+
       constructor(vertexShader, fragmentShader) {
         this.uniforms = {};
         this.program = createProgram(vertexShader, fragmentShader);
@@ -1252,7 +1280,7 @@ function SplashCursor({
   ]);
 
   return (
-    <div className="fixed top-0 left-0 z-0 pointer-events-none">
+    <div className="fixed top-0 left-0 z-50 pointer-events-none">
       <canvas ref={canvasRef} id="fluid" className="w-screen h-screen" />
     </div>
   );

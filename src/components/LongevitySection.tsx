@@ -65,7 +65,7 @@ export default function LongevitySection() {
         <div className="flex flex-col items-center mb-12">
           <div className="flex items-center space-x-2 mb-2">
             <BookMarked className="w-6 h-6 text-blue-400" />
-            <p className="text-sm font-mono tracking-widest text-blue-400">MANIFESTO 2025.04.30</p>
+            <p className="text-sm font-mono tracking-widest text-blue-400">MANIFESTO 2025.01.01</p>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-3 text-center bg-gradient-to-r from-blue-400 via-purple-500 to-pink-400 text-transparent bg-clip-text">
             The Longevity Ecosystem

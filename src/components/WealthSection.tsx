@@ -1,5 +1,5 @@
 
-import { Clock, Users, DollarSign, Heart, Brain, ExternalLink } from "lucide-react";
+import { Clock, Users, DollarSign, Heart, Brain, ExternalLink, Zap } from "lucide-react";
 import { Button } from "./ui/button";
 import { HoverEffect } from "./ui/hover-effect";
 
@@ -33,6 +33,12 @@ export default function WealthSection() {
       title: "Mental Wealth",
       description: "More stillness = more clarity. More clarity = sharper decisions. Sharper decisions = a better future. Master your inner world before anything else. Train the mind. Expand awareness. Your mind is your first environment.",
       icon: <Brain className="h-8 w-8 text-studio-lightgray" />,
+      link: "#wealth"
+    },
+    {
+      title: "360 REATED",
+      description: "Complete ecosystem approach combining all wealth dimensions. 360 REATED enhances cognitive function, physical performance, and emotional resilience through personalized optimization strategies. Uniting technology and holistic practices for maximum human potential.",
+      icon: <Zap className="h-8 w-8 text-studio-lightgray" />,
       link: "#wealth"
     }
   ];

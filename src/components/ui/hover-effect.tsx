@@ -20,7 +20,9 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 sm:grid-cols-3 gap-6",
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
+        // For exactly 5 items, we want a special layout on medium screens
+        items.length === 5 ? "md:[&>*:nth-child(4)]:col-span-1 md:[&>*:nth-child(5)]:col-span-1" : "",
         className
       )}
     >

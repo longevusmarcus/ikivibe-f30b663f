@@ -13,7 +13,7 @@ export default function TextGradientSection() {
             <div className="w-full max-w-4xl mx-auto">
               <div className="text-xl md:text-2xl">
                 <TextGradientScroll 
-                  text="We bring ideas to life—beyond the mind and into the world—by riding enduring trends that spark human connection and meaningful growth. Along the way, we accelerate bold concepts, guiding individuals and organizations toward their core purpose and helping them build what truly thrives." 
+                  text="We build a world where ideas survive, humans thrive, and wealth endures—across generations." 
                   type="letter"
                   textOpacity="soft"
                   className="font-light"

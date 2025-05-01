@@ -77,7 +77,7 @@ export default function Footer() {
             <p>© {new Date().getFullYear()} IkiVibe Chōka Labs. All rights reserved.</p>
           </div>
           
-          <p className="text-xs opacity-80 text-studio-lightgray text-center mb-4 md:mb-0">Powered by MBH CHE-344.214.080</p>
+          <p className="text-xs opacity-80 text-studio-lightgray text-center mb-4 md:mb-0 md:mx-auto md:flex-grow">Powered by MBH CHE-344.214.080</p>
           
           <button 
             onClick={scrollToTop}

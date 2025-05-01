@@ -86,7 +86,7 @@ export const HoverEffect = ({
             />
           )}
         </AnimatePresence>
-        <Card>
+        <Card isActive={hoveredIndex === 0}>
           {item.icon && <div className="mb-4">{item.icon}</div>}
           <CardTitle>{item.title}</CardTitle>
           <CardDescription>{item.description}</CardDescription>
@@ -130,10 +130,10 @@ export const HoverEffect = ({
                 />
               )}
             </AnimatePresence>
-            <Card>
+            <Card isActive={hoveredIndex === idx}>
               {item.icon && <div className="mb-4">{item.icon}</div>}
-              <CardTitle>{item.title}</CardTitle>
-              <CardDescription>{item.description}</CardDescription>
+              <CardTitle isActive={hoveredIndex === idx}>{item.title}</CardTitle>
+              <CardDescription isActive={hoveredIndex === idx}>{item.description}</CardDescription>
             </Card>
           </div>
         );
@@ -145,9 +145,11 @@ export const HoverEffect = ({
 export const Card = ({
   className,
   children,
+  isActive = false,
 }: {
   className?: string;
   children: React.ReactNode;
+  isActive?: boolean;
 }) => {
   return (
     <div
@@ -166,12 +168,20 @@ export const Card = ({
 export const CardTitle = ({
   className,
   children,
+  isActive = true,
 }: {
   className?: string;
   children: React.ReactNode;
+  isActive?: boolean;
 }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
+    <h4 
+      className={cn(
+        "text-zinc-100 font-bold tracking-wide mt-4",
+        isActive ? "opacity-100" : "opacity-40",
+        className
+      )}
+    >
       {children}
     </h4>
   );
@@ -180,18 +190,27 @@ export const CardTitle = ({
 export const CardDescription = ({
   className,
   children,
+  isActive = true,
 }: {
   className?: string;
   children: React.ReactNode;
+  isActive?: boolean;
 }) => {
   return (
-    <p
+    <motion.p
+      initial={false}
+      animate={{
+        opacity: isActive ? 1 : 0,
+        height: isActive ? "auto" : 0,
+        marginTop: isActive ? "2rem" : 0
+      }}
+      transition={{ duration: 0.2 }}
       className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "text-zinc-400 tracking-wide leading-relaxed text-sm",
         className
       )}
     >
       {children}
-    </p>
+    </motion.p>
   );
 };

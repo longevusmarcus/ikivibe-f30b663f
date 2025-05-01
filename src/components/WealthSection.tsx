@@ -1,4 +1,3 @@
-
 import { Clock, Users, DollarSign, Heart, Brain, ExternalLink, Zap } from "lucide-react";
 import { Button } from "./ui/button";
 import { HoverEffect } from "./ui/hover-effect";

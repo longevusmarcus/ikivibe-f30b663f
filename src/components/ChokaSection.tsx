@@ -10,18 +10,24 @@ export default function ChokaSection() {
     const text = textRef.current;
     if (!text) return;
     
+    // Set the data-text attribute to match the text content
+    text.setAttribute('data-text', text.textContent || '');
+    
     const handleScroll = () => {
       const rect = text.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       
-      // Calculate how much of the element is in view
-      const visiblePercentage = Math.max(
-        0,
-        Math.min(1, (windowHeight - rect.top) / (windowHeight + rect.height))
-      );
-      
-      // Apply highlighting effect based on scroll position
-      text.style.backgroundSize = `${visiblePercentage * 100}% 100%`;
+      // Calculate when element starts to come into view
+      if (rect.top <= windowHeight && rect.bottom >= 0) {
+        // Calculate visibility percentage (from 0 to 1)
+        const visibleHeight = Math.min(windowHeight, rect.bottom) - 
+                             Math.max(0, rect.top);
+        const percentVisible = visibleHeight / rect.height;
+        
+        // Apply highlighting effect based on visibility
+        const highlightPercentage = Math.min(100, Math.max(0, percentVisible * 150));
+        text.style.backgroundSize = `${highlightPercentage}% 100%`;
+      }
     };
     
     window.addEventListener("scroll", handleScroll);

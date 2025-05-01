@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -106,14 +105,13 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    background-repeat: no-repeat;
     background-size: 0% 100%;
-    transition: background-size 0.1s ease-in-out;
+    transition: background-size 0.5s ease-out;
     position: relative;
   }
   
   .enlighten-text::before {
-    content: '';
+    content: attr(data-text);
     position: absolute;
     top: 0;
     left: 0;

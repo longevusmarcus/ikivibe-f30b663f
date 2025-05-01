@@ -1,51 +1,8 @@
 
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
-import { useEffect, useState, useRef } from "react";
 
 export default function ChokaSection() {
-  const fullText = "Wellness is the foundation of human evolution. Powered by IkiVibe Collective and produced by Chōka Crew, we offer unique solutions that accelerate holistic wellbeing and a health-first society.";
-  const [displayText, setDisplayText] = useState("");
-  const [isVisible, setIsVisible] = useState(false);
-  const descriptionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
-      { threshold: 0.2 }
-    );
-
-    if (descriptionRef.current) {
-      observer.observe(descriptionRef.current);
-    }
-
-    return () => {
-      if (descriptionRef.current) {
-        observer.unobserve(descriptionRef.current);
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!isVisible) return;
-
-    let currentIndex = 0;
-    setDisplayText("");
-
-    const typingInterval = setInterval(() => {
-      if (currentIndex < fullText.length) {
-        setDisplayText((prev) => prev + fullText[currentIndex]);
-        currentIndex++;
-      } else {
-        clearInterval(typingInterval);
-      }
-    }, 20);
-
-    return () => clearInterval(typingInterval);
-  }, [isVisible]);
-
   return (
     <section id="choka" className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10">
       <div className="container mx-auto px-4">
@@ -55,10 +12,10 @@ export default function ChokaSection() {
           <p className="section-subtitle">Humans who thrive</p>
         </div>
         
-        <div className="mb-16 max-w-3xl" ref={descriptionRef}>
+        <div className="mb-16 max-w-3xl">
           <p className="text-lg leading-relaxed">
-            {displayText}
-            <span className={`inline-block w-0.5 h-5 bg-studio-lightgray ml-1 ${displayText.length === fullText.length ? 'hidden' : 'animate-pulse'}`}></span>
+            Wellness is the foundation of human evolution. Powered by IkiVibe Collective and produced by Chōka Crew, 
+            we offer unique solutions that accelerate holistic wellbeing and a health-first society.
           </p>
         </div>
         

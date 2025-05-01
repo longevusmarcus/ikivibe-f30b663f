@@ -2,7 +2,6 @@
 import { ExternalLink, Lightbulb, Code, Users } from "lucide-react";
 import { Button } from "./ui/button";
 import { HoverEffect } from "./ui/hover-effect";
-import { cn } from "@/lib/utils";
 
 export default function IkiVibeSection() {
   const ikiVibeCards = [
@@ -37,11 +36,7 @@ export default function IkiVibeSection() {
         
         <div className="mb-16 max-w-3xl">
           <p className="text-lg leading-relaxed mb-8">
-            We bring ideas to life in <span className={cn(
-              "font-bold px-1.5 py-0.5 rounded",
-              "bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 bg-clip-text text-transparent",
-              "animate-pulse"
-            )}>days</span>—beyond the mind and into the world—by riding enduring trends that spark human connection and meaningful growth. 
+            We bring ideas to life in <span className="text-purple-500 font-semibold">days</span>—beyond the mind and into the world—by riding enduring trends that spark human connection and meaningful growth. 
             Along the way, we accelerate bold concepts, guiding individuals and organizations toward their core purpose and helping them ship ultra fast.
           </p>
         </div>

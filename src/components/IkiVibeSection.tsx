@@ -36,8 +36,8 @@ export default function IkiVibeSection() {
         
         <div className="mb-16 max-w-3xl">
           <p className="text-lg leading-relaxed mb-8">
-            We bring ideas to life—beyond the mind and into the world—by riding enduring trends that spark human connection and meaningful growth. 
-            Along the way, we accelerate bold concepts, guiding individuals and organizations toward their core purpose and helping them build what truly thrives.
+            We bring ideas to life in days—beyond the mind and into the world—by riding enduring trends that spark human connection and meaningful growth. 
+            Along the way, we accelerate bold concepts, guiding individuals and organizations toward their core purpose and helping them ship ultra fast.
           </p>
         </div>
         

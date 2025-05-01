@@ -55,12 +55,14 @@ export default function WealthSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* First five cards using HoverEffect component */}
-          <HoverEffect items={wealthCards} className="grid grid-cols-1 gap-6" />
+          <div className="col-span-full lg:col-span-2">
+            <HoverEffect items={wealthCards} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" />
+          </div>
           
           {/* The 6th special card that only activates on hover */}
-          <div className="relative group block p-2 h-full w-full">
+          <div className="relative group block p-2 h-full w-full md:col-span-2 lg:col-span-1">
             <EvervaultCard text="HOVER" />
           </div>
         </div>

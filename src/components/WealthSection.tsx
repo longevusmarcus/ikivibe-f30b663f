@@ -62,7 +62,25 @@ export default function WealthSection() {
           </p>
         </div>
         
-        <HoverEffect items={wealthCards} />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
+          {wealthCards.map((item, idx) => (
+            idx === 5 ? (
+              <div key={`item-${idx}`} className="relative group block p-2 h-full w-full">
+                <EvervaultCard text="+" />
+              </div>
+            ) : (
+              <div
+                key={`item-${idx}`}
+                className="relative group block p-2 h-full w-full"
+              >
+                <HoverEffect 
+                  items={[item]} 
+                  singleCard={true}
+                />
+              </div>
+            )
+          ))}
+        </div>
 
         <div className="mt-12 flex justify-center">
           <Button 

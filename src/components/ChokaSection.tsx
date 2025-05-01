@@ -1,5 +1,5 @@
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
 
 export default function ChokaSection() {
@@ -51,9 +51,12 @@ export default function ChokaSection() {
           <Button 
             variant="outline" 
             className="group border border-purple-500/40 bg-studio-black/50 hover:bg-purple-950/30 hover:border-purple-500/70 text-purple-400 hover:text-purple-300 transition-all duration-300 backdrop-blur-sm"
+            asChild
           >
-            <span>Explore Chōka</span>
-            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <a href="https://x.com/chokalabs" target="_blank" rel="noopener noreferrer" className="flex items-center">
+              <span>Explore Chōka</span>
+              <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
           </Button>
         </div>
       </div>

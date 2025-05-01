@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from "./ui/card";
-import { Lightbulb, Code, Users, ArrowRight } from "lucide-react";
+import { Lightbulb, Code, Users, ArrowRight, ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
 
 export default function IkiVibeSection() {
@@ -58,9 +58,12 @@ export default function IkiVibeSection() {
           <Button 
             variant="outline" 
             className="group border border-blue-500/40 bg-studio-black/50 hover:bg-blue-950/30 hover:border-blue-500/70 text-blue-400 hover:text-blue-300 transition-all duration-300 backdrop-blur-sm"
+            asChild
           >
-            <span>Explore IkiVibe</span>
-            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <a href="https://x.com/ikivibelabs" target="_blank" rel="noopener noreferrer" className="flex items-center">
+              <span>Explore IkiVibe</span>
+              <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
           </Button>
         </div>
       </div>

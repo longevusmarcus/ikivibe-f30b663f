@@ -1,6 +1,5 @@
-
 import { Card, CardContent } from "./ui/card";
-import { Clock, Users, DollarSign, Heart, Brain, ArrowRight } from "lucide-react";
+import { Clock, Users, DollarSign, Heart, Brain, ArrowRight, ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
 
 export default function WealthSection() {
@@ -92,9 +91,12 @@ export default function WealthSection() {
           <Button 
             variant="outline" 
             className="group border border-pink-500/40 bg-studio-black/50 hover:bg-pink-950/30 hover:border-pink-500/70 text-pink-400 hover:text-pink-300 transition-all duration-300 backdrop-blur-sm"
+            asChild
           >
-            <span>Explore 360 Wealth</span>
-            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <a href="https://x.com/360wealthlabs" target="_blank" rel="noopener noreferrer" className="flex items-center">
+              <span>Explore 360 Wealth</span>
+              <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
           </Button>
         </div>
       </div>

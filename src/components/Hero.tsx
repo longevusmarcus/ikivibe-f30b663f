@@ -3,7 +3,7 @@ import { ArrowDown } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 export default function Hero() {
-  const fullText = "The future belongs to those who connect the dots. Our mission is to build a world where ideas survive, humans thrive, and wealth endures—across generations.";
+  const fullText = "The future belongs to those who connect the dots guys...Our mission is to build a world where ideas survive, humans thrive, and wealth endures—across generations.";
   const [displayText, setDisplayText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   

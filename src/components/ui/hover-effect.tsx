@@ -105,12 +105,22 @@ export const HoverEffect = ({
       {items.map((item, idx) => {
         const isSpecialCard = item.specialCard;
         
+        if (isSpecialCard) {
+          return (
+            <div key={`item-${idx}`} className="relative group block p-2 h-full w-full">
+              <div className="h-full w-full rounded-2xl overflow-hidden">
+                <EvervaultCard text="Special" />
+              </div>
+            </div>
+          );
+        }
+        
         return (
           <div
             key={`item-${idx}`}
             className="relative group block p-2 h-full w-full"
-            onMouseEnter={() => !isMobile && !isSpecialCard && setHoveredIndex(idx)}
-            onMouseLeave={() => !isMobile && !isSpecialCard && setHoveredIndex(null)}
+            onMouseEnter={() => !isMobile && setHoveredIndex(idx)}
+            onMouseLeave={() => !isMobile && setHoveredIndex(null)}
             ref={(el) => cardsRef.current[idx] = el}
           >
             <AnimatePresence>

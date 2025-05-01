@@ -1,40 +1,41 @@
-import { Card, CardContent } from "./ui/card";
-import { Clock, Users, DollarSign, Heart, Brain, ArrowRight, ExternalLink } from "lucide-react";
+
+import { Clock, Users, DollarSign, Heart, Brain, ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
+import { HoverEffect } from "./ui/hover-effect";
 
 export default function WealthSection() {
-  const wealthTypes = [
+  const wealthCards = [
     {
       title: "Time Wealth",
       description: "More time = more thoughts. More thoughts = more ideas. More ideas = more opportunities. Design a life that buys back your time— so your mind can roam, create, and lead. Time is your amplifier.",
-      icon: <Clock className="h-8 w-8 text-studio-lightgray" />
+      icon: <Clock className="h-8 w-8 text-studio-lightgray" />,
+      link: "#wealth"
     },
     {
       title: "Social Wealth",
       description: "More connection = more trust. More trust = more flow. More flow = more fulfillment. Curate your circle with intention— the right people multiply your energy. Social wealth is your emotional engine.",
-      icon: <Users className="h-8 w-8 text-studio-lightgray" />
+      icon: <Users className="h-8 w-8 text-studio-lightgray" />,
+      link: "#wealth"
     },
     {
       title: "Financial Wealth",
       description: "More clarity = better choices. Better choices = aligned growth. Aligned growth = lasting freedom. Let your capital reflect your values— money should fund your mission, not distract from it. Wealth that serves, sustains.",
-      icon: <DollarSign className="h-8 w-8 text-studio-lightgray" />
+      icon: <DollarSign className="h-8 w-8 text-studio-lightgray" />,
+      link: "#wealth"
     },
     {
       title: "Physical Wealth",
       description: "Know your DNA = know your needs. Know your needs = better choices. Better choices = lasting vitality. Your body is not generic—neither should your health plan be. Fuel it with precision. Move with intention. Recover with respect. Longevity starts with knowledge.",
-      icon: <Heart className="h-8 w-8 text-studio-lightgray" />
+      icon: <Heart className="h-8 w-8 text-studio-lightgray" />,
+      link: "#wealth"
     },
     {
       title: "Mental Wealth",
       description: "More stillness = more clarity. More clarity = sharper decisions. Sharper decisions = a better future. Master your inner world before anything else. Train the mind. Expand awareness. Your mind is your first environment.",
-      icon: <Brain className="h-8 w-8 text-studio-lightgray" />
+      icon: <Brain className="h-8 w-8 text-studio-lightgray" />,
+      link: "#wealth"
     }
   ];
-
-  // First three items for the top row
-  const firstRowItems = wealthTypes.slice(0, 3);
-  // Remaining two items for the second row
-  const secondRowItems = wealthTypes.slice(3);
 
   return (
     <section id="wealth" className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10">
@@ -53,39 +54,7 @@ export default function WealthSection() {
           </p>
         </div>
         
-        {/* First row - 3 cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-          {firstRowItems.map((wealth, index) => (
-            <Card key={index} className="bg-studio-gray/10 border-none text-studio-white">
-              <CardContent className="pt-6">
-                <div className="mb-4">
-                  {wealth.icon}
-                </div>
-                <h3 className="text-xl font-display font-bold mb-3">{wealth.title}</h3>
-                <p className="text-sm text-studio-lightgray">
-                  {wealth.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-        
-        {/* Second row - 2 cards filling the space */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-          {secondRowItems.map((wealth, index) => (
-            <Card key={index} className="bg-studio-gray/10 border-none text-studio-white">
-              <CardContent className="pt-6">
-                <div className="mb-4">
-                  {wealth.icon}
-                </div>
-                <h3 className="text-xl font-display font-bold mb-3">{wealth.title}</h3>
-                <p className="text-sm text-studio-lightgray">
-                  {wealth.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        <HoverEffect items={wealthCards} />
 
         <div className="mt-12 flex justify-center">
           <Button 

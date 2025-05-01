@@ -1,24 +1,27 @@
 
-import { Card, CardContent } from "./ui/card";
-import { Lightbulb, Code, Users, ArrowRight, ExternalLink } from "lucide-react";
+import { ExternalLink, Lightbulb, Code, Users } from "lucide-react";
 import { Button } from "./ui/button";
+import { HoverEffect } from "./ui/hover-effect";
 
 export default function IkiVibeSection() {
   const ikiVibeCards = [
     {
       title: "Ikideas",
       description: "Inspired by the concept of Ikigai, we explore emerging trends to uncover opportunities that shape the future and ideas that endure. In a world where AI reshapes execution, the value of iki-ideas is skyrocketing. When humans blend their Ikigai with a tech spirit, ideas become the currency of an AI-driven economy.",
-      icon: <Lightbulb className="h-8 w-8 text-studio-lightgray" />
+      icon: <Lightbulb className="h-8 w-8 text-studio-lightgray" />,
+      link: "#ikivibe"
     },
     {
       title: "Vibe Coding",
       description: "We build simple, fun digital solutions that solve pain points, foster connection, enhance well-being, and drive personal growth. By seamlessly blending AI technology with thoughtful, human-centered design, we ensure our platforms evolve alongside humanity's ever-changing needs, delivering a bright new future for all.",
-      icon: <Code className="h-8 w-8 text-studio-lightgray" />
+      icon: <Code className="h-8 w-8 text-studio-lightgray" />,
+      link: "#ikivibe"
     },
     {
       title: "For Partners",
       description: "We help individuals and organizations discover their core purpose—accelerating unique ideas and guiding them from conception to market. By pinpointing the intersection of passion, skill, mission, and vocation, we ensure purpose drives resilience, enabling both ideas and people to thrive.",
-      icon: <Users className="h-8 w-8 text-studio-lightgray" />
+      icon: <Users className="h-8 w-8 text-studio-lightgray" />,
+      link: "#ikivibe"
     }
   ];
 
@@ -38,21 +41,7 @@ export default function IkiVibeSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {ikiVibeCards.map((card, index) => (
-            <Card key={index} className="bg-studio-gray/10 border-none text-studio-white hover:border-studio-lightgray/40 transition-colors">
-              <CardContent className="pt-6">
-                <div className="mb-4">
-                  {card.icon}
-                </div>
-                <h3 className="text-xl font-display font-bold mb-4">{card.title}</h3>
-                <p className="text-studio-lightgray">
-                  {card.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        <HoverEffect items={ikiVibeCards} />
 
         <div className="mt-12 flex justify-center">
           <Button 

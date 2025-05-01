@@ -1,3 +1,4 @@
+
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
@@ -207,20 +208,14 @@ export const CardDescription = ({
   isActive?: boolean;
 }) => {
   return (
-    <motion.p
-      initial={false}
-      animate={{
-        opacity: isActive ? 1 : 0,
-        height: isActive ? "auto" : 0,
-        marginTop: isActive ? "2rem" : 0
-      }}
-      transition={{ duration: 0.2 }}
+    <div
       className={cn(
-        "text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "text-zinc-400 tracking-wide leading-relaxed text-sm min-h-[150px]",
+        isActive ? "opacity-100" : "opacity-0",
         className
       )}
     >
       {children}
-    </motion.p>
+    </div>
   );
 };

@@ -73,9 +73,10 @@ export default function Footer() {
         </div>
         
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-studio-gray/20 backdrop-blur-md bg-studio-black/30">
-          <p className="text-studio-lightgray text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} IkiVibe Chōka Labs. All rights reserved.
-          </p>
+          <div className="text-studio-lightgray text-sm mb-4 md:mb-0">
+            <p>© {new Date().getFullYear()} IkiVibe Chōka Labs. All rights reserved.</p>
+            <p className="text-xs mt-1 opacity-80">Powered by MBH CHE-344.214.080</p>
+          </div>
           
           <button 
             onClick={scrollToTop}

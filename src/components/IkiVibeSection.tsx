@@ -19,7 +19,7 @@ export default function IkiVibeSection() {
     },
     {
       title: "For Partners",
-      description: "We help individuals and organizations discover their core purpose—accelerating unique ideas and guiding them from conception to market. By pinpointing the intersection of passion, skill, mission, and vocation, we ensure purpose drives resilience, enabling both ideas and people to thrive.",
+      description: "We help individuals and organizations discover their core purpose—accelerating unique ideas and guiding them from conception to market in days. By pinpointing the intersection of passion, skill, mission, and vocation, we ensure purpose drives resilience, enabling both ideas and people to thrive.",
       icon: <Users className="h-8 w-8 text-studio-lightgray" />,
       link: "#ikivibe"
     }

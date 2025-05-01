@@ -6,17 +6,17 @@ import { HoverEffect } from "./ui/hover-effect";
 export default function ChokaSection() {
   const chokaCards = [
     {
-      title: "CARD 1: JOBS",
+      title: "JOBS",
       description: "Chōka Path - A digital platform that guides individuals to workplaces that prioritize health, balance, and long-term well-being.",
       link: "#choka"
     },
     {
-      title: "CARD 2: SUPPLEMENTS",
+      title: "SUPPLEMENTS",
       description: "Chōka - We design tangible products like Longevity Chocolate, and one-of-a-kind spaces such as Chōka Cafe, each deliberately crafted to support cellular health, mental clarity, and vibrant living.",
       link: "#choka"
     },
     {
-      title: "CARD 3: KNOWLEDGE",
+      title: "KNOWLEDGE",
       description: "Chōwa - Mini Courses To Unlock Your Epigenetic Potential: discover how to optimize your genetic blueprint, and align with your Ikigai to attract abundance.",
       link: "#choka"
     }

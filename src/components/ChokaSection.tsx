@@ -12,7 +12,7 @@ export default function ChokaSection() {
     },
     {
       title: "SUPPLEMENTS",
-      description: "Chōka - We design tangible products like Longevity Chocolate, and one-of-a-kind spaces such as Chōka Cafe, each deliberately crafted to support cellular health, mental clarity, and vibrant living.",
+      description: "Chōka - We design healthy solutions like Longevity Chocolate, and one-of-a-kind spaces such as Chōka Cafe, each deliberately crafted to support cellular health, mental clarity, and vibrant living.",
       link: "#choka"
     },
     {

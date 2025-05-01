@@ -36,7 +36,7 @@ export default function ChokaSection() {
 
     const typingInterval = setInterval(() => {
       if (currentIndex < fullText.length) {
-        setDisplayText((prev) => prev + fullText[currentIndex]);
+        setDisplayText(prev => prev + fullText[currentIndex]);
         currentIndex++;
       } else {
         clearInterval(typingInterval);

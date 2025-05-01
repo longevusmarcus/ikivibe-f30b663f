@@ -61,7 +61,7 @@ export default function WealthSection() {
           
           {/* The 6th special card that only activates on hover */}
           <div className="relative group block p-2 h-full w-full">
-            <EvervaultCard text="360" />
+            <EvervaultCard text="HOVER" />
           </div>
         </div>
 

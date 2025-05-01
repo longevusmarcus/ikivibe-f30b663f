@@ -24,8 +24,6 @@ export const HoverEffect = ({
     <div
       className={cn(
         "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-4",
-        // For 5 items, adjust the grid on medium screens
-        hasFiveItems ? "md:grid-cols-[1fr_1fr] lg:grid-cols-3" : "md:grid-cols-2 lg:grid-cols-3",
         "gap-6",
         className
       )}
@@ -36,8 +34,10 @@ export const HoverEffect = ({
           key={item?.link}
           className={cn(
             "relative group block p-2 h-full w-full transition-all",
-            // For 5 items on medium screens (like iPad), make the last 2 cards wider
-            hasFiveItems && idx >= 3 && "md:col-span-1"
+            // When we have 5 items, make the last 2 cards each span half the width on medium screens
+            hasFiveItems && idx >= 3 && "md:col-span-1 lg:col-span-1",
+            // When using md:grid-cols-2, make sure the last card in a 5-card set doesn't leave empty space
+            hasFiveItems && idx === 4 && "md:col-span-2 lg:col-span-1"
           )}
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}

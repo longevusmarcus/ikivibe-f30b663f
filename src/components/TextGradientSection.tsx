@@ -1,4 +1,5 @@
 
+import React from "react";
 import { TextGradientScroll } from "@/components/ui/text-gradient-scroll";
 
 export default function TextGradientSection() {

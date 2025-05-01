@@ -1,5 +1,6 @@
 
-import { TextGradientScroll } from "@/components/ui/text-gradient-scroll"
+import React from "react";
+import { TextGradientScroll } from "@/components/ui/text-gradient-scroll";
 
 function TextGradientScrollExample() {
   return (

@@ -1,5 +1,5 @@
 
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useTheme } from "../hooks/use-theme";
 
 interface Particle {

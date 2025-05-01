@@ -1,3 +1,4 @@
+
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
@@ -12,6 +13,7 @@ export const HoverEffect = ({
     description: string;
     link: string;
     icon?: React.ReactNode;
+    specialCard?: boolean;
   }[];
   className?: string;
 }) => {
@@ -23,7 +25,7 @@ export const HoverEffect = ({
     if (isMobile) {
       // Set up Intersection Observer for mobile scroll activation
       const observers = cardsRef.current.map((ref, idx) => {
-        if (!ref) return null;
+        if (!ref || (items[idx] && items[idx].specialCard)) return null;
 
         const observer = new IntersectionObserver(
           (entries) => {
@@ -51,7 +53,7 @@ export const HoverEffect = ({
         });
       };
     }
-  }, [isMobile, hoveredIndex]);
+  }, [isMobile, hoveredIndex, items]);
 
   return (
     <div
@@ -60,38 +62,42 @@ export const HoverEffect = ({
         className
       )}
     >
-      {items.map((item, idx) => (
-        <div
-          key={`item-${idx}`}
-          className="relative group block p-2 h-full w-full"
-          onMouseEnter={() => !isMobile && setHoveredIndex(idx)}
-          onMouseLeave={() => !isMobile && setHoveredIndex(null)}
-          ref={(el) => cardsRef.current[idx] = el}
-        >
-          <AnimatePresence>
-            {hoveredIndex === idx && (
-              <motion.span
-                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl"
-                layoutId="hoverBackground"
-                initial={{ opacity: 0 }}
-                animate={{
-                  opacity: 1,
-                  transition: { duration: 0.15 },
-                }}
-                exit={{
-                  opacity: 0,
-                  transition: { duration: 0.15, delay: 0.2 },
-                }}
-              />
-            )}
-          </AnimatePresence>
-          <Card>
-            {item.icon && <div className="mb-4">{item.icon}</div>}
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
-          </Card>
-        </div>
-      ))}
+      {items.map((item, idx) => {
+        const isSpecialCard = item.specialCard;
+        
+        return (
+          <div
+            key={`item-${idx}`}
+            className="relative group block p-2 h-full w-full"
+            onMouseEnter={() => !isMobile && !isSpecialCard && setHoveredIndex(idx)}
+            onMouseLeave={() => !isMobile && !isSpecialCard && setHoveredIndex(null)}
+            ref={(el) => cardsRef.current[idx] = el}
+          >
+            <AnimatePresence>
+              {hoveredIndex === idx && (
+                <motion.span
+                  className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl"
+                  layoutId="hoverBackground"
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                    transition: { duration: 0.15 },
+                  }}
+                  exit={{
+                    opacity: 0,
+                    transition: { duration: 0.15, delay: 0.2 },
+                  }}
+                />
+              )}
+            </AnimatePresence>
+            <Card>
+              {item.icon && <div className="mb-4">{item.icon}</div>}
+              <CardTitle>{item.title}</CardTitle>
+              <CardDescription>{item.description}</CardDescription>
+            </Card>
+          </div>
+        );
+      })}
     </div>
   );
 };

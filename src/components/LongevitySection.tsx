@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import { SplashCursor } from "./ui/splash-cursor";
 import { ArrowUpRight, Book, BookOpen, BookText, Bookmark, BookMarked } from "lucide-react";
@@ -161,9 +160,8 @@ export default function LongevitySection() {
                       
                       {/* Page 2 */}
                       <div className={`book-page transition-all duration-700 ease-in-out ${activePage === 1 ? 'block' : 'hidden'}`}>
-                        <div className="flex items-center mb-6">
-                          <BookOpen className="w-5 h-5 text-purple-400 mr-3" />
-                          <h3 className="text-xl font-display font-bold bg-gradient-to-r from-purple-400 to-purple-300 text-transparent bg-clip-text">A future where:</h3>
+                        <div className="mb-8">
+                          {/* Empty space where the title was - now removed */}
                         </div>
                         
                         <ul className="space-y-8 mb-12">

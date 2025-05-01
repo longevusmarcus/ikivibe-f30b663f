@@ -2,6 +2,7 @@
 import { Card, CardContent } from "./ui/card";
 import { Clock, Users, DollarSign, Heart, Brain, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { useEffect, useState, useRef } from "react";
 
 export default function WealthSection() {
   const wealthTypes = [
@@ -32,6 +33,48 @@ export default function WealthSection() {
     }
   ];
 
+  const fullText = "We dissect the essence of who we are, building communities that support this journey, while investing in visionary ideators empowered by ikigai. Our goal is to cultivate 360-degree wealth—encompassing time, relationships, wellbeing, and financial prosperity—creating a holistic approach to lasting abundance and legacy.";
+  const [displayText, setDisplayText] = useState("");
+  const [isVisible, setIsVisible] = useState(false);
+  const descriptionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.2 }
+    );
+
+    if (descriptionRef.current) {
+      observer.observe(descriptionRef.current);
+    }
+
+    return () => {
+      if (descriptionRef.current) {
+        observer.unobserve(descriptionRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let currentIndex = 0;
+    setDisplayText("");
+
+    const typingInterval = setInterval(() => {
+      if (currentIndex < fullText.length) {
+        setDisplayText((prev) => prev + fullText[currentIndex]);
+        currentIndex++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, 20); // Adjust typing speed here
+
+    return () => clearInterval(typingInterval);
+  }, [isVisible, fullText]);
+
   // First three items for the top row
   const firstRowItems = wealthTypes.slice(0, 3);
   // Remaining two items for the second row
@@ -46,11 +89,10 @@ export default function WealthSection() {
           <p className="section-subtitle">Wealth That Sustains</p>
         </div>
         
-        <div className="mb-16 max-w-3xl">
+        <div className="mb-16 max-w-3xl" ref={descriptionRef}>
           <p className="text-lg leading-relaxed mb-8">
-            We dissect the essence of who we are, building communities that support this journey, while investing in visionary ideators 
-            empowered by ikigai. Our goal is to cultivate 360-degree wealth—encompassing time, relationships, wellbeing, and financial prosperity—creating 
-            a holistic approach to lasting abundance and legacy.
+            {displayText}
+            <span className={`inline-block w-0.5 h-5 bg-studio-lightgray ml-1 ${displayText.length === fullText.length ? 'hidden' : 'animate-pulse'}`}></span>
           </p>
         </div>
         

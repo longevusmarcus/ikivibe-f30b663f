@@ -2,6 +2,7 @@
 import { Card, CardContent } from "./ui/card";
 import { Lightbulb, Code, Users, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { useEffect, useState, useRef } from "react";
 
 export default function IkiVibeSection() {
   const ikiVibeCards = [
@@ -22,6 +23,48 @@ export default function IkiVibeSection() {
     }
   ];
 
+  const fullText = "We bring ideas to life—beyond the mind and into the world—by riding enduring trends that spark human connection and meaningful growth. Along the way, we accelerate bold concepts, guiding individuals and organizations toward their core purpose and helping them build what truly thrives.";
+  const [displayText, setDisplayText] = useState("");
+  const [isVisible, setIsVisible] = useState(false);
+  const descriptionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.2 }
+    );
+
+    if (descriptionRef.current) {
+      observer.observe(descriptionRef.current);
+    }
+
+    return () => {
+      if (descriptionRef.current) {
+        observer.unobserve(descriptionRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let currentIndex = 0;
+    setDisplayText("");
+
+    const typingInterval = setInterval(() => {
+      if (currentIndex < fullText.length) {
+        setDisplayText((prev) => prev + fullText[currentIndex]);
+        currentIndex++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, 20); // Adjust typing speed here
+
+    return () => clearInterval(typingInterval);
+  }, [isVisible, fullText]);
+
   return (
     <section id="ikivibe" className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10">
       <div className="container mx-auto px-4">
@@ -31,10 +74,10 @@ export default function IkiVibeSection() {
           <p className="section-subtitle">Ideas that survive</p>
         </div>
         
-        <div className="mb-16 max-w-3xl">
+        <div className="mb-16 max-w-3xl" ref={descriptionRef}>
           <p className="text-lg leading-relaxed mb-8">
-            We bring ideas to life—beyond the mind and into the world—by riding enduring trends that spark human connection and meaningful growth. 
-            Along the way, we accelerate bold concepts, guiding individuals and organizations toward their core purpose and helping them build what truly thrives.
+            {displayText}
+            <span className={`inline-block w-0.5 h-5 bg-studio-lightgray ml-1 ${displayText.length === fullText.length ? 'hidden' : 'animate-pulse'}`}></span>
           </p>
         </div>
         

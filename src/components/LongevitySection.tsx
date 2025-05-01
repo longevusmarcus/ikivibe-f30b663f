@@ -161,11 +161,9 @@ export default function LongevitySection() {
                       
                       {/* Page 2 */}
                       <div className={`book-page transition-all duration-700 ease-in-out ${activePage === 1 ? 'block' : 'hidden'}`}>
-                        <div className="flex flex-col items-center mb-6">
-                          <h3 className="text-3xl sm:text-4xl font-display font-bold mb-3 text-center bg-gradient-to-r from-purple-400 via-purple-500 to-pink-400 text-transparent bg-clip-text">
-                            A Future Where
-                          </h3>
-                          <div className="h-0.5 w-16 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                        <div className="flex items-center mb-6">
+                          <BookOpen className="w-5 h-5 text-purple-400 mr-3" />
+                          <h3 className="text-xl font-display font-bold bg-gradient-to-r from-purple-400 to-purple-300 text-transparent bg-clip-text">A future where:</h3>
                         </div>
                         
                         <ul className="space-y-8 mb-12">

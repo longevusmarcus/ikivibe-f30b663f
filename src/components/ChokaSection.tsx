@@ -32,21 +32,19 @@ export default function ChokaSection() {
     if (!isVisible) return;
 
     let currentIndex = 0;
-    // Reset display text to empty string to ensure clean start
     setDisplayText("");
 
     const typingInterval = setInterval(() => {
       if (currentIndex < fullText.length) {
-        // Make sure we're adding characters properly
         setDisplayText((prev) => prev + fullText[currentIndex]);
         currentIndex++;
       } else {
         clearInterval(typingInterval);
       }
-    }, 20); // Adjust typing speed here
+    }, 20);
 
     return () => clearInterval(typingInterval);
-  }, [isVisible, fullText]);
+  }, [isVisible]);
 
   return (
     <section id="choka" className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10">

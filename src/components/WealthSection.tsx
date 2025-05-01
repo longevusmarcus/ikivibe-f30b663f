@@ -55,14 +55,29 @@ export default function WealthSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* First five cards using HoverEffect component */}
-          <div className="col-span-full lg:col-span-2">
-            <HoverEffect items={wealthCards} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" />
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
+          {/* Display the first 3 cards in the first row */}
+          {wealthCards.slice(0, 3).map((item, idx) => (
+            <div key={`item-${idx}`} className="relative group block p-2 h-full w-full">
+              <HoverEffect 
+                items={[item]} 
+                className="grid grid-cols-1 gap-6"
+              />
+            </div>
+          ))}
           
-          {/* The 6th special card that only activates on hover */}
-          <div className="relative group block p-2 h-full w-full md:col-span-2 lg:col-span-1">
+          {/* Display the next 2 cards and the hover card in the second row */}
+          {wealthCards.slice(3, 5).map((item, idx) => (
+            <div key={`item-${idx + 3}`} className="relative group block p-2 h-full w-full">
+              <HoverEffect 
+                items={[item]} 
+                className="grid grid-cols-1 gap-6"
+              />
+            </div>
+          ))}
+          
+          {/* The 6th special card that only activates on hover - in the second row */}
+          <div className="relative group block p-2 h-full w-full">
             <EvervaultCard text="HOVER" />
           </div>
         </div>

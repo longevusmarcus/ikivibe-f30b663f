@@ -1,5 +1,5 @@
 
-import { Clock, Users, DollarSign, Heart, Brain, ExternalLink, Zap } from "lucide-react";
+import { Clock, Users, DollarSign, Heart, Brain, ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
 import { HoverEffect } from "./ui/hover-effect";
 import { EvervaultCard } from "./ui/evervault-card";
@@ -55,28 +55,29 @@ export default function WealthSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
-          {/* Display the first 3 cards in the first row */}
-          {wealthCards.slice(0, 3).map((item, idx) => (
-            <div key={`item-${idx}`} className="relative group block p-2 h-full w-full">
+        {/* Fixed grid layout for cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* First row - 3 cards */}
+          {wealthCards.slice(0, 3).map((card, idx) => (
+            <div key={idx} className="relative group block p-2 h-full w-full">
               <HoverEffect 
-                items={[item]} 
+                items={[card]} 
                 className="grid grid-cols-1 gap-6"
               />
             </div>
           ))}
           
-          {/* Display the next 2 cards and the hover card in the second row */}
-          {wealthCards.slice(3, 5).map((item, idx) => (
-            <div key={`item-${idx + 3}`} className="relative group block p-2 h-full w-full">
+          {/* Second row - 2 cards plus hover card */}
+          {wealthCards.slice(3, 5).map((card, idx) => (
+            <div key={idx + 3} className="relative group block p-2 h-full w-full">
               <HoverEffect 
-                items={[item]} 
+                items={[card]} 
                 className="grid grid-cols-1 gap-6"
               />
             </div>
           ))}
           
-          {/* The 6th special card that only activates on hover - in the second row */}
+          {/* The hover card */}
           <div className="relative group block p-2 h-full w-full">
             <EvervaultCard text="HOVER" />
           </div>

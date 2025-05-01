@@ -23,7 +23,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-3 gap-6",
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
         className
       )}
     >
@@ -33,8 +33,8 @@ export const HoverEffect = ({
           key={item?.link}
           className={cn(
             "relative group block p-2 h-full w-full transition-all",
-            // Make the last two cards each span correctly to fill the row evenly
-            hasFiveItems && idx >= 3 && "md:col-span-[1.5]"
+            // For iPad screens: Make the first 3 cards take 1 column each, and the last 2 cards take 3 columns across (full width)
+            hasFiveItems && idx >= 3 && "md:col-span-1 lg:col-span-1"
           )}
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}

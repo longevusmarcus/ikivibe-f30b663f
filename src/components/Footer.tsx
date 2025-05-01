@@ -73,7 +73,7 @@ export default function Footer() {
         </div>
         
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-studio-gray/20 backdrop-blur-md bg-studio-black/30">
-          <div className="text-studio-lightgray text-sm mb-4 md:mb-0 md:w-1/4">
+          <div className="text-studio-lightgray text-xs mb-4 md:mb-0 md:w-1/4">
             <p>© {new Date().getFullYear()} IkiVibe Chōka Labs. All rights reserved.</p>
           </div>
           

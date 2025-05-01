@@ -18,12 +18,11 @@ export default function Hero() {
     }
   }, [currentIndex, fullText]);
 
-  const scrollToNext = () => {
-    const heroSection = document.getElementById('hero');
-    if (heroSection) {
-      const heroHeight = heroSection.offsetHeight;
+  const scrollToReadMe = () => {
+    const readMeSection = document.getElementById('text-gradient-section');
+    if (readMeSection) {
       window.scrollTo({
-        top: heroHeight,
+        top: readMeSection.offsetTop - 50, // Offset by 50px to account for any fixed elements
         behavior: 'smooth'
       });
     }
@@ -46,11 +45,11 @@ export default function Hero() {
         
         <div className="mt-12 animate-slide-up">
           <button 
-            onClick={scrollToNext} 
-            className="flex items-center text-studio-lightgray hover:text-studio-white transition-colors"
+            onClick={scrollToReadMe} 
+            className="flex items-center text-studio-lightgray hover:text-studio-white transition-colors group"
           >
-            <span className="mr-2 text-sm uppercase tracking-wider">Explore</span>
-            <ArrowDown className="w-5 h-5" />
+            <span className="mr-2 text-sm uppercase tracking-wider">Read Me</span>
+            <ArrowDown className="w-5 h-5 group-hover:translate-y-1 transition-transform duration-300" />
           </button>
         </div>
       </div>

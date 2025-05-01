@@ -1,4 +1,5 @@
 
+import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import IkiVibeSection from "../components/IkiVibeSection";
@@ -11,6 +12,26 @@ import Footer from "../components/Footer";
 import ConnectedDots from "../components/ConnectedDots";
 
 const Index = () => {
+  // Add smooth scrolling for all anchor links
+  useEffect(() => {
+    const handleSmoothScroll = (e: MouseEvent) => {
+      const target = e.target as HTMLAnchorElement;
+      if (target.tagName === 'A' && target.hash) {
+        const element = document.querySelector(target.hash);
+        if (element) {
+          e.preventDefault();
+          window.scrollTo({
+            top: element.getBoundingClientRect().top + window.scrollY - 70,
+            behavior: 'smooth'
+          });
+        }
+      }
+    };
+
+    document.addEventListener('click', handleSmoothScroll);
+    return () => document.removeEventListener('click', handleSmoothScroll);
+  }, []);
+
   return (
     <div className="min-h-screen bg-studio-black text-studio-white relative">
       <div className="fixed inset-0 z-0">

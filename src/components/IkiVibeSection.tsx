@@ -1,9 +1,37 @@
 
+import { useEffect, useRef } from "react";
 import { Card, CardContent } from "./ui/card";
 import { Lightbulb, Code, Users, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 
 export default function IkiVibeSection() {
+  const textRef = useRef<HTMLParagraphElement>(null);
+  
+  useEffect(() => {
+    const text = textRef.current;
+    if (!text) return;
+    
+    const handleScroll = () => {
+      const rect = text.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Calculate how much of the element is in view
+      const visiblePercentage = Math.max(
+        0,
+        Math.min(1, (windowHeight - rect.top) / (windowHeight + rect.height))
+      );
+      
+      // Apply highlighting effect based on scroll position
+      text.style.backgroundSize = `${visiblePercentage * 100}% 100%`;
+    };
+    
+    window.addEventListener("scroll", handleScroll);
+    // Initial check
+    handleScroll();
+    
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const ikiVibeCards = [
     {
       title: "Ikideas",
@@ -32,7 +60,10 @@ export default function IkiVibeSection() {
         </div>
         
         <div className="mb-16 max-w-3xl">
-          <p className="text-lg leading-relaxed mb-8">
+          <p 
+            ref={textRef}
+            className="text-lg leading-relaxed mb-8 enlighten-text"
+          >
             We bring ideas to life—beyond the mind and into the world—by riding enduring trends that spark human connection and meaningful growth. 
             Along the way, we accelerate bold concepts, guiding individuals and organizations toward their core purpose and helping them build what truly thrives.
           </p>

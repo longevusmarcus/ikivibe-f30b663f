@@ -73,15 +73,15 @@ export default function Footer() {
         </div>
         
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-studio-gray/20 backdrop-blur-md bg-studio-black/30">
-          <div className="text-studio-lightgray text-sm mb-4 md:mb-0">
+          <div className="text-studio-lightgray text-sm mb-4 md:mb-0 md:w-1/4">
             <p>© {new Date().getFullYear()} IkiVibe Chōka Labs. All rights reserved.</p>
           </div>
           
-          <p className="text-xs opacity-80 text-studio-lightgray text-center mb-4 md:mb-0 md:mx-auto md:flex-grow">Powered by MBH CHE-344.214.080</p>
+          <p className="text-xs opacity-80 text-studio-lightgray text-center mb-4 md:mb-0 md:w-1/2">Powered by MBH CHE-344.214.080</p>
           
           <button 
             onClick={scrollToTop}
-            className="flex items-center space-x-2 text-sm uppercase tracking-wider hover:text-studio-lightgray transition-colors group"
+            className="flex items-center space-x-2 text-sm uppercase tracking-wider hover:text-studio-lightgray transition-colors group md:w-1/4 md:justify-end"
           >
             <span>Back to top</span>
             <ArrowUp className="ml-1 w-4 h-4 group-hover:-translate-y-1 transition-transform" />

@@ -22,7 +22,7 @@ export default function Footer() {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-16">
-          <div className="backdrop-blur-md bg-studio-black/30 p-6 border border-blue-500/20 rounded-lg">
+          <div className="backdrop-blur-md bg-studio-black/30 p-6 border border-blue-500/20 rounded-2xl">
             <div className="flex items-center space-x-2 mb-4">
               <Sparkles className="w-5 h-5 text-blue-400" />
               <h4 className="text-2xl font-display font-bold bg-gradient-to-r from-blue-400 to-blue-300 text-transparent bg-clip-text">AI Summary</h4>
@@ -32,7 +32,7 @@ export default function Footer() {
             </p>
           </div>
           
-          <div className="backdrop-blur-md bg-studio-black/30 p-6 border border-purple-500/20 rounded-lg">
+          <div className="backdrop-blur-md bg-studio-black/30 p-6 border border-purple-500/20 rounded-2xl">
             <h4 className="text-2xl font-display font-bold bg-gradient-to-r from-purple-400 to-purple-300 text-transparent bg-clip-text mb-4">Labs</h4>
             <ul className="space-y-2 text-studio-lightgray">
               <li className="transition-colors">
@@ -53,7 +53,7 @@ export default function Footer() {
             </ul>
           </div>
           
-          <div className="backdrop-blur-md bg-studio-black/30 p-6 border border-pink-500/20 rounded-lg">
+          <div className="backdrop-blur-md bg-studio-black/30 p-6 border border-pink-500/20 rounded-2xl">
             <h4 className="text-2xl font-display font-bold bg-gradient-to-r from-pink-400 to-pink-300 text-transparent bg-clip-text mb-4">Connect</h4>
             <div className="flex items-center mb-3">
               <Twitter className="w-4 h-4 text-studio-lightgray mr-2" />
@@ -62,7 +62,7 @@ export default function Footer() {
             <div className="mt-4">
               <a 
                 href="#contact" 
-                className="group flex items-center justify-center space-x-2 border border-studio-white/40 px-6 py-2 hover:bg-studio-white hover:text-studio-black transition-colors rounded-sm"
+                className="group flex items-center justify-center space-x-2 border border-studio-white/40 px-6 py-2 hover:bg-studio-white hover:text-studio-black transition-colors rounded-2xl"
               >
                 <Mail className="w-4 h-4" />
                 <span>Contact Us</span>

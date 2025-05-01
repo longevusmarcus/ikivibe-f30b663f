@@ -6,7 +6,7 @@ export default function TextGradientSection() {
   return (
     <section id="text-gradient-section" className="min-h-screen bg-studio-black relative py-24">
       <div className="container mx-auto px-4">
-        <h2 className="section-title mb-12">Our Mission</h2>
+        <h2 className="section-title mb-12">Read Me</h2>
         
         <div className="min-h-[50vh] w-full relative">
           <div className="w-full max-w-4xl">

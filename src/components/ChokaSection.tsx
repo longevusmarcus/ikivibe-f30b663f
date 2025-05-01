@@ -17,7 +17,7 @@ export default function ChokaSection() {
     },
     {
       title: "Chōka Solutions",
-      description: "Chōwa - Mini Courses To Unlock Your Epigenetic Potential",
+      description: "Chōwa - Mini Courses To Unlock Your Epigenetic Potential: discover how to optimize your genetic blueprint, and align with your Ikigai to attract abundance.",
       link: "#choka"
     }
   ];

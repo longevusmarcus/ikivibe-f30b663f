@@ -1,4 +1,3 @@
-
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
@@ -110,7 +109,7 @@ export const HoverEffect = ({
           return (
             <div key={`item-${idx}`} className="relative group block p-2 h-full w-full">
               <div className="h-full w-full rounded-2xl overflow-hidden">
-                <EvervaultCard text="Special" />
+                <EvervaultCard text="360" />
               </div>
             </div>
           );

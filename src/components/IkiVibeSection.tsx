@@ -1,43 +1,9 @@
 
-import { useEffect, useRef } from "react";
 import { Card, CardContent } from "./ui/card";
 import { Lightbulb, Code, Users, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 
 export default function IkiVibeSection() {
-  const textRef = useRef<HTMLParagraphElement>(null);
-  
-  useEffect(() => {
-    const text = textRef.current;
-    if (!text) return;
-    
-    // Set the data-text attribute to match the text content
-    text.setAttribute('data-text', text.textContent || '');
-    
-    const handleScroll = () => {
-      const rect = text.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      
-      // Calculate when element starts to come into view
-      if (rect.top <= windowHeight && rect.bottom >= 0) {
-        // Calculate visibility percentage (from 0 to 1)
-        const visibleHeight = Math.min(windowHeight, rect.bottom) - 
-                             Math.max(0, rect.top);
-        const percentVisible = visibleHeight / rect.height;
-        
-        // Apply highlighting effect based on visibility
-        const highlightPercentage = Math.min(100, Math.max(0, percentVisible * 150));
-        text.style.backgroundSize = `${highlightPercentage}% 100%`;
-      }
-    };
-    
-    window.addEventListener("scroll", handleScroll);
-    // Initial check
-    handleScroll();
-    
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const ikiVibeCards = [
     {
       title: "Ikideas",
@@ -66,10 +32,7 @@ export default function IkiVibeSection() {
         </div>
         
         <div className="mb-16 max-w-3xl">
-          <p 
-            ref={textRef}
-            className="text-lg leading-relaxed mb-8 enlighten-text"
-          >
+          <p className="text-lg leading-relaxed mb-8">
             We bring ideas to life—beyond the mind and into the world—by riding enduring trends that spark human connection and meaningful growth. 
             Along the way, we accelerate bold concepts, guiding individuals and organizations toward their core purpose and helping them build what truly thrives.
           </p>

@@ -46,7 +46,7 @@ export default function IkiVibeSection() {
         <div className="mt-12 flex justify-center">
           <Button 
             variant="outline" 
-            className="group border border-blue-500/40 bg-studio-black/50 hover:bg-blue-950/30 hover:border-blue-500/70 text-blue-400 hover:text-blue-300 transition-all duration-300 backdrop-blur-sm"
+            className="group border border-blue-500/40 bg-studio-black/50 hover:bg-blue-950/30 hover:border-blue-500/70 text-blue-400 hover:text-blue-300 transition-all duration-300 backdrop-blur-sm rounded-2xl"
             asChild
           >
             <a href="https://x.com/ikivibelabs" target="_blank" rel="noopener noreferrer" className="flex items-center">

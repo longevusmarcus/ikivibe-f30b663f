@@ -24,7 +24,7 @@ export default function ContactSection() {
             </div>
           </div>
           
-          <div className="w-full md:w-1/2 bg-studio-gray/10 p-8">
+          <div className="w-full md:w-1/2 bg-studio-gray/10 p-8 rounded-2xl">
             <form>
               <div className="mb-6">
                 <label htmlFor="name" className="block text-sm uppercase tracking-wider mb-2">
@@ -61,7 +61,7 @@ export default function ContactSection() {
               
               <button 
                 type="submit" 
-                className="border border-studio-white px-8 py-3 hover:bg-studio-white hover:text-studio-black transition-colors"
+                className="border border-studio-white px-8 py-3 hover:bg-studio-white hover:text-studio-black transition-colors rounded-2xl"
               >
                 Send Message
               </button>

@@ -59,7 +59,7 @@ export default function WealthSection() {
         <div className="mt-12 flex justify-center">
           <Button 
             variant="outline" 
-            className="group border border-pink-500/40 bg-studio-black/50 hover:bg-pink-950/30 hover:border-pink-500/70 text-pink-400 hover:text-pink-300 transition-all duration-300 backdrop-blur-sm"
+            className="group border border-pink-500/40 bg-studio-black/50 hover:bg-pink-950/30 hover:border-pink-500/70 text-pink-400 hover:text-pink-300 transition-all duration-300 backdrop-blur-sm rounded-2xl"
             asChild
           >
             <a href="https://x.com/360wealthlabs" target="_blank" rel="noopener noreferrer" className="flex items-center">

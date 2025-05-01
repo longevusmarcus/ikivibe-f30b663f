@@ -17,14 +17,10 @@ export const HoverEffect = ({
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  // Calculate if we have a second row with only 2 cards (for 5 total cards)
-  const hasFiveItems = items.length === 5;
-
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-4",
-        "gap-6",
+        "grid grid-cols-1 sm:grid-cols-3 gap-6",
         className
       )}
     >
@@ -32,13 +28,7 @@ export const HoverEffect = ({
         <a
           href={item?.link}
           key={item?.link}
-          className={cn(
-            "relative group block p-2 h-full w-full transition-all",
-            // When we have 5 items, make the last 2 cards each span half the width on medium screens
-            hasFiveItems && idx >= 3 && "md:col-span-1 lg:col-span-1",
-            // When using md:grid-cols-2, make sure the last card in a 5-card set doesn't leave empty space
-            hasFiveItems && idx === 4 && "md:col-span-2 lg:col-span-1"
-          )}
+          className="relative group block p-2 h-full w-full transition-all"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
           target={item.link.startsWith('http') ? "_blank" : undefined}

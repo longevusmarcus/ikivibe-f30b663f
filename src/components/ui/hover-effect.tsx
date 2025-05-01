@@ -23,7 +23,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 sm:grid-cols-3 gap-6",
+        "grid grid-cols-1 md:grid-cols-3 gap-6",
         className
       )}
     >
@@ -34,7 +34,7 @@ export const HoverEffect = ({
           className={cn(
             "relative group block p-2 h-full w-full transition-all",
             // Make the last two cards take full width on the second row when we have 5 items total
-            hasFiveItems && idx >= 3 && "sm:col-span-1.5"
+            hasFiveItems && idx >= 3 && "md:col-span-1.5"
           )}
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}

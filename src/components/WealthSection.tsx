@@ -35,6 +35,13 @@ export default function WealthSection() {
       description: "More stillness = more clarity. More clarity = sharper decisions. Sharper decisions = a better future. Master your inner world before anything else. Train the mind. Expand awareness. Your mind is your first environment.",
       icon: <Brain className="h-8 w-8 text-studio-lightgray" />,
       link: "#wealth"
+    },
+    {
+      title: "",
+      description: "",
+      icon: <Zap className="h-8 w-8 text-studio-lightgray" />,
+      link: "#wealth",
+      specialCard: true
     }
   ];
 
@@ -56,13 +63,29 @@ export default function WealthSection() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
-          {/* First five cards using HoverEffect component */}
-          <HoverEffect items={wealthCards} className="grid grid-cols-1 gap-6" />
-          
-          {/* The 6th special card that only activates on hover */}
-          <div className="relative group block p-2 h-full w-full">
-            <EvervaultCard text="360" />
-          </div>
+          {wealthCards.map((card, idx) => (
+            card.specialCard ? (
+              <div key={`special-card-${idx}`} className="relative group block p-2 h-full w-full">
+                <EvervaultCard text="360" />
+              </div>
+            ) : (
+              <a
+                href={card.link}
+                key={`card-${idx}`}
+                className="relative group block p-2 h-full w-full"
+              >
+                <div className="rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20">
+                  <div className="relative z-50">
+                    <div className="p-4">
+                      {card.icon && <div className="mb-4">{card.icon}</div>}
+                      <h4 className="text-zinc-100 font-bold tracking-wide mt-4">{card.title}</h4>
+                      <p className="mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm">{card.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            )
+          ))}
         </div>
 
         <div className="mt-12 flex justify-center">

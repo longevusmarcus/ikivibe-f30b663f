@@ -6,8 +6,8 @@ import { HoverEffect } from "./ui/hover-effect";
 export default function ChokaSection() {
   const chokaCards = [
     {
-      title: "JOBS",
-      description: "Chōka Path - A digital platform that guides individuals to workplaces that prioritize health, balance, and long-term well-being.",
+      title: "KNOWLEDGE",
+      description: "Chōwa - Mini Courses To Unlock Your Epigenetic Potential: discover how to optimize your genetic blueprint, and align with your Ikigai to attract abundance.",
       link: "#choka"
     },
     {
@@ -16,8 +16,8 @@ export default function ChokaSection() {
       link: "#choka"
     },
     {
-      title: "KNOWLEDGE",
-      description: "Chōwa - Mini Courses To Unlock Your Epigenetic Potential: discover how to optimize your genetic blueprint, and align with your Ikigai to attract abundance.",
+      title: "JOBS",
+      description: "Chōka Path - A digital platform that guides individuals to workplaces that prioritize health, balance, and long-term well-being.",
       link: "#choka"
     }
   ];

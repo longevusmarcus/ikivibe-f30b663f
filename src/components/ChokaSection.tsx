@@ -32,11 +32,13 @@ export default function ChokaSection() {
     if (!isVisible) return;
 
     let currentIndex = 0;
+    // Reset display text to empty string to ensure clean start
     setDisplayText("");
 
     const typingInterval = setInterval(() => {
       if (currentIndex < fullText.length) {
-        setDisplayText(prev => prev + fullText[currentIndex]);
+        // Make sure we're adding characters properly
+        setDisplayText((prev) => prev + fullText[currentIndex]);
         currentIndex++;
       } else {
         clearInterval(typingInterval);

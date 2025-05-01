@@ -1,4 +1,3 @@
-
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
@@ -17,7 +16,7 @@ export const HoverEffect = ({
   className?: string;
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const cardsRef = useRef<(HTMLAnchorElement | null)[]>([]);
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const isMobile = useIsMobile();
 
   useEffect(() => {
@@ -62,15 +61,12 @@ export const HoverEffect = ({
       )}
     >
       {items.map((item, idx) => (
-        <a
-          href={item?.link}
-          key={item?.link}
+        <div
+          key={`item-${idx}`}
           className="relative group block p-2 h-full w-full"
           onMouseEnter={() => !isMobile && setHoveredIndex(idx)}
           onMouseLeave={() => !isMobile && setHoveredIndex(null)}
           ref={(el) => cardsRef.current[idx] = el}
-          target={item.link.startsWith('http') ? "_blank" : undefined}
-          rel={item.link.startsWith('http') ? "noopener noreferrer" : undefined}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
@@ -94,7 +90,7 @@ export const HoverEffect = ({
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
           </Card>
-        </a>
+        </div>
       ))}
     </div>
   );

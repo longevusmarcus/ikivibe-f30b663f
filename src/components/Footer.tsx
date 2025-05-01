@@ -25,7 +25,7 @@ export default function Footer() {
           <div className="backdrop-blur-md bg-studio-black/30 p-6 border border-blue-500/20 rounded-lg">
             <div className="flex items-center space-x-2 mb-4">
               <Sparkles className="w-5 h-5 text-blue-400" />
-              <h4 className="text-2xl font-display font-bold bg-gradient-to-r from-blue-400 to-blue-300 text-transparent bg-clip-text">About</h4>
+              <h4 className="text-2xl font-display font-bold bg-gradient-to-r from-blue-400 to-blue-300 text-transparent bg-clip-text">AI Summary</h4>
             </div>
             <p className="text-studio-lightgray">
               Idea Hub + Vibe Studio + Multi-Dimensional Lab Focused On Ideas Humans Wealth Longevity

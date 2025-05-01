@@ -16,13 +16,12 @@ export const EvervaultCard = ({
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
 
-  const [repeatedText, setRepeatedText] = useState("");
+  const [randomString, setRandomString] = useState("");
   const isMobile = useIsMobile();
 
   useEffect(() => {
-    // Generate "360 " repeated text instead of random characters
-    let str = "360 ".repeat(500);
-    setRepeatedText(str);
+    let str = generateRandomString(1500);
+    setRandomString(str);
   }, []);
 
   function onMouseMove({ currentTarget, clientX, clientY }: React.MouseEvent) {
@@ -31,9 +30,8 @@ export const EvervaultCard = ({
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
 
-    // Generate new "360 " repeated text on mouse move
-    const str = "360 ".repeat(500);
-    setRepeatedText(str);
+    const str = generateRandomString(1500);
+    setRandomString(str);
   }
 
   return (
@@ -50,7 +48,7 @@ export const EvervaultCard = ({
         <CardPattern
           mouseX={mouseX}
           mouseY={mouseY}
-          repeatedText={repeatedText}
+          randomString={randomString}
         />
         <div className="relative z-10 flex items-center justify-center">
           <div className="relative h-44 w-44 rounded-full flex items-center justify-center text-white font-bold text-4xl">
@@ -66,11 +64,11 @@ export const EvervaultCard = ({
 export function CardPattern({ 
   mouseX, 
   mouseY, 
-  repeatedText
+  randomString
 }: { 
   mouseX: any; 
   mouseY: any; 
-  repeatedText: string;
+  randomString: string;
 }) {
   let maskImage = useMotionTemplate`radial-gradient(250px at ${mouseX}px ${mouseY}px, white, transparent)`;
   let style = { maskImage, WebkitMaskImage: maskImage };
@@ -87,14 +85,22 @@ export function CardPattern({
         style={style}
       >
         <p className="absolute inset-x-0 text-xs h-full break-words whitespace-pre-wrap text-white font-mono font-bold transition duration-500">
-          {repeatedText}
+          {randomString}
         </p>
       </motion.div>
     </div>
   );
 }
 
-// Removed the generateRandomString function as it's no longer needed
+const characters =
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+export const generateRandomString = (length: number) => {
+  let result = "";
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return result;
+};
 
 export const Icon = ({ className, ...rest }: React.SVGProps<SVGSVGElement>) => {
   return (

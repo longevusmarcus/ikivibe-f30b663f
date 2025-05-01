@@ -33,8 +33,8 @@ export const HoverEffect = ({
           key={item?.link}
           className={cn(
             "relative group block p-2 h-full w-full transition-all",
-            // Make the last two cards take full width on the second row when we have 5 items total
-            hasFiveItems && idx >= 3 && "md:col-span-1.5"
+            // Make the last two cards each span correctly to fill the row evenly
+            hasFiveItems && idx >= 3 && "md:col-span-[1.5]"
           )}
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}

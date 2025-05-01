@@ -36,8 +36,8 @@ export default function WealthSection() {
       link: "#wealth"
     },
     {
-      title: "360 REATED",
-      description: "Complete ecosystem approach combining all wealth dimensions. 360 REATED enhances cognitive function, physical performance, and emotional resilience through personalized optimization strategies. Uniting technology and holistic practices for maximum human potential.",
+      title: "",
+      description: "",
       icon: <Zap className="h-8 w-8 text-studio-lightgray" />,
       link: "#wealth"
     }

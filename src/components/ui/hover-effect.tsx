@@ -1,7 +1,8 @@
 
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export const HoverEffect = ({
   items,
@@ -16,6 +17,42 @@ export const HoverEffect = ({
   className?: string;
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const cardsRef = useRef<(HTMLAnchorElement | null)[]>([]);
+  const isMobile = useIsMobile();
+
+  useEffect(() => {
+    if (isMobile) {
+      // Set up Intersection Observer for mobile scroll activation
+      const observers = cardsRef.current.map((ref, idx) => {
+        if (!ref) return null;
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                setHoveredIndex(idx);
+              } else if (hoveredIndex === idx) {
+                setHoveredIndex(null);
+              }
+            });
+          },
+          { threshold: 0.7 } // Trigger when 70% of the element is visible
+        );
+
+        observer.observe(ref);
+        return observer;
+      });
+
+      // Cleanup observers on unmount
+      return () => {
+        observers.forEach((observer, idx) => {
+          if (observer && cardsRef.current[idx]) {
+            observer.unobserve(cardsRef.current[idx]!);
+          }
+        });
+      };
+    }
+  }, [isMobile, hoveredIndex]);
 
   return (
     <div
@@ -29,8 +66,9 @@ export const HoverEffect = ({
           href={item?.link}
           key={item?.link}
           className="relative group block p-2 h-full w-full"
-          onMouseEnter={() => setHoveredIndex(idx)}
-          onMouseLeave={() => setHoveredIndex(null)}
+          onMouseEnter={() => !isMobile && setHoveredIndex(idx)}
+          onMouseLeave={() => !isMobile && setHoveredIndex(null)}
+          ref={(el) => cardsRef.current[idx] = el}
           target={item.link.startsWith('http') ? "_blank" : undefined}
           rel={item.link.startsWith('http') ? "noopener noreferrer" : undefined}
         >

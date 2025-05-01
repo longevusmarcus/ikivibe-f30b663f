@@ -1,9 +1,10 @@
 
 "use client";
 import { useMotionValue } from "framer-motion";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useMotionTemplate, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export const EvervaultCard = ({
   text,
@@ -16,13 +17,54 @@ export const EvervaultCard = ({
   let mouseY = useMotionValue(0);
 
   const [randomString, setRandomString] = useState("");
+  const [isVisible, setIsVisible] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     let str = generateRandomString(1500);
     setRandomString(str);
-  }, []);
+
+    // Set up Intersection Observer for mobile scroll activation
+    if (isMobile) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setIsVisible(true);
+              // Center the effect on mobile
+              if (cardRef.current) {
+                const { width, height } = cardRef.current.getBoundingClientRect();
+                mouseX.set(width / 2);
+                mouseY.set(height / 2);
+                
+                // Update the random string for visual effect
+                const str = generateRandomString(1500);
+                setRandomString(str);
+              }
+            } else {
+              setIsVisible(false);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      if (cardRef.current) {
+        observer.observe(cardRef.current);
+      }
+
+      return () => {
+        if (cardRef.current) {
+          observer.unobserve(cardRef.current);
+        }
+      };
+    }
+  }, [isMobile, mouseX, mouseY]);
 
   function onMouseMove({ currentTarget, clientX, clientY }: React.MouseEvent) {
+    if (isMobile) return; // Skip mouse events on mobile
+    
     let { left, top } = currentTarget.getBoundingClientRect();
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
@@ -37,15 +79,21 @@ export const EvervaultCard = ({
         "p-0.5 bg-transparent aspect-square flex items-center justify-center w-full h-full relative",
         className
       )}
+      ref={cardRef}
     >
       <div
         onMouseMove={onMouseMove}
-        className="group/card rounded-3xl w-full relative overflow-hidden bg-transparent flex items-center justify-center h-full"
+        className={cn(
+          "group/card rounded-3xl w-full relative overflow-hidden bg-transparent flex items-center justify-center h-full",
+          isMobile && isVisible ? "mobile-active" : ""
+        )}
       >
         <CardPattern
           mouseX={mouseX}
           mouseY={mouseY}
           randomString={randomString}
+          isVisible={isVisible}
+          isMobile={isMobile}
         />
         <div className="relative z-10 flex items-center justify-center">
           <div className="relative h-44 w-44 rounded-full flex items-center justify-center text-white font-bold text-4xl">
@@ -61,11 +109,15 @@ export const EvervaultCard = ({
 export function CardPattern({ 
   mouseX, 
   mouseY, 
-  randomString 
+  randomString,
+  isVisible,
+  isMobile
 }: { 
   mouseX: any; 
   mouseY: any; 
-  randomString: string; 
+  randomString: string;
+  isVisible?: boolean;
+  isMobile?: boolean;
 }) {
   let maskImage = useMotionTemplate`radial-gradient(250px at ${mouseX}px ${mouseY}px, white, transparent)`;
   let style = { maskImage, WebkitMaskImage: maskImage };
@@ -74,11 +126,17 @@ export function CardPattern({
     <div className="pointer-events-none">
       <div className="absolute inset-0 rounded-2xl [mask-image:linear-gradient(white,transparent)] group-hover/card:opacity-50"></div>
       <motion.div
-        className="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-500 to-blue-700 opacity-0 group-hover/card:opacity-100 backdrop-blur-xl transition duration-500"
+        className={cn(
+          "absolute inset-0 rounded-2xl bg-gradient-to-r from-green-500 to-blue-700 opacity-0 backdrop-blur-xl transition duration-500",
+          (isMobile && isVisible) ? "opacity-100" : "group-hover/card:opacity-100"
+        )}
         style={style}
       />
       <motion.div
-        className="absolute inset-0 rounded-2xl opacity-0 mix-blend-overlay group-hover/card:opacity-100"
+        className={cn(
+          "absolute inset-0 rounded-2xl opacity-0 mix-blend-overlay transition duration-500",
+          (isMobile && isVisible) ? "opacity-100" : "group-hover/card:opacity-100"
+        )}
         style={style}
       >
         <p className="absolute inset-x-0 text-xs h-full break-words whitespace-pre-wrap text-white font-mono font-bold transition duration-500">

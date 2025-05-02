@@ -146,21 +146,27 @@ export const PortfolioProjects = () => {
                   </a>
                 )}
               </div>
-              <AnimatePresence>
-                {hoveredIndex === index && (
-                  <motion.p 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="text-studio-lightgray"
-                  >
-                    {project.description}
-                  </motion.p>
-                )}
-              </AnimatePresence>
-              {hoveredIndex !== index && (
-                <div className="h-[24px]" /> // Empty space placeholder for layout stability
+              {isMobile ? (
+                <p className="text-studio-lightgray">{project.description}</p>
+              ) : (
+                <>
+                  <AnimatePresence>
+                    {hoveredIndex === index && (
+                      <motion.p 
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="text-studio-lightgray"
+                      >
+                        {project.description}
+                      </motion.p>
+                    )}
+                  </AnimatePresence>
+                  {hoveredIndex !== index && (
+                    <div className="h-[24px]" /> // Empty space placeholder for layout stability
+                  )}
+                </>
               )}
             </div>
           ))}
@@ -169,3 +175,4 @@ export const PortfolioProjects = () => {
     </div>
   );
 };
+

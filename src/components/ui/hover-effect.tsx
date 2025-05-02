@@ -23,39 +23,38 @@ export const HoverEffect = ({
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const isMobile = useIsMobile();
+  const [isScrollActivated, setIsScrollActivated] = useState(true); // Default to true to enable scroll activation
 
   useEffect(() => {
-    if (isMobile) {
-      // Set up Intersection Observer for mobile scroll activation
-      const observers = cardsRef.current.map((ref, idx) => {
-        if (!ref || (items[idx] && items[idx].specialCard)) return null;
+    // Set up Intersection Observer for scroll activation on both mobile and desktop
+    const observers = cardsRef.current.map((ref, idx) => {
+      if (!ref || (items[idx] && items[idx].specialCard)) return null;
 
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                setHoveredIndex(idx);
-              } else if (hoveredIndex === idx) {
-                setHoveredIndex(null);
-              }
-            });
-          },
-          { threshold: 0.7 } // Trigger when 70% of the element is visible
-        );
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setHoveredIndex(idx);
+            } else if (hoveredIndex === idx) {
+              setHoveredIndex(null);
+            }
+          });
+        },
+        { threshold: isMobile ? 0.7 : 0.6 } // Different threshold for mobile and desktop
+      );
 
-        observer.observe(ref);
-        return observer;
+      observer.observe(ref);
+      return observer;
+    });
+
+    // Cleanup observers on unmount
+    return () => {
+      observers.forEach((observer, idx) => {
+        if (observer && cardsRef.current[idx]) {
+          observer.unobserve(cardsRef.current[idx]!);
+        }
       });
-
-      // Cleanup observers on unmount
-      return () => {
-        observers.forEach((observer, idx) => {
-          if (observer && cardsRef.current[idx]) {
-            observer.unobserve(cardsRef.current[idx]!);
-          }
-        });
-      };
-    }
+    };
   }, [isMobile, hoveredIndex, items]);
 
   // For single card mode, directly render just one card
@@ -66,8 +65,8 @@ export const HoverEffect = ({
     return (
       <div
         className="relative group block p-2 h-full w-full"
-        onMouseEnter={() => !isMobile && !isSpecialCard && setHoveredIndex(0)}
-        onMouseLeave={() => !isMobile && !isSpecialCard && setHoveredIndex(null)}
+        onMouseEnter={() => !isScrollActivated && !isMobile && !isSpecialCard && setHoveredIndex(0)}
+        onMouseLeave={() => !isScrollActivated && !isMobile && !isSpecialCard && setHoveredIndex(null)}
         ref={(el) => cardsRef.current[0] = el}
       >
         <AnimatePresence>
@@ -120,8 +119,8 @@ export const HoverEffect = ({
           <div
             key={`item-${idx}`}
             className="relative group block p-2 h-full w-full"
-            onMouseEnter={() => !isMobile && setHoveredIndex(idx)}
-            onMouseLeave={() => !isMobile && setHoveredIndex(null)}
+            onMouseEnter={() => !isScrollActivated && !isMobile && setHoveredIndex(idx)}
+            onMouseLeave={() => !isScrollActivated && !isMobile && setHoveredIndex(null)}
             ref={(el) => cardsRef.current[idx] = el}
           >
             <AnimatePresence>

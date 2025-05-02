@@ -42,23 +42,6 @@ export default function WealthSection() {
     };
   }, [isMobile, hasStartedTyping]);
 
-  // For manual testing/triggering on mobile if needed
-  useEffect(() => {
-    const handleScroll = () => {
-      if (isMobile && sectionRef.current && !hasStartedTyping) {
-        const rect = sectionRef.current.getBoundingClientRect();
-        const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-        if (rect.top <= viewHeight * 0.7 && rect.bottom >= viewHeight * 0.3) {
-          setHasStartedTyping(true);
-          startTyping();
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [isMobile, hasStartedTyping]);
-
   const startTyping = () => {
     setTypedText("");
     let currentIndex = 0;
@@ -128,7 +111,7 @@ export default function WealthSection() {
       ref={sectionRef} 
       id="wealth" 
       className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10"
-      style={{ position: 'relative' }} // Add explicit position for Intersection Observer
+      style={{ position: 'relative' }}
     >
       <div className="container mx-auto px-4">
         <div className="mb-16">

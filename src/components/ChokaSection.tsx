@@ -7,6 +7,7 @@ import { HoverEffect } from "./ui/hover-effect";
 export default function ChokaSection() {
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
+  const [hasStartedTyping, setHasStartedTyping] = useState(false);
   const textToType = "Wellness is the foundation of human evolution. Powered by IkiVibe Collective and produced by Chōka Crew, we offer unique solutions that accelerate holistic wellbeing and a health-first society.";
   const typingSpeed = 30; // milliseconds per character
   const textRef = useRef<HTMLParagraphElement>(null);
@@ -15,7 +16,8 @@ export default function ChokaSection() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !hasStartedTyping) {
+          setHasStartedTyping(true);
           startTyping();
         }
       },
@@ -31,7 +33,7 @@ export default function ChokaSection() {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, []);
+  }, [hasStartedTyping]);
 
   const startTyping = () => {
     setTypedText("");

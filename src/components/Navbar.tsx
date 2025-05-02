@@ -28,41 +28,20 @@ export default function Navbar() {
             </div>
             
             <nav className="flex flex-col w-full space-y-6 text-2xl">
-              <a 
-                href="#ikivibe" 
+              <Link 
+                to="/" 
                 className="py-4 border-b border-studio-gray/20 text-white"
                 onClick={() => setIsMenuOpen(false)}
               >
-                IkiVibe Labs
-              </a>
-              <a 
-                href="#choka" 
-                className="py-4 border-b border-studio-gray/20 text-white"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Chōka Labs
-              </a>
-              <a 
-                href="#wealth" 
-                className="py-4 border-b border-studio-gray/20 text-white"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                360 Wealth Labs
-              </a>
+                Home
+              </Link>
               <Link 
                 to="/portfolio" 
-                className="py-4 border-b border-studio-gray/20 text-white"
+                className="py-4 text-white"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Portfolio
               </Link>
-              <a 
-                href="#contact" 
-                className="py-4 text-white"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact
-              </a>
             </nav>
           </div>
           
@@ -107,21 +86,12 @@ export default function Navbar() {
             
             {/* Desktop menu */}
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#ikivibe" className="text-studio-lightgray hover:text-studio-white transition-colors">
-                IkiVibe Labs
-              </a>
-              <a href="#choka" className="text-studio-lightgray hover:text-studio-white transition-colors">
-                Chōka Labs
-              </a>
-              <a href="#wealth" className="text-studio-lightgray hover:text-studio-white transition-colors">
-                360 Wealth Labs
-              </a>
+              <Link to="/" className="text-studio-lightgray hover:text-studio-white transition-colors">
+                Home
+              </Link>
               <Link to="/portfolio" className="text-studio-lightgray hover:text-studio-white transition-colors">
                 Portfolio
               </Link>
-              <a href="#contact" className="text-studio-lightgray hover:text-studio-white transition-colors">
-                Contact
-              </a>
             </nav>
           </div>
         </header>

@@ -45,7 +45,7 @@ const projects: Project[] = [
   },
   {
     name: "360 Wealth Labs Community",
-    description: "⌛️* ❤️ ⛓*💪*🧠*💰 Wealth",
+    description: "360 Wealth Discord Community",
     url: "https://discord.com/invite/MV8g7HTbCG"
   },
   {

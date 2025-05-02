@@ -55,7 +55,7 @@ const projects: Project[] = [
   },
   {
     name: "Homocryptus",
-    description: "Be Forever Crypto (Predictions / TA Ideas / TA Scripts / Web3 Advisory For Startups",
+    description: "Predictions, TA Ideas, TA Scripts, Web3 Advisory For Startups",
     url: "https://linktr.ee/homocryptus"
   },
   {

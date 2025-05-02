@@ -1,4 +1,3 @@
-
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 
@@ -26,7 +25,8 @@ const projects: Project[] = [
   },
   {
     name: "Chōka",
-    description: "RTD longevity chocolat"
+    description: "RTD longevity chocolate",
+    url: "chohkah.com"
   },
   {
     name: "Chōka Café",

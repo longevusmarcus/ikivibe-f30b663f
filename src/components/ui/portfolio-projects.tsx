@@ -10,7 +10,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "milliondollarvibe",
+    name: "Million Dollar Vibe",
     description: "A pixel-made, permanent directory of founder projects",
     url: "milliondollarvibe.ai"
   },

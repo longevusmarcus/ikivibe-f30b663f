@@ -76,12 +76,12 @@ const projects: Project[] = [
   {
     name: "Bittensor",
     description: "AI OpenSource Protocol, Blockchain Protocol",
-    url: "bittensor.com"
+    url: "https://bittensor.com"
   },
   {
     name: "Ethereum",
     description: "Blockchain Protocol",
-    url: "ethereum.org"
+    url: "https://ethereum.org"
   }
 ];
 

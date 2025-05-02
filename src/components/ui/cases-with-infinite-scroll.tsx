@@ -8,15 +8,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-
-// Logos for the companies
-const companyLogos = [
-  "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=300&h=300&fit=crop&auto=format",
-  "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=300&h=300&fit=crop&auto=format",
-  "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&h=300&fit=crop&auto=format", 
-  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=300&fit=crop&auto=format",
-  "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=300&h=300&fit=crop&auto=format",
-];
+import { Lock } from "lucide-react";
 
 function Case() {
   const [api, setApi] = useState<CarouselApi>();
@@ -48,16 +40,9 @@ function Case() {
             <CarouselContent>
               {Array.from({ length: 15 }).map((_, index) => (
                 <CarouselItem className="basis-1/2 md:basis-1/3 lg:basis-1/6" key={index}>
-                  <div className="flex rounded-md aspect-square bg-studio-gray/20 backdrop-blur-sm items-center justify-center p-6 hover:bg-studio-gray/30 transition-all duration-300">
-                    {index < companyLogos.length ? (
-                      <img 
-                        src={companyLogos[index % companyLogos.length]} 
-                        alt={`Client logo ${index + 1}`} 
-                        className="w-full h-full object-cover rounded" 
-                      />
-                    ) : (
-                      <span className="text-sm text-studio-lightgray">Logo {index + 1}</span>
-                    )}
+                  <div className="flex flex-col rounded-md aspect-square bg-studio-gray/20 backdrop-blur-sm items-center justify-center p-6 hover:bg-studio-gray/30 transition-all duration-300">
+                    <Lock className="w-8 h-8 mb-2 text-studio-lightgray/70" />
+                    <span className="text-sm text-center text-studio-lightgray">Stealth Mode</span>
                   </div>
                 </CarouselItem>
               ))}

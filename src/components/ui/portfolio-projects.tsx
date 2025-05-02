@@ -10,14 +10,14 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "Million Dollar Vibe",
-    description: "A pixel-made, permanent directory of founder projects",
-    url: "milliondollarvibe.ai"
-  },
-  {
     name: "Murmur",
     description: "Chatroulette Meets BetterHelp",
     url: "welovemurmur.com"
+  },
+  {
+    name: "Million Dollar Vibe",
+    description: "A pixel-made, permanent directory of founder projects",
+    url: "milliondollarvibe.ai"
   },
   {
     name: "FUCK MIRROR",

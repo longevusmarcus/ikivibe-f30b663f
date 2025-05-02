@@ -2,6 +2,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { CaseDemo } from "@/components/ui/demo";
+import { PortfolioProjects } from "@/components/ui/portfolio-projects";
 
 export default function Portfolio() {
   return (
@@ -15,7 +16,12 @@ export default function Portfolio() {
               Explore our work with leading brands and innovative startups across various industries.
             </p>
             
-            <CaseDemo />
+            <PortfolioProjects />
+            
+            <div className="mt-20">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">Client Partnerships</h2>
+              <CaseDemo />
+            </div>
           </div>
         </section>
       </div>

@@ -20,6 +20,11 @@ const projects: Project[] = [
     url: "welovemurmur.com"
   },
   {
+    name: "Bittensor",
+    description: "AI OpenSource Protocol, Blockchain Protocol",
+    url: "bittensor.com"
+  },
+  {
     name: "FUCK MIRROR",
     description: "Clothing That Only Speaks In Reflection",
     url: "fuckmirror.com"

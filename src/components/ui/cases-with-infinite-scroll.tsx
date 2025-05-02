@@ -32,31 +32,44 @@ function Case() {
     return () => clearTimeout(timer);
   }, [api, current]);
 
+  // Create an array of 15 items where every 5th item is ANote Music
+  const carouselItems = Array.from({ length: 15 }).map((_, index) => {
+    const isANoteMusic = index % 5 === 0;
+    
+    return (
+      <CarouselItem className="basis-1/2 md:basis-1/3 lg:basis-1/6" key={index}>
+        <div className="flex flex-col rounded-md aspect-square bg-studio-gray/20 backdrop-blur-sm items-center justify-center p-6 hover:bg-studio-gray/30 transition-all duration-300">
+          {isANoteMusic ? (
+            <div className="flex flex-col items-center text-center">
+              <h3 className="text-lg font-medium mb-1">ANote Music</h3>
+              <p className="text-sm text-studio-lightgray">The main stage for music investments</p>
+              <a 
+                href="https://anotemusic.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sm text-studio-lightgray underline mt-2 hover:text-white"
+              >
+                anotemusic.com
+              </a>
+            </div>
+          ) : (
+            <>
+              <Lock className="w-8 h-8 mb-2 text-studio-lightgray/70" />
+              <span className="text-sm text-center text-studio-lightgray">Stealth Mode</span>
+            </>
+          )}
+        </div>
+      </CarouselItem>
+    );
+  });
+
   return (
     <div className="w-full py-20 lg:py-40">
       <div className="container mx-auto">
         <div className="flex flex-col gap-10">
           <Carousel setApi={setApi} className="w-full">
             <CarouselContent>
-              {/* ANote Music client shown first */}
-              <CarouselItem className="basis-1/2 md:basis-1/3 lg:basis-1/6">
-                <div className="flex flex-col rounded-md aspect-square bg-studio-gray/20 backdrop-blur-sm items-center justify-center p-6 hover:bg-studio-gray/30 transition-all duration-300">
-                  <div className="flex flex-col items-center text-center">
-                    <h3 className="text-lg font-medium mb-1">ANote Music</h3>
-                    <p className="text-sm text-studio-lightgray">The main stage for music investments</p>
-                  </div>
-                </div>
-              </CarouselItem>
-              
-              {/* Rest remain in stealth mode */}
-              {Array.from({ length: 14 }).map((_, index) => (
-                <CarouselItem className="basis-1/2 md:basis-1/3 lg:basis-1/6" key={index}>
-                  <div className="flex flex-col rounded-md aspect-square bg-studio-gray/20 backdrop-blur-sm items-center justify-center p-6 hover:bg-studio-gray/30 transition-all duration-300">
-                    <Lock className="w-8 h-8 mb-2 text-studio-lightgray/70" />
-                    <span className="text-sm text-center text-studio-lightgray">Stealth Mode</span>
-                  </div>
-                </CarouselItem>
-              ))}
+              {carouselItems}
             </CarouselContent>
           </Carousel>
         </div>

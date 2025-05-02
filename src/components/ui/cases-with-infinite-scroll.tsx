@@ -52,7 +52,6 @@ function Case() {
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
-              <p className="text-sm text-studio-lightgray mt-1">The main stage for music investments</p>
             </div>
           ) : (
             <div className="flex flex-col items-center text-center">

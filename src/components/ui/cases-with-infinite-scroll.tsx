@@ -8,7 +8,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { Lock } from "lucide-react";
+import { Lock, ExternalLink } from "lucide-react";
 
 function Case() {
   const [api, setApi] = useState<CarouselApi>();
@@ -41,16 +41,18 @@ function Case() {
         <div className="flex flex-col rounded-md aspect-square bg-studio-gray/20 backdrop-blur-sm items-center justify-center p-6 hover:bg-studio-gray/30 transition-all duration-300">
           {isANoteMusic ? (
             <div className="flex flex-col items-center text-center">
-              <h3 className="text-lg font-medium mb-1">ANote Music</h3>
-              <p className="text-sm text-studio-lightgray">The main stage for music investments</p>
-              <a 
-                href="https://anotemusic.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-sm text-studio-lightgray underline mt-2 hover:text-white"
-              >
-                anotemusic.com
-              </a>
+              <div className="flex items-center justify-center gap-2">
+                <h3 className="text-lg font-medium">ANote Music</h3>
+                <a 
+                  href="https://anotemusic.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-studio-lightgray hover:text-white transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+              <p className="text-sm text-studio-lightgray mt-1">The main stage for music investments</p>
             </div>
           ) : (
             <>

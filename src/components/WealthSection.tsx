@@ -1,5 +1,5 @@
 
-import { useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Clock, Users, DollarSign, Heart, Brain, ExternalLink, Zap } from "lucide-react";
 import { Button } from "./ui/button";
 import { HoverEffect } from "./ui/hover-effect";
@@ -7,10 +7,58 @@ import { EvervaultCard } from "./ui/evervault-card";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function WealthSection() {
+  const [typedText, setTypedText] = useState("");
+  const [showCursor, setShowCursor] = useState(true);
+  const textToType = "We dissect the essence of who we are, building communities that support this journey, while investing in visionary ideators empowered by ikigai. Our goal is to cultivate 360-degree wealth—encompassing time, relationships, wellbeing, and financial prosperity—creating a holistic approach to lasting abundance and legacy.";
+  const typingSpeed = 20; // milliseconds per character - faster typing speed
   const textRef = useRef<HTMLParagraphElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
-  const text = "We dissect the essence of who we are, building communities that support this journey, while investing in visionary ideators empowered by ikigai. Our goal is to cultivate 360-degree wealth—encompassing time, relationships, wellbeing, and financial prosperity—creating a holistic approach to lasting abundance and legacy.";
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          startTyping();
+        }
+      },
+      { threshold: isMobile ? 0.7 : 0.3 } // Higher threshold for mobile to ensure it's more visible before typing starts
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [isMobile]);
+
+  const startTyping = () => {
+    setTypedText("");
+    let currentIndex = 0;
+
+    const typingInterval = setInterval(() => {
+      if (currentIndex <= textToType.length) {
+        setTypedText(textToType.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, typingSpeed);
+
+    // Blinking cursor effect
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 500);
+
+    return () => {
+      clearInterval(typingInterval);
+      clearInterval(cursorInterval);
+    };
+  };
 
   const wealthCards = [
     {
@@ -63,7 +111,8 @@ export default function WealthSection() {
         
         <div className="mb-16 max-w-3xl">
           <p ref={textRef} className="text-lg leading-relaxed mb-8">
-            {text}
+            {typedText}
+            {showCursor && <span className="typing-cursor">|</span>}
           </p>
         </div>
         

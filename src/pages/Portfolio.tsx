@@ -11,9 +11,9 @@ export default function Portfolio() {
       <div className="pt-24">
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">Our Portfolio</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">Active Portfolio</h1>
             <p className="text-xl max-w-3xl mb-12 text-studio-lightgray">
-              Explore our work with leading brands and innovative startups across various industries.
+              Explore our vibes, our work, our investments.
             </p>
             
             <PortfolioProjects />

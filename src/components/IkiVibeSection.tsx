@@ -1,9 +1,74 @@
 
+import { useState, useEffect, useRef } from "react";
 import { ExternalLink, Lightbulb, Code, Users } from "lucide-react";
 import { Button } from "./ui/button";
 import { HoverEffect } from "./ui/hover-effect";
 
 export default function IkiVibeSection() {
+  const [typedText, setTypedText] = useState("");
+  const [showCursor, setShowCursor] = useState(true);
+  const textToType = "We bring ideas to life in days—beyond the mind and into the world—by riding enduring trends that spark human connection and meaningful growth. Along the way, we accelerate bold concepts, guiding individuals and organizations toward their core purpose and helping them ship ultra fast.";
+  const typingSpeed = 30; // milliseconds per character
+  const textRef = useRef<HTMLParagraphElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          startTyping();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  const startTyping = () => {
+    setTypedText("");
+    let currentIndex = 0;
+
+    const typingInterval = setInterval(() => {
+      if (currentIndex <= textToType.length) {
+        setTypedText(textToType.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, typingSpeed);
+
+    // Blinking cursor effect
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 500);
+
+    return () => {
+      clearInterval(typingInterval);
+      clearInterval(cursorInterval);
+    };
+  };
+
+  const renderTextWithHighlight = (text: string) => {
+    if (!text) return null;
+    
+    const parts = text.split(/(days)/);
+    
+    return parts.map((part, index) => 
+      part === "days" 
+        ? <span key={index} className="text-purple-500 font-semibold">{part}</span> 
+        : <span key={index}>{part}</span>
+    );
+  };
+
   const ikiVibeCards = [
     {
       title: "Ikideas",
@@ -26,7 +91,7 @@ export default function IkiVibeSection() {
   ];
 
   return (
-    <section id="ikivibe" className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10">
+    <section ref={sectionRef} id="ikivibe" className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10">
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <div className="section-number">01</div>
@@ -35,9 +100,9 @@ export default function IkiVibeSection() {
         </div>
         
         <div className="mb-16 max-w-3xl">
-          <p className="text-lg leading-relaxed mb-8">
-            We bring ideas to life in <span className="text-purple-500 font-semibold">days</span>—beyond the mind and into the world—by riding enduring trends that spark human connection and meaningful growth. 
-            Along the way, we accelerate bold concepts, guiding individuals and organizations toward their core purpose and helping them ship ultra fast.
+          <p ref={textRef} className="text-lg leading-relaxed mb-8">
+            {renderTextWithHighlight(typedText)}
+            {showCursor && <span className="typing-cursor">|</span>}
           </p>
         </div>
         

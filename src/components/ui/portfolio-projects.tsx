@@ -82,7 +82,6 @@ export const PortfolioProjects = () => {
   return (
     <div className="w-full py-12">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10">Our Projects</h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <div 

@@ -9,6 +9,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 export default function WealthSection() {
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
+  const [hasStartedTyping, setHasStartedTyping] = useState(false);
   const textToType = "We dissect the essence of who we are, building communities that support this journey, while investing in visionary ideators empowered by ikigai. Our goal is to cultivate 360-degree wealth—encompassing time, relationships, wellbeing, and financial prosperity—creating a holistic approach to lasting abundance and legacy.";
   const typingSpeed = 20; // milliseconds per character - faster typing speed
   const textRef = useRef<HTMLParagraphElement>(null);
@@ -16,13 +17,18 @@ export default function WealthSection() {
   const isMobile = useIsMobile();
   
   useEffect(() => {
+    // Create the observer with appropriate threshold
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !hasStartedTyping) {
+          setHasStartedTyping(true);
           startTyping();
         }
       },
-      { threshold: isMobile ? 0.7 : 0.3 } // Higher threshold for mobile to ensure it's more visible before typing starts
+      { 
+        threshold: isMobile ? 0.5 : 0.3, // Adjusted threshold for mobile
+        rootMargin: isMobile ? "-10% 0px" : "0px", // Add margin for mobile to trigger earlier
+      }
     );
 
     if (sectionRef.current) {
@@ -34,7 +40,24 @@ export default function WealthSection() {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, [isMobile]);
+  }, [isMobile, hasStartedTyping]);
+
+  // For manual testing/triggering on mobile if needed
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isMobile && sectionRef.current && !hasStartedTyping) {
+        const rect = sectionRef.current.getBoundingClientRect();
+        const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+        if (rect.top <= viewHeight * 0.7 && rect.bottom >= viewHeight * 0.3) {
+          setHasStartedTyping(true);
+          startTyping();
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isMobile, hasStartedTyping]);
 
   const startTyping = () => {
     setTypedText("");
@@ -101,7 +124,12 @@ export default function WealthSection() {
   ];
 
   return (
-    <section ref={sectionRef} id="wealth" className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10">
+    <section 
+      ref={sectionRef} 
+      id="wealth" 
+      className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10"
+      style={{ position: 'relative' }} // Add explicit position for Intersection Observer
+    >
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <div className="section-number">03</div>
@@ -110,7 +138,10 @@ export default function WealthSection() {
         </div>
         
         <div className="mb-16 max-w-3xl">
-          <p ref={textRef} className="text-lg leading-relaxed mb-8">
+          <p 
+            ref={textRef} 
+            className="text-lg leading-relaxed mb-8"
+          >
             {typedText}
             {showCursor && <span className="typing-cursor">|</span>}
           </p>

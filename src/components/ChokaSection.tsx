@@ -2,6 +2,7 @@
 import { ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
 import { HoverEffect } from "./ui/hover-effect";
+import { useState, useEffect, useRef } from "react";
 
 export default function ChokaSection() {
   const chokaCards = [
@@ -21,9 +22,52 @@ export default function ChokaSection() {
       link: "#choka"
     }
   ];
+  
+  const fullText = "We bring ideas to life in days—beyond the mind and into the world—by riding enduring trends that spark human connection and meaningful growth. Along the way, we accelerate bold concepts, guiding individuals and organizations toward their core purpose and helping them ship ultra fast.";
+  const [displayText, setDisplayText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  
+  // Effect for typing animation
+  useEffect(() => {
+    if (!isVisible) return;
+    
+    if (currentIndex < fullText.length) {
+      const timeout = setTimeout(() => {
+        setDisplayText(prev => prev + fullText[currentIndex]);
+        setCurrentIndex(currentIndex + 1);
+      }, 20); // Fast typing speed (20ms per character)
+      
+      return () => clearTimeout(timeout);
+    }
+  }, [currentIndex, fullText, isVisible]);
+  
+  // Effect for intersection observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.2 }
+    );
+    
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <section id="choka" className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10">
+    <section id="choka" className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <div className="section-number">02</div>
@@ -33,8 +77,8 @@ export default function ChokaSection() {
         
         <div className="mb-16 max-w-3xl">
           <p className="text-lg leading-relaxed">
-            Wellness is the foundation of human evolution. Powered by IkiVibe Collective and produced by Chōka Crew, 
-            we offer unique solutions that accelerate holistic wellbeing and a health-first society.
+            {displayText}
+            <span className={`inline-block w-0.5 h-5 bg-studio-lightgray ml-1 animate-pulse ${currentIndex >= fullText.length ? 'opacity-0' : 'opacity-100'}`}></span>
           </p>
         </div>
         

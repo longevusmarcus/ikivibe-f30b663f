@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,6 +49,13 @@ export default function Navbar() {
               >
                 360 Wealth Labs
               </a>
+              <Link 
+                to="/portfolio" 
+                className="py-4 border-b border-studio-gray/20 text-white"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Portfolio
+              </Link>
               <a 
                 href="#contact" 
                 className="py-4 text-white"
@@ -73,7 +81,7 @@ export default function Navbar() {
         <header className="fixed top-0 left-0 w-full z-50 bg-studio-black/90 backdrop-blur-sm">
           <div className="container mx-auto px-4 py-6 flex items-center justify-between">
             <div className="flex items-center">
-              <a href="/" className="flex items-center gap-3 group">
+              <Link to="/" className="flex items-center gap-3 group">
                 <div className="relative w-5 h-5">
                   <div className="absolute w-1.5 h-1.5 bg-white/80 rounded-full top-0 left-0 group-hover:bg-white transition-colors"></div>
                   <div className="absolute w-1.5 h-1.5 bg-white/80 rounded-full bottom-0 right-0 group-hover:bg-white transition-colors"></div>
@@ -85,7 +93,7 @@ export default function Navbar() {
                 <span className="text-xl md:text-2xl font-display font-bold tracking-tight">
                   IkiVibe Chōka Labs
                 </span>
-              </a>
+              </Link>
             </div>
 
             {/* Mobile menu button */}
@@ -108,6 +116,9 @@ export default function Navbar() {
               <a href="#wealth" className="text-studio-lightgray hover:text-studio-white transition-colors">
                 360 Wealth Labs
               </a>
+              <Link to="/portfolio" className="text-studio-lightgray hover:text-studio-white transition-colors">
+                Portfolio
+              </Link>
               <a href="#contact" className="text-studio-lightgray hover:text-studio-white transition-colors">
                 Contact
               </a>

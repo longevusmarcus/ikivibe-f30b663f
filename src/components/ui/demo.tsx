@@ -2,6 +2,7 @@
 import React from "react";
 import { TextGradientScroll } from "@/components/ui/text-gradient-scroll";
 import { HoverEffect } from "@/components/ui/hover-effect";
+import { Case } from "@/components/ui/cases-with-infinite-scroll";
 
 function TextGradientScrollExample() {
   return (
@@ -23,6 +24,14 @@ export function CardHoverEffectDemo() {
   return (
     <div className="max-w-5xl mx-auto px-8">
       <HoverEffect items={projects} />
+    </div>
+  );
+}
+
+function CaseDemo() {
+  return (
+    <div className="block">
+      <Case />
     </div>
   );
 }
@@ -66,4 +75,4 @@ export const projects = [
   },
 ];
 
-export { TextGradientScrollExample }
+export { TextGradientScrollExample, CaseDemo }

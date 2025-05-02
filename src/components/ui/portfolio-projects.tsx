@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -53,7 +52,7 @@ const projects: Project[] = [
   },
   {
     name: "Path",
-    description: "Personalized career strategist"
+    description: "Stealth Mode"
   },
   {
     name: "Homocryptus",
@@ -175,4 +174,3 @@ export const PortfolioProjects = () => {
     </div>
   );
 };
-

@@ -2,54 +2,8 @@
 import { ExternalLink, Lightbulb, Code, Users } from "lucide-react";
 import { Button } from "./ui/button";
 import { HoverEffect } from "./ui/hover-effect";
-import { useEffect, useState, useRef } from "react";
 
 export default function IkiVibeSection() {
-  const [displayText, setDisplayText] = useState("");
-  const [isInView, setIsInView] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
-  
-  const fullText = "We bring ideas to life in days—beyond the mind and into the world—by riding enduring trends that spark human connection and meaningful growth. Along the way, we accelerate bold concepts, guiding individuals and organizations toward their core purpose and helping them ship ultra fast.";
-  
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsInView(true);
-        }
-      },
-      { threshold: 0.3 }
-    );
-    
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-    
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
-  
-  useEffect(() => {
-    if (isInView) {
-      let currentIndex = 0;
-      setDisplayText("");
-      
-      const typingInterval = setInterval(() => {
-        if (currentIndex < fullText.length) {
-          setDisplayText((prev) => prev + fullText.charAt(currentIndex));
-          currentIndex++;
-        } else {
-          clearInterval(typingInterval);
-        }
-      }, 15); // Fast typing speed
-      
-      return () => clearInterval(typingInterval);
-    }
-  }, [isInView]);
-
   const ikiVibeCards = [
     {
       title: "Ikideas",
@@ -72,7 +26,7 @@ export default function IkiVibeSection() {
   ];
 
   return (
-    <section id="ikivibe" className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10" ref={sectionRef}>
+    <section id="ikivibe" className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10">
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <div className="section-number">01</div>
@@ -82,8 +36,8 @@ export default function IkiVibeSection() {
         
         <div className="mb-16 max-w-3xl">
           <p className="text-lg leading-relaxed mb-8">
-            <span>{displayText}</span>
-            <span className={`inline-block w-1 h-5 bg-purple-500 ml-0.5 ${fullText.length === displayText.length ? 'animate-pulse' : 'animate-blink'}`}></span>
+            We bring ideas to life in <span className="text-purple-500 font-semibold">days</span>—beyond the mind and into the world—by riding enduring trends that spark human connection and meaningful growth. 
+            Along the way, we accelerate bold concepts, guiding individuals and organizations toward their core purpose and helping them ship ultra fast.
           </p>
         </div>
         

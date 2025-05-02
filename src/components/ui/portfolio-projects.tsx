@@ -60,7 +60,7 @@ const projects: Project[] = [
   },
   {
     name: "Homolongevus",
-    description: "My Journey to Live Better and Longer",
+    description: "Wellbeing Coach",
     url: "https://designrr.page/?id=389570&token=2939920265&type=FP&h=3198"
   },
   {

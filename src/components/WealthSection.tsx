@@ -4,67 +4,35 @@ import { Clock, Users, DollarSign, Heart, Brain, ExternalLink, Zap } from "lucid
 import { Button } from "./ui/button";
 import { HoverEffect } from "./ui/hover-effect";
 import { EvervaultCard } from "./ui/evervault-card";
-import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function WealthSection() {
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
-  const [hasTriggeredTyping, setHasTriggeredTyping] = useState(false);
   const textToType = "We dissect the essence of who we are, building communities that support this journey, while investing in visionary ideators empowered by ikigai. Our goal is to cultivate 360-degree wealth—encompassing time, relationships, wellbeing, and financial prosperity—creating a holistic approach to lasting abundance and legacy.";
   const typingSpeed = 30; // milliseconds per character
   const textRef = useRef<HTMLParagraphElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
-  const isMobile = useIsMobile();
 
   useEffect(() => {
-    // Reset state if section becomes visible again
-    setHasTriggeredTyping(false);
-    setTypedText("");
-
-    // Different approach for mobile vs desktop
-    if (isMobile) {
-      // For mobile, use scroll position instead of IntersectionObserver
-      const handleScroll = () => {
-        if (sectionRef.current && !hasTriggeredTyping) {
-          const rect = sectionRef.current.getBoundingClientRect();
-          // Start typing when section is 30% visible from the bottom
-          if (rect.top < window.innerHeight * 0.7) {
-            startTyping();
-            setHasTriggeredTyping(true);
-          }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          startTyping();
         }
-      };
+      },
+      { threshold: 0.3 }
+    );
 
-      window.addEventListener("scroll", handleScroll);
-      // Check immediately in case section is already in view
-      handleScroll();
-      
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    } else {
-      // For desktop, use intersection observer as before
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting && !hasTriggeredTyping) {
-            startTyping();
-            setHasTriggeredTyping(true);
-          }
-        },
-        { threshold: 0.3 }
-      );
-
-      if (sectionRef.current) {
-        observer.observe(sectionRef.current);
-      }
-
-      return () => {
-        if (sectionRef.current) {
-          observer.unobserve(sectionRef.current);
-        }
-      };
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
     }
-  }, [isMobile, hasTriggeredTyping]);
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   const startTyping = () => {
     setTypedText("");

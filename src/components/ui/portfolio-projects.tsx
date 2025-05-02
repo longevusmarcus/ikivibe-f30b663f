@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -51,7 +52,7 @@ const projects: Project[] = [
     url: "https://discord.com/invite/MV8g7HTbCG"
   },
   {
-    name: "Path",
+    name: "Stealth",
     description: "Stealth Mode"
   },
   {

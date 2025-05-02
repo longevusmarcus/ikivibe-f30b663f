@@ -38,7 +38,18 @@ function Case() {
         <div className="flex flex-col gap-10">
           <Carousel setApi={setApi} className="w-full">
             <CarouselContent>
-              {Array.from({ length: 15 }).map((_, index) => (
+              {/* ANote Music client shown first */}
+              <CarouselItem className="basis-1/2 md:basis-1/3 lg:basis-1/6">
+                <div className="flex flex-col rounded-md aspect-square bg-studio-gray/20 backdrop-blur-sm items-center justify-center p-6 hover:bg-studio-gray/30 transition-all duration-300">
+                  <div className="flex flex-col items-center text-center">
+                    <h3 className="text-lg font-medium mb-1">ANote Music</h3>
+                    <p className="text-sm text-studio-lightgray">The main stage for music investments</p>
+                  </div>
+                </div>
+              </CarouselItem>
+              
+              {/* Rest remain in stealth mode */}
+              {Array.from({ length: 14 }).map((_, index) => (
                 <CarouselItem className="basis-1/2 md:basis-1/3 lg:basis-1/6" key={index}>
                   <div className="flex flex-col rounded-md aspect-square bg-studio-gray/20 backdrop-blur-sm items-center justify-center p-6 hover:bg-studio-gray/30 transition-all duration-300">
                     <Lock className="w-8 h-8 mb-2 text-studio-lightgray/70" />

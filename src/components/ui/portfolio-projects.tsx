@@ -1,4 +1,3 @@
-
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 
@@ -67,11 +66,6 @@ const projects: Project[] = [
     name: "HomoiDeus",
     description: "Mint Ideas, Predictions, Thoughts, Visions & Vibes",
     url: "https://zora.co/@homoideus"
-  },
-  {
-    name: "ANote Music",
-    description: "The main stage for music investments",
-    url: "anotemusic.com"
   },
   {
     name: "Bittensor",

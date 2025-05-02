@@ -55,10 +55,10 @@ function Case() {
               <p className="text-sm text-studio-lightgray mt-1">The main stage for music investments</p>
             </div>
           ) : (
-            <>
+            <div className="flex flex-col items-center text-center">
               <Lock className="w-8 h-8 mb-2 text-studio-lightgray/70" />
               <span className="text-sm text-center text-studio-lightgray">Stealth Mode</span>
-            </>
+            </div>
           )}
         </div>
       </CarouselItem>

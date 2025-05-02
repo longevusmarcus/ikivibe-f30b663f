@@ -71,6 +71,22 @@ export default function IkiVibeSection() {
     }
   ];
 
+  // Function to render the text with highlighted "days"
+  const renderTextWithHighlight = (text: string) => {
+    if (!text) return null;
+    
+    const daysIndex = text.indexOf("days");
+    if (daysIndex === -1) return <>{text}</>;
+    
+    return (
+      <>
+        {text.substring(0, daysIndex)}
+        <span className="text-purple-500 font-semibold">days</span>
+        {text.substring(daysIndex + 4)}
+      </>
+    );
+  };
+
   return (
     <section id="ikivibe" className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10" ref={sectionRef}>
       <div className="container mx-auto px-4">
@@ -82,7 +98,7 @@ export default function IkiVibeSection() {
         
         <div className="mb-16 max-w-3xl">
           <p className="text-lg leading-relaxed mb-8">
-            <span>{displayText}</span>
+            {renderTextWithHighlight(displayText)}
             <span className={`inline-block w-1 h-5 bg-purple-500 ml-0.5 ${fullText.length === displayText.length ? 'animate-pulse' : 'animate-blink'}`}></span>
           </p>
         </div>

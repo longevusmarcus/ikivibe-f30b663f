@@ -34,10 +34,6 @@ const projects: Project[] = [
     url: "chohkah.com"
   },
   {
-    name: "Chōka",
-    description: "RTD longevity chocolat"
-  },
-  {
     name: "Chōka Path",
     description: "Find Your Wellness-Focused Workplace",
     url: "chokapath.com"

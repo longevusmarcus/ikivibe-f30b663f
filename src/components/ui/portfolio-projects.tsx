@@ -1,3 +1,4 @@
+
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 
@@ -15,7 +16,7 @@ const projects: Project[] = [
   },
   {
     name: "Murmur",
-    description: "Chatroulette Meets Mental Health + Empathy",
+    description: "Chatroulette Meets BetterHelp",
     url: "welovemurmur.com"
   },
   {

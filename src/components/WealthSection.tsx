@@ -4,6 +4,7 @@ import { Clock, Users, DollarSign, Heart, Brain, ExternalLink, Zap } from "lucid
 import { Button } from "./ui/button";
 import { HoverEffect } from "./ui/hover-effect";
 import { EvervaultCard } from "./ui/evervault-card";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function WealthSection() {
   const [typedText, setTypedText] = useState("");
@@ -12,6 +13,7 @@ export default function WealthSection() {
   const typingSpeed = 30; // milliseconds per character
   const textRef = useRef<HTMLParagraphElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -20,7 +22,7 @@ export default function WealthSection() {
           startTyping();
         }
       },
-      { threshold: 0.3 }
+      { threshold: isMobile ? 0.7 : 0.3 }
     );
 
     if (sectionRef.current) {
@@ -32,7 +34,7 @@ export default function WealthSection() {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, []);
+  }, [isMobile]);
 
   const startTyping = () => {
     setTypedText("");

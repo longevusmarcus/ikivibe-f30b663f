@@ -1,9 +1,62 @@
 
+import { useState, useEffect, useRef } from "react";
 import { ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
 import { HoverEffect } from "./ui/hover-effect";
 
 export default function ChokaSection() {
+  const [typedText, setTypedText] = useState("");
+  const [showCursor, setShowCursor] = useState(true);
+  const textToType = "Wellness is the foundation of human evolution. Powered by IkiVibe Collective and produced by Chōka Crew, we offer unique solutions that accelerate holistic wellbeing and a health-first society.";
+  const typingSpeed = 30; // milliseconds per character
+  const textRef = useRef<HTMLParagraphElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          startTyping();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  const startTyping = () => {
+    setTypedText("");
+    let currentIndex = 0;
+
+    const typingInterval = setInterval(() => {
+      if (currentIndex <= textToType.length) {
+        setTypedText(textToType.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, typingSpeed);
+
+    // Blinking cursor effect
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 500);
+
+    return () => {
+      clearInterval(typingInterval);
+      clearInterval(cursorInterval);
+    };
+  };
+
   const chokaCards = [
     {
       title: "KNOWLEDGE",
@@ -23,7 +76,7 @@ export default function ChokaSection() {
   ];
 
   return (
-    <section id="choka" className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10">
+    <section ref={sectionRef} id="choka" className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10">
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <div className="section-number">02</div>
@@ -32,9 +85,9 @@ export default function ChokaSection() {
         </div>
         
         <div className="mb-16 max-w-3xl">
-          <p className="text-lg leading-relaxed">
-            Wellness is the foundation of human evolution. Powered by IkiVibe Collective and produced by Chōka Crew, 
-            we offer unique solutions that accelerate holistic wellbeing and a health-first society.
+          <p ref={textRef} className="text-lg leading-relaxed">
+            {typedText}
+            {showCursor && <span className="typing-cursor">|</span>}
           </p>
         </div>
         

@@ -50,6 +50,10 @@ const projects: Project[] = [
     url: "https://discord.com/invite/MV8g7HTbCG"
   },
   {
+    name: "Path",
+    description: "Personalized career strategist"
+  },
+  {
     name: "Homocryptus",
     description: "Be Forever Crypto (Predictions / TA Ideas / TA Scripts / Web3 Advisory For Startups",
     url: "https://linktr.ee/homocryptus"
@@ -68,10 +72,6 @@ const projects: Project[] = [
     name: "ANote Music",
     description: "The main stage for music investments",
     url: "anotemusic.com"
-  },
-  {
-    name: "Path",
-    description: "Personalized career strategist"
   },
   {
     name: "Bittensor",
@@ -116,4 +116,3 @@ export const PortfolioProjects = () => {
     </div>
   );
 };
-

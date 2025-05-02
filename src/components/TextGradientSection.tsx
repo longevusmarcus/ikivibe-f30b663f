@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from "react";
 import { TextGradientScroll } from "@/components/ui/text-gradient-scroll";
 
@@ -40,7 +41,7 @@ export default function TextGradientSection() {
           <div className="w-full max-w-4xl">
             <div className={`text-xl md:text-2xl transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
               <TextGradientScroll 
-                text="We are building a world where ideas don't just spark, they endure. Where human potential is not sacrificed in the pursuit of success, but ignited by it. Where wealth is not measured by short-term gain, but by its power to uplift communities, outlast generations, and fuel a legacy of purpose. We believe in a future where longevity isn't just physical it's mental, emotional, intellectual, and financial. We're forging ecosystems where visionaries are not burned out by brilliance, but supported to build boldly, live fully, and pass on more than money: wisdom, health, and hope. This is the era of sustainable greatness. A new civilization built not on prompts, but on consciousness. Where ideas become reality, humans are empowered, and capital becomes a force for good. Forever." 
+                text="We are building a world where ideas don't just spark, they endure. Where human potential is not sacrificed in the pursuit of success, but ignited by it. Where wealth is not measured by short-term gain, but by its power to uplift communities, outlast generations, and fuel a legacy of purpose. We believe in a future where longevity isn't just physical it's mental, emotional, intellectual, and financial. We're forging ecosystems where visionaries are not burned out by brilliance, but supported to build boldly, live fully, and pass on more than money: wisdom, health, and hope. This is the era of sustainable greatness. A new civilization built not on prompts, but on consciousness. Where ideas turn into reality, humans are empowered, and capital becomes a force for good. Forever." 
                 type="letter"
                 textOpacity="soft"
                 className="font-light"

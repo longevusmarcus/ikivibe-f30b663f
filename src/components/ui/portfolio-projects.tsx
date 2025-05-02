@@ -1,3 +1,4 @@
+
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 
@@ -17,11 +18,6 @@ const projects: Project[] = [
     name: "Murmur",
     description: "Chatroulette Meets BetterHelp",
     url: "welovemurmur.com"
-  },
-  {
-    name: "Bittensor",
-    description: "AI OpenSource Protocol, Blockchain Protocol",
-    url: "bittensor.com"
   },
   {
     name: "FUCK MIRROR",
@@ -76,6 +72,11 @@ const projects: Project[] = [
   {
     name: "Path",
     description: "Personalized career strategist"
+  },
+  {
+    name: "Bittensor",
+    description: "AI OpenSource Protocol, Blockchain Protocol",
+    url: "bittensor.com"
   }
 ];
 
@@ -110,3 +111,4 @@ export const PortfolioProjects = () => {
     </div>
   );
 };
+

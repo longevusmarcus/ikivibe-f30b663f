@@ -38,8 +38,8 @@ const projects: Project[] = [
   },
   {
     name: "Chōka Path",
-    description: "Longevity retreat concept",
-    url: "chohkah.com"
+    description: "Curated Directory Of Wellness-Focused Workspaces",
+    url: "chokapath.com"
   },
   {
     name: "Chōwa",

@@ -50,10 +50,6 @@ const projects: Project[] = [
     url: "https://discord.com/invite/MV8g7HTbCG"
   },
   {
-    name: "Stealth",
-    description: "Stealth Mode"
-  },
-  {
     name: "Homocryptus",
     description: "Predictions, TA Ideas, TA Scripts, Web3 Advisory For Startups",
     url: "https://linktr.ee/homocryptus"

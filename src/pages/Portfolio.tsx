@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { CaseDemo } from "@/components/ui/demo";
 import { PortfolioProjects } from "@/components/ui/portfolio-projects";
+import { InvestmentShowcase } from "@/components/ui/investment-showcase";
 
 export default function Portfolio() {
   return (
@@ -20,7 +21,7 @@ export default function Portfolio() {
             
             <div className="mt-20">
               <h2 className="text-2xl md:text-3xl font-bold mb-8">Investments</h2>
-              <CaseDemo />
+              <InvestmentShowcase />
             </div>
 
             <div className="mt-20">

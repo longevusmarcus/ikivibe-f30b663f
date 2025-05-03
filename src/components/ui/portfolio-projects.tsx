@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -37,9 +36,8 @@ const projects: Project[] = [
     url: "chohkah.com"
   },
   {
-    name: "Chōka Path",
-    description: "Find Your Wellness-Focused Workplace",
-    url: "chokapath.com"
+    name: "Stealth",
+    description: "Stealth Mode"
   },
   {
     name: "Chōwa",
@@ -69,16 +67,6 @@ const projects: Project[] = [
     name: "HomoiDeus",
     description: "Mint Ideas, Predictions, Thoughts, Visions & Vibes",
     url: "https://zora.co/@homoideus"
-  },
-  {
-    name: "Bittensor",
-    description: "AI OpenSource Protocol, Blockchain Protocol",
-    url: "https://bittensor.com"
-  },
-  {
-    name: "Ethereum",
-    description: "Blockchain Protocol",
-    url: "https://ethereum.org"
   }
 ];
 

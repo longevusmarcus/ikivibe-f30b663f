@@ -12,7 +12,7 @@ import { HelpCircle, ExternalLink } from "lucide-react";
 
 interface Investment {
   name: string;
-  description: string;
+  description?: string;
   url?: string;
   isSecret?: boolean;
 }
@@ -22,13 +22,11 @@ const investments: Investment[] = Array.from({ length: 15 }).map((_, index) => {
   if (index % 5 === 0) {
     return {
       name: "Bittensor",
-      description: "AI OpenSource Protocol, Blockchain Protocol",
       url: "https://bittensor.com"
     };
   } else if (index % 5 === 1) {
     return {
       name: "Ethereum",
-      description: "Blockchain Protocol",
       url: "https://ethereum.org"
     };
   } else {
@@ -85,7 +83,6 @@ export function InvestmentCarousel() {
                 <ExternalLink className="w-4 h-4" />
               </a>
             </div>
-            <span className="text-sm text-center text-studio-lightgray mt-2">{investment.description}</span>
           </div>
         )}
       </div>

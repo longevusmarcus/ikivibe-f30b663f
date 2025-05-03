@@ -8,7 +8,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { ExternalLink, HelpCircle } from "lucide-react";
+import { HelpCircle, ExternalLink } from "lucide-react";
 
 interface Investment {
   name: string;
@@ -17,23 +17,28 @@ interface Investment {
   isSecret?: boolean;
 }
 
-const investments: Investment[] = [
-  {
-    name: "Bittensor",
-    description: "AI OpenSource Protocol, Blockchain Protocol",
-    url: "https://bittensor.com"
-  },
-  {
-    name: "Ethereum",
-    description: "Blockchain Protocol",
-    url: "https://ethereum.org"
-  },
-  {
-    name: "?",
-    description: "Stealth Investment",
-    isSecret: true
+// Create an array of 15 items where every 5th item is a real investment
+const investments: Investment[] = Array.from({ length: 15 }).map((_, index) => {
+  if (index % 5 === 0) {
+    return {
+      name: "Bittensor",
+      description: "AI OpenSource Protocol, Blockchain Protocol",
+      url: "https://bittensor.com"
+    };
+  } else if (index % 5 === 1) {
+    return {
+      name: "Ethereum",
+      description: "Blockchain Protocol",
+      url: "https://ethereum.org"
+    };
+  } else {
+    return {
+      name: "?",
+      description: "Stealth Investment",
+      isSecret: true
+    };
   }
-];
+});
 
 export function InvestmentCarousel() {
   const [api, setApi] = useState<CarouselApi>();
@@ -60,34 +65,29 @@ export function InvestmentCarousel() {
   const carouselItems = investments.map((investment, index) => (
     <CarouselItem className="basis-1/2 md:basis-1/3 lg:basis-1/6" key={index}>
       <div className="flex flex-col rounded-md aspect-square bg-studio-gray/20 backdrop-blur-sm items-center justify-center p-6 hover:bg-studio-gray/30 transition-all duration-300">
-        <div className="flex flex-col items-center text-center">
-          {investment.isSecret ? (
-            <>
-              <div className="h-12 w-12 rounded-full flex items-center justify-center bg-studio-gray/30 mb-2">
-                <HelpCircle className="w-8 h-8 text-studio-lightgray" />
-              </div>
+        {investment.isSecret ? (
+          <div className="flex flex-col items-center text-center">
+            <div className="h-12 w-12 rounded-full flex items-center justify-center bg-studio-gray/30 mb-2">
+              <HelpCircle className="w-8 h-8 text-studio-lightgray" />
+            </div>
+            <span className="text-sm text-center text-studio-lightgray">{investment.description}</span>
+          </div>
+        ) : (
+          <div className="flex flex-col items-center text-center">
+            <div className="flex items-center justify-center gap-2">
               <h3 className="text-lg font-medium">{investment.name}</h3>
-              <span className="text-sm text-center text-studio-lightgray mt-2">{investment.description}</span>
-            </>
-          ) : (
-            <>
-              <div className="flex items-center justify-center gap-2">
-                <h3 className="text-lg font-medium">{investment.name}</h3>
-                {investment.url && (
-                  <a 
-                    href={investment.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-studio-lightgray hover:text-white transition-colors"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                )}
-              </div>
-              <span className="text-sm text-center text-studio-lightgray mt-2">{investment.description}</span>
-            </>
-          )}
-        </div>
+              <a 
+                href={investment.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-studio-lightgray hover:text-white transition-colors"
+              >
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
+            <span className="text-sm text-center text-studio-lightgray mt-2">{investment.description}</span>
+          </div>
+        )}
       </div>
     </CarouselItem>
   ));

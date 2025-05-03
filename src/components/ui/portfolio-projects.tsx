@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -33,6 +34,11 @@ const projects: Project[] = [
   {
     name: "Chōka Café",
     description: "Longevity café concept",
+    url: "chohkah.com"
+  },
+  {
+    name: "Chōka Path",
+    description: "Longevity retreat concept",
     url: "chohkah.com"
   },
   {

@@ -42,10 +42,6 @@ const projects: Project[] = [
     url: "chohkah.com"
   },
   {
-    name: "Stealth",
-    description: "Stealth Mode"
-  },
-  {
     name: "Chōwa",
     description: "Courses To Unlock Your Epigenetic Potential",
     url: "chowacourses.com"
@@ -54,6 +50,10 @@ const projects: Project[] = [
     name: "360 Wealth Labs",
     description: "360 Wealth Discord Community",
     url: "https://discord.com/invite/MV8g7HTbCG"
+  },
+  {
+    name: "Stealth",
+    description: "Stealth Mode"
   },
   {
     name: "Homocryptus",

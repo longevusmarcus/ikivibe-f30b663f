@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
@@ -69,7 +68,7 @@ export default function ChokaSection() {
       link: "#choka"
     },
     {
-      title: "WORKSPACES",
+      title: "DIRECTORY",
       description: "Chōka Path - A digital platform that guides individuals to workplaces that prioritize health, balance, and long-term well-being.",
       link: "#choka"
     }

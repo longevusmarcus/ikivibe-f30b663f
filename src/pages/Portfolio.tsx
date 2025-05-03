@@ -19,6 +19,11 @@ export default function Portfolio() {
             <PortfolioProjects />
             
             <div className="mt-20">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">Investments</h2>
+              <CaseDemo />
+            </div>
+
+            <div className="mt-20">
               <h2 className="text-2xl md:text-3xl font-bold mb-8">Client Partnerships</h2>
               <CaseDemo />
             </div>

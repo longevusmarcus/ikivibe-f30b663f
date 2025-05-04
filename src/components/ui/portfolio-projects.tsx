@@ -8,75 +8,92 @@ interface Project {
   name: string;
   description: string;
   url?: string;
+  category: 'core' | 'mid';
 }
 
 const projects: Project[] = [
+  // CORE Projects
   {
     name: "Murmur",
     description: "Chatroulette Meets BetterHelp",
-    url: "welovemurmur.com"
-  },
-  {
-    name: "Million Dollar Vibe",
-    description: "A pixel-made, permanent directory of founder projects",
-    url: "milliondollarvibe.ai"
-  },
-  {
-    name: "FUCK MIRROR",
-    description: "Clothing That Only Speaks In Reflection",
-    url: "fuckmirror.com"
+    url: "welovemurmur.com",
+    category: 'core'
   },
   {
     name: "Chōka",
     description: "RTD longevity chocolate",
-    url: "chohkah.com"
+    url: "chohkah.com",
+    category: 'core'
   },
   {
     name: "Chōka Café",
     description: "Longevity café concept",
-    url: "chohkah.com"
+    url: "chohkah.com",
+    category: 'core'
   },
   {
-    name: "Chōka Path",
-    description: "Curated Directory Of Wellness-Focused Workspaces",
-    url: "chokapath.com"
+    name: "Stealth",
+    description: "Stealth Mode",
+    category: 'core'
+  },
+  
+  // Mid Priority & Communities
+  {
+    name: "Million Dollar Vibe",
+    description: "A pixel-made, permanent directory of founder projects",
+    url: "milliondollarvibe.ai",
+    category: 'mid'
+  },
+  {
+    name: "FUCK MIRROR",
+    description: "Clothing That Only Speaks In Reflection",
+    url: "fuckmirror.com",
+    category: 'mid'
   },
   {
     name: "Chōwa",
     description: "Courses To Unlock Your Epigenetic Potential",
-    url: "chowacourses.com"
+    url: "chowacourses.com",
+    category: 'mid'
   },
   {
     name: "360 Wealth Labs",
     description: "360 Wealth Discord Community",
-    url: "https://discord.com/invite/MV8g7HTbCG"
-  },
-  {
-    name: "Stealth",
-    description: "Stealth Mode"
+    url: "https://discord.com/invite/MV8g7HTbCG",
+    category: 'mid'
   },
   {
     name: "Homocryptus",
     description: "Predictions, TA Ideas, TA Scripts, Web3 Advisory For Startups",
-    url: "https://linktr.ee/homocryptus"
+    url: "https://linktr.ee/homocryptus",
+    category: 'mid'
   },
   {
     name: "Homolongevus",
     description: "Wellbeing Coach",
-    url: "https://designrr.page/?id=389570&token=2939920265&type=FP&h=3198"
+    url: "https://designrr.page/?id=389570&token=2939920265&type=FP&h=3198",
+    category: 'mid'
   },
   {
     name: "HomoiDeus",
     description: "Mint Ideas, Predictions, Thoughts, Visions & Vibes",
-    url: "https://zora.co/@homoideus"
+    url: "https://zora.co/@homoideus",
+    category: 'mid'
   }
 ];
 
-export const PortfolioProjects = () => {
+interface PortfolioProjectsProps {
+  category: 'core' | 'mid';
+}
+
+export const PortfolioProjects = ({ category }: PortfolioProjectsProps) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
   const isMobile = useIsMobile();
 
+  // Filter projects based on category
+  const filteredProjects = projects.filter(project => project.category === category);
+  
   useEffect(() => {
     if (isMobile) {
       // Set up Intersection Observer for mobile scroll activation
@@ -112,10 +129,10 @@ export const PortfolioProjects = () => {
   }, [isMobile, hoveredIndex]);
   
   return (
-    <div className="w-full py-12">
+    <div className="w-full py-6">
       <div className="container mx-auto px-4">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <div 
               key={index}
               className="p-6 rounded-lg bg-studio-gray/10 backdrop-blur-sm border border-studio-gray/20 hover:border-studio-gray/40 transition-all duration-300 relative"

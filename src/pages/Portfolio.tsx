@@ -17,7 +17,15 @@ export default function Portfolio() {
               Explore our vibes, our work, our investments.
             </p>
             
-            <PortfolioProjects />
+            <div className="mb-20">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">CORE</h2>
+              <PortfolioProjects category="core" />
+            </div>
+            
+            <div className="mb-20">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">Mid Priority & Communities</h2>
+              <PortfolioProjects category="mid" />
+            </div>
             
             <div className="mt-20">
               <h2 className="text-2xl md:text-3xl font-bold mb-8">Investments</h2>

@@ -18,7 +18,7 @@ export default function Portfolio() {
             </p>
             
             <div className="mb-20">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8">CORE</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">Core</h2>
               <PortfolioProjects category="core" />
             </div>
             

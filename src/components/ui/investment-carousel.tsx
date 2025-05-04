@@ -32,7 +32,7 @@ const investments: Investment[] = Array.from({ length: 15 }).map((_, index) => {
   } else {
     return {
       name: "?",
-      description: "Stealth Investment",
+      description: "Stealth",
       isSecret: true
     };
   }

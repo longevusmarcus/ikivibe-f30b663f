@@ -1,4 +1,5 @@
 
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { CaseDemo } from "@/components/ui/demo";
@@ -6,6 +7,11 @@ import { PortfolioProjects } from "@/components/ui/portfolio-projects";
 import { InvestmentCarousel } from "@/components/ui/investment-carousel";
 
 export default function Portfolio() {
+  // Ensure scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <div className="min-h-screen bg-studio-black text-white">
       <Navbar />

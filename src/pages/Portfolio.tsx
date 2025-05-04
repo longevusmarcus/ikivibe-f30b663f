@@ -23,7 +23,7 @@ export default function Portfolio() {
             </div>
             
             <div className="mb-20">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8">Mid Priority & Communities</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">Fun, Directories & Communities</h2>
               <PortfolioProjects category="mid" />
             </div>
             

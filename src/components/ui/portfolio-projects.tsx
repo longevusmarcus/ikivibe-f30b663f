@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -38,15 +39,15 @@ const projects: Project[] = [
   
   // Mid Priority & Communities
   {
-    name: "Million Dollar Vibe",
-    description: "A pixel-made, permanent directory of founder projects",
-    url: "milliondollarvibe.ai",
-    category: 'mid'
-  },
-  {
     name: "FUCK MIRROR",
     description: "Clothing That Only Speaks In Reflection",
     url: "fuckmirror.com",
+    category: 'mid'
+  },
+  {
+    name: "Million Dollar Vibe",
+    description: "A pixel-made, permanent directory of founder projects",
+    url: "milliondollarvibe.ai",
     category: 'mid'
   },
   {

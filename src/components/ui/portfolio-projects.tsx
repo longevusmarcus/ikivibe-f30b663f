@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -32,8 +31,9 @@ const projects: Project[] = [
     category: 'core'
   },
   {
-    name: "Stealth",
-    description: "Stealth Mode",
+    name: "Path",
+    description: "The AI Career Strategist (demo)",
+    url: "https://path-career.netlify.app/",
     category: 'core'
   },
   

@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -13,9 +14,9 @@ interface Project {
 const projects: Project[] = [
   // CORE Projects
   {
-    name: "Murmur",
+    name: "Wellchat",
     description: "Chatroulette Meets BetterHelp",
-    url: "welovemurmur.com",
+    url: "wellchat.me",
     category: 'core'
   },
   {

@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -72,7 +71,7 @@ const projects: Project[] = [
   {
     name: "Homocryptus",
     description: "Predictions, TA Ideas, TA Scripts, Web3 Advisory For Startups",
-    url: "https://linktr.ee/homocryptus",
+    url: "homocryptus.life",
     category: 'mid'
   },
   {

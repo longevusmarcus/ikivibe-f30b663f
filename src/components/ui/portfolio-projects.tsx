@@ -34,7 +34,7 @@ const projects: Project[] = [
   {
     name: "Path",
     description: "The AI Career Strategist (demo)",
-    url: "https://path-career.netlify.app/",
+    url: "https://careerjobs.app",
     category: 'core'
   },
   

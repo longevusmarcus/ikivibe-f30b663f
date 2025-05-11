@@ -32,9 +32,10 @@ function Case() {
     return () => clearTimeout(timer);
   }, [api, current]);
 
-  // Create an array of 15 items where every 5th item is ANote Music
+  // Create an array of 15 items where every 5th item is ANote Music and every 6th item is Feedel
   const carouselItems = Array.from({ length: 15 }).map((_, index) => {
     const isANoteMusic = index % 5 === 0;
+    const isFeedel = index % 5 === 1;
     
     return (
       <CarouselItem className="basis-1/2 md:basis-1/3 lg:basis-1/6" key={index}>
@@ -45,6 +46,20 @@ function Case() {
                 <h3 className="text-lg font-medium">ANote Music</h3>
                 <a 
                   href="https://anotemusic.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-studio-lightgray hover:text-white transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          ) : isFeedel ? (
+            <div className="flex flex-col items-center text-center">
+              <div className="flex items-center justify-center gap-2">
+                <h3 className="text-lg font-medium">Feedel</h3>
+                <a 
+                  href="https://www.feedel.ventures/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-studio-lightgray hover:text-white transition-colors"

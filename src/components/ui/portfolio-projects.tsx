@@ -22,7 +22,7 @@ const projects: Project[] = [
   {
     name: "Chōka",
     description: "RTD longevity chocolate",
-    url: "chohkah.com",
+    url: "longevitychocolate.ch",
     category: 'core'
   },
   {

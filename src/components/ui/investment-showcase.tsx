@@ -20,6 +20,11 @@ const investments: Investment[] = [
     name: "Ethereum",
     description: "Blockchain Protocol",
     url: "https://ethereum.org"
+  },
+  {
+    name: "BIO",
+    description: "Blockchain Protocol",
+    url: "https://www.bio.xyz/"
   }
 ];
 

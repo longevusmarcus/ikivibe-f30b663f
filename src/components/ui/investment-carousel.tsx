@@ -29,6 +29,11 @@ const investments: Investment[] = Array.from({ length: 15 }).map((_, index) => {
       name: "Ethereum",
       url: "https://ethereum.org"
     };
+  } else if (index % 5 === 2) {
+    return {
+      name: "BIO",
+      url: "https://www.bio.xyz/"
+    };
   } else {
     return {
       name: "?",

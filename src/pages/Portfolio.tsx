@@ -40,7 +40,7 @@ export default function Portfolio() {
             </div>
             
             <div className="mt-20">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8">Investments</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">Crypto Investments</h2>
               <InvestmentCarousel />
             </div>
 

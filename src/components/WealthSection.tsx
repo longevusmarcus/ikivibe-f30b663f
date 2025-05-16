@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import { HoverEffect } from "./ui/hover-effect";
 import { EvervaultCard } from "./ui/evervault-card";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { Link } from "react-router-dom";
 
 export default function WealthSection() {
   const [typedText, setTypedText] = useState("");
@@ -155,10 +156,10 @@ export default function WealthSection() {
             className="group border border-pink-500/40 bg-studio-black/50 hover:bg-pink-950/30 hover:border-pink-500/70 text-pink-400 hover:text-pink-300 transition-all duration-300 backdrop-blur-sm rounded-2xl"
             asChild
           >
-            <a href="https://x.com/360wealthlabs" target="_blank" rel="noopener noreferrer" className="flex items-center">
+            <Link to="/portfolio" className="flex items-center">
               <span>Explore 360 Wealth</span>
               <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </Link>
           </Button>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { ExternalLink, Lightbulb, Code, Users } from "lucide-react";
 import { Button } from "./ui/button";
 import { HoverEffect } from "./ui/hover-effect";
+import { Link } from "react-router-dom";
 
 export default function IkiVibeSection() {
   const [typedText, setTypedText] = useState("");
@@ -83,7 +84,7 @@ export default function IkiVibeSection() {
       link: "#ikivibe"
     },
     {
-      title: "For Partners",
+      title: "Rocket Minds | For Partners",
       description: "We help individuals and organizations discover their core purpose—accelerating unique ideas and guiding them from conception to market in days. By pinpointing the intersection of passion, skill, mission, and vocation, we ensure purpose drives resilience, enabling both ideas and people to thrive.",
       icon: <Users className="h-8 w-8 text-studio-lightgray" />,
       link: "#ikivibe"
@@ -114,10 +115,10 @@ export default function IkiVibeSection() {
             className="group border border-blue-500/40 bg-studio-black/50 hover:bg-blue-950/30 hover:border-blue-500/70 text-blue-400 hover:text-blue-300 transition-all duration-300 backdrop-blur-sm rounded-2xl"
             asChild
           >
-            <a href="https://x.com/ikivibelabs" target="_blank" rel="noopener noreferrer" className="flex items-center">
-              <span>Explore IkiVibe</span>
+            <Link to="/portfolio" className="flex items-center">
+              <span>Explore Rocket</span>
               <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </Link>
           </Button>
         </div>
       </div>

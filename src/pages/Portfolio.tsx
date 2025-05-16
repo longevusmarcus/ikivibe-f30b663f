@@ -10,22 +10,16 @@ import { PreSeedCarousel } from "@/components/ui/pre-seed-carousel";
 export default function Portfolio() {
   const rocketMindsRef = useRef<HTMLDivElement>(null);
   
-  // Ensure scroll to top on mount (if no hash)
   useEffect(() => {
     // Check if there's a hash in the URL
     const hash = window.location.hash;
-    if (hash) {
-      // If hash exists, scroll to that element
-      const targetId = hash.substring(1); // Remove the # character
-      const targetElement = document.getElementById(targetId);
-      
-      if (targetElement && targetId === 'rocket-minds' && rocketMindsRef.current) {
-        // Use setTimeout to ensure the DOM is fully loaded
-        setTimeout(() => {
-          rocketMindsRef.current?.scrollIntoView({ behavior: "smooth" });
-        }, 300);
-      }
-    } else {
+    
+    if (hash === '#rocket-minds' && rocketMindsRef.current) {
+      // Use a longer timeout to ensure DOM is fully rendered
+      setTimeout(() => {
+        rocketMindsRef.current?.scrollIntoView({ behavior: "smooth" });
+      }, 500);
+    } else if (!hash) {
       // If no hash, scroll to top
       window.scrollTo(0, 0);
     }

@@ -26,8 +26,9 @@ export default function Navbar() {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      // Navigate to the portfolio page with the hash
-      navigate('/portfolio#rocket-minds');
+      // Navigate to the portfolio page with the hash and force a page refresh
+      // to ensure the useEffect in Portfolio.tsx runs with the hash
+      window.location.href = '/portfolio#rocket-minds';
     }
   };
 

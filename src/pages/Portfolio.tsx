@@ -6,6 +6,8 @@ import { CaseDemo } from "@/components/ui/demo";
 import { PortfolioProjects } from "@/components/ui/portfolio-projects";
 import { InvestmentCarousel } from "@/components/ui/investment-carousel";
 import { PreSeedCarousel } from "@/components/ui/pre-seed-carousel";
+import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export default function Portfolio() {
   const rocketMindsRef = useRef<HTMLDivElement>(null);
@@ -61,7 +63,24 @@ export default function Portfolio() {
               ref={rocketMindsRef}
               className="mt-20 scroll-mt-24 relative"
             >
-              <h2 className="text-2xl md:text-3xl font-bold mb-8">Rocket Minds</h2>
+              <div className="flex items-center justify-between mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold">Rocket Minds</h2>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button 
+                        variant="outline" 
+                        className="border-studio-gray/30 hover:bg-studio-gray/20 text-studio-lightgray hover:text-white"
+                      >
+                        Website Soon
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Our dedicated website is coming soon!</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </div>
               <p className="text-xl max-w-3xl mb-12 text-studio-lightgray">
                 We help young talents and startups stay true to their purpose while building with a long-term vision. With hands-on support, we turn unique ideas into real products—often in just days—and guide them toward sustainable growth. By aligning passion, skill, mission, and market need, we help both people and ventures grow with purpose and a mindset rooted in longevity.
               </p>

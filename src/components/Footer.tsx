@@ -37,7 +37,7 @@ export default function Footer() {
             <ul className="space-y-2 text-studio-lightgray">
               <li className="transition-colors">
                 <a href="#ikivibe" className="hover:text-studio-white flex items-center">
-                  <span className="mr-2">・</span> IkiVibe Labs
+                  <span className="mr-2">・</span> Rocket Labs
                 </a>
               </li>
               <li className="transition-colors">
@@ -47,7 +47,7 @@ export default function Footer() {
               </li>
               <li className="transition-colors">
                 <a href="#wealth" className="hover:text-studio-white flex items-center">
-                  <span className="mr-2">・</span> 360 Wealth Labs
+                  <span className="mr-2">・</span> 360 Labs
                 </a>
               </li>
             </ul>
@@ -74,7 +74,7 @@ export default function Footer() {
         
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-studio-gray/20 backdrop-blur-md bg-studio-black/30">
           <div className="text-studio-lightgray text-xs mb-4 md:mb-0 md:w-1/4">
-            <p className="whitespace-nowrap">© {new Date().getFullYear()} IkiVibe Chōka Labs. All rights reserved.</p>
+            <p className="whitespace-nowrap">© {new Date().getFullYear()} IkiVibe Labs. All rights reserved.</p>
           </div>
           
           <p className="text-xs opacity-80 text-studio-lightgray text-center mb-4 md:mb-0 md:w-1/2">Powered by MBH CHE-344.214.080</p>

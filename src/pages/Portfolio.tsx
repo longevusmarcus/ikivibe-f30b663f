@@ -45,7 +45,10 @@ export default function Portfolio() {
             </div>
 
             <div className="mt-20">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8">Rocket Minds | For Partners</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">Rocket Minds</h2>
+              <p className="text-xl max-w-3xl mb-12 text-studio-lightgray">
+                We help individuals and organizations discover their core purpose—accelerating unique ideas and guiding them from conception to market in days. By pinpointing the intersection of passion, skill, mission, and vocation, we ensure purpose drives resilience, enabling both ideas and people to thrive.
+              </p>
               <CaseDemo />
             </div>
           </div>

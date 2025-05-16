@@ -128,13 +128,13 @@ export default function WealthSection() {
       ref={sectionRef} 
       id="wealth" 
       className="py-24 sm:py-32 bg-studio-black/80 backdrop-blur-sm relative z-10"
-      style={{ position: 'relative' }} // Add explicit position for Intersection Observer
+      style={{ position: 'relative' }}
     >
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <div className="section-number">03</div>
-          <h2 className="section-title">360 Wealth Labs</h2>
-          <p className="section-subtitle">Wealth That Sustains</p>
+          <h2 className="section-title">360 Labs</h2>
+          <p className="section-subtitle">Building full-circle sustainable abundance and legacy: time, social, physical, mental, financial</p>
         </div>
         
         <div className="mb-16 max-w-3xl">

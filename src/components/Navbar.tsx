@@ -7,9 +7,11 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
-  // Scroll to top when location changes
+  // Scroll to top when location changes (unless there's a hash)
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (!location.hash) {
+      window.scrollTo(0, 0);
+    }
   }, [location]);
 
   return (

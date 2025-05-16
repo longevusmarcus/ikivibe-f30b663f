@@ -8,9 +8,23 @@ import { InvestmentCarousel } from "@/components/ui/investment-carousel";
 import { PreSeedCarousel } from "@/components/ui/pre-seed-carousel";
 
 export default function Portfolio() {
-  // Ensure scroll to top on mount
+  // Ensure scroll to top on mount (if no hash)
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Check if there's a hash in the URL
+    const hash = window.location.hash;
+    if (hash) {
+      // If hash exists, scroll to that element
+      const element = document.querySelector(hash);
+      if (element) {
+        // Use setTimeout to ensure the DOM is fully loaded
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    } else {
+      // If no hash, scroll to top
+      window.scrollTo(0, 0);
+    }
   }, []);
   
   return (

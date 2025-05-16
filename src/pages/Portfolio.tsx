@@ -45,7 +45,7 @@ export default function Portfolio() {
             </div>
 
             <div className="mt-20">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8">Client Partnerships</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">Rocket Minds | For Partners</h2>
               <CaseDemo />
             </div>
           </div>

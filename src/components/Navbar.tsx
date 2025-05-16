@@ -29,7 +29,7 @@ export default function Navbar() {
                 <div className="absolute inset-0 before:absolute before:w-[70%] before:h-[70%] before:border-r before:border-white/30 before:rotate-[15deg] before:origin-top-right"></div>
               </div>
               <span className="text-xl font-display font-bold tracking-tight text-white">
-                IkiVibe Chōka Labs
+                IkiVibe Labs
               </span>
             </div>
             
@@ -48,6 +48,9 @@ export default function Navbar() {
               >
                 Portfolio
               </Link>
+              <div className="py-4 text-white opacity-70 cursor-not-allowed">
+                Rocket Minds (soon)
+              </div>
             </nav>
           </div>
           
@@ -76,7 +79,7 @@ export default function Navbar() {
                   <div className="absolute inset-0 before:absolute before:w-[70%] before:h-[70%] before:border-r before:border-white/30 before:rotate-[15deg] before:origin-top-right"></div>
                 </div>
                 <span className="text-xl md:text-2xl font-display font-bold tracking-tight">
-                  IkiVibe Chōka Labs
+                  IkiVibe Labs
                 </span>
               </Link>
             </div>
@@ -98,6 +101,9 @@ export default function Navbar() {
               <Link to="/portfolio" className="text-studio-lightgray hover:text-studio-white transition-colors">
                 Portfolio
               </Link>
+              <div className="text-studio-lightgray/70 cursor-not-allowed">
+                Rocket Minds (soon)
+              </div>
             </nav>
           </div>
         </header>

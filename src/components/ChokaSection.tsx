@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
@@ -82,7 +81,7 @@ export default function ChokaSection() {
         <div className="mb-16">
           <div className="section-number">02</div>
           <h2 className="section-title">Chōka Labs</h2>
-          <p className="section-subtitle">Designing next-generation rituals and systems for joyful, lasting health and human optimization</p>
+          <p className="section-subtitle">Designing next-generation rituals and systems for lasting health and human optimization</p>
         </div>
         
         <div className="mb-16 max-w-3xl">

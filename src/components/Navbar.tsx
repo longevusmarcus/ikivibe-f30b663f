@@ -1,11 +1,12 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   // Scroll to top when location changes (unless there's a hash)
   useEffect(() => {
@@ -13,6 +14,22 @@ export default function Navbar() {
       window.scrollTo(0, 0);
     }
   }, [location]);
+
+  const handleRocketMindsClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+    
+    // If already on portfolio page, just scroll to the section
+    if (location.pathname === '/portfolio') {
+      const element = document.getElementById('rocket-minds');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Navigate to the portfolio page with the hash
+      navigate('/portfolio#rocket-minds');
+    }
+  };
 
   return (
     <>
@@ -50,13 +67,13 @@ export default function Navbar() {
               >
                 Portfolio
               </Link>
-              <Link 
-                to="/portfolio#rocket-minds" 
+              <a 
+                href="#rocket-minds"
                 className="py-4 text-white"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handleRocketMindsClick}
               >
                 Rocket Minds
-              </Link>
+              </a>
             </nav>
           </div>
           
@@ -107,9 +124,13 @@ export default function Navbar() {
               <Link to="/portfolio" className="text-studio-lightgray hover:text-studio-white transition-colors">
                 Portfolio
               </Link>
-              <Link to="/portfolio#rocket-minds" className="text-studio-lightgray hover:text-studio-white transition-colors">
+              <a 
+                href="#rocket-minds"
+                className="text-studio-lightgray hover:text-studio-white transition-colors"
+                onClick={handleRocketMindsClick}
+              >
                 Rocket Minds
-              </Link>
+              </a>
             </nav>
           </div>
         </header>

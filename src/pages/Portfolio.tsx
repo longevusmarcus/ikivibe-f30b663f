@@ -1,5 +1,5 @@
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { CaseDemo } from "@/components/ui/demo";
@@ -8,18 +8,22 @@ import { InvestmentCarousel } from "@/components/ui/investment-carousel";
 import { PreSeedCarousel } from "@/components/ui/pre-seed-carousel";
 
 export default function Portfolio() {
+  const rocketMindsRef = useRef<HTMLDivElement>(null);
+  
   // Ensure scroll to top on mount (if no hash)
   useEffect(() => {
     // Check if there's a hash in the URL
     const hash = window.location.hash;
     if (hash) {
       // If hash exists, scroll to that element
-      const element = document.querySelector(hash);
-      if (element) {
+      const targetId = hash.substring(1); // Remove the # character
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement && targetId === 'rocket-minds' && rocketMindsRef.current) {
         // Use setTimeout to ensure the DOM is fully loaded
         setTimeout(() => {
-          element.scrollIntoView({ behavior: "smooth" });
-        }, 100);
+          rocketMindsRef.current?.scrollIntoView({ behavior: "smooth" });
+        }, 300);
       }
     } else {
       // If no hash, scroll to top
@@ -58,7 +62,11 @@ export default function Portfolio() {
               <InvestmentCarousel />
             </div>
 
-            <div id="rocket-minds" className="mt-20 scroll-mt-24">
+            <div 
+              id="rocket-minds" 
+              ref={rocketMindsRef}
+              className="mt-20 scroll-mt-24 relative"
+            >
               <h2 className="text-2xl md:text-3xl font-bold mb-8">Rocket Minds</h2>
               <p className="text-xl max-w-3xl mb-12 text-studio-lightgray">
                 We help young talents and startups stay true to their purpose while building with a long-term vision. With hands-on support, we turn unique ideas into real products—often in just days—and guide them toward sustainable growth. By aligning passion, skill, mission, and market need, we help both people and ventures grow with purpose and a mindset rooted in longevity.

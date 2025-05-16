@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from "react";
 import { ExternalLink, Lightbulb, Code, Users } from "lucide-react";
 import { Button } from "./ui/button";
@@ -96,7 +97,7 @@ export default function IkiVibeSection() {
         <div className="mb-16">
           <div className="section-number">01</div>
           <h2 className="section-title">Rocket Labs</h2>
-          <p className="section-subtitle">Igniting and preserving vibes, ideas, talents, and startups through fast, creative execution, driven by Ikigai and committed to lasting impact</p>
+          <p className="section-subtitle">Igniting and preserving vibes, ideas, talents, and startups through fast, creative execution, guided by ikigai, built for longevity</p>
         </div>
         
         <div className="mb-16 max-w-3xl">

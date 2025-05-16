@@ -44,7 +44,7 @@ export default function Portfolio() {
               <InvestmentCarousel />
             </div>
 
-            <div className="mt-20">
+            <div id="rocket-minds" className="mt-20 scroll-mt-24">
               <h2 className="text-2xl md:text-3xl font-bold mb-8">Rocket Minds</h2>
               <p className="text-xl max-w-3xl mb-12 text-studio-lightgray">
                 We help young talents and startups stay true to their purpose while building with a long-term vision. With hands-on support, we turn unique ideas into real products—often in just days—and guide them toward sustainable growth. By aligning passion, skill, mission, and market need, we help both people and ventures grow with purpose and a mindset rooted in longevity.

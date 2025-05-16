@@ -48,9 +48,13 @@ export default function Navbar() {
               >
                 Portfolio
               </Link>
-              <div className="py-4 text-white opacity-70 cursor-not-allowed">
-                Rocket Minds (soon)
-              </div>
+              <Link 
+                to="/portfolio#rocket-minds" 
+                className="py-4 text-white"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Rocket Minds
+              </Link>
             </nav>
           </div>
           
@@ -101,9 +105,9 @@ export default function Navbar() {
               <Link to="/portfolio" className="text-studio-lightgray hover:text-studio-white transition-colors">
                 Portfolio
               </Link>
-              <div className="text-studio-lightgray/70 cursor-not-allowed">
-                Rocket Minds (soon)
-              </div>
+              <Link to="/portfolio#rocket-minds" className="text-studio-lightgray hover:text-studio-white transition-colors">
+                Rocket Minds
+              </Link>
             </nav>
           </div>
         </header>

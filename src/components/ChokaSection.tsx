@@ -70,7 +70,7 @@ export default function ChokaSection() {
       link: "#choka"
     },
     {
-      title: "DIRECTORY",
+      title: "DIRECTORIES",
       description: "Chōka Path - A digital platform that guides individuals to workplaces that prioritize health, balance, and long-term well-being.",
       link: "#choka"
     }

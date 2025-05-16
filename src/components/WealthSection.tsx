@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { Clock, Users, DollarSign, Heart, Brain, ExternalLink, Zap } from "lucide-react";
 import { Button } from "./ui/button";
@@ -86,7 +85,7 @@ export default function WealthSection() {
 
   const wealthCards = [
     {
-      title: "Time Wealth",
+      title: "Temporal Wealth",
       description: "More time = more thoughts. More thoughts = more ideas. More ideas = more opportunities. Design a life that buys back your time— so your mind can roam, create, and lead. Time is your amplifier.",
       icon: <Clock className="h-8 w-8 text-studio-lightgray" />,
       link: "#wealth"
@@ -135,7 +134,7 @@ export default function WealthSection() {
         <div className="mb-16">
           <div className="section-number">03</div>
           <h2 className="section-title">360 Labs</h2>
-          <p className="section-subtitle">Building full-circle sustainable abundance and legacy: time, social, physical, mental, financial</p>
+          <p className="section-subtitle">Building full-circle sustainable abundance and legacy: temporal, social, physical, mental, financial</p>
         </div>
         
         <div className="mb-16 max-w-3xl">

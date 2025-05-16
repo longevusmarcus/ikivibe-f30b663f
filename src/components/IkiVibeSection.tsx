@@ -73,7 +73,7 @@ export default function IkiVibeSection() {
   const ikiVibeCards = [
     {
       title: "Rocket Research",
-      description: "Inspired by the concept of Ikigai, we explore emerging trends to uncover opportunities that shape the future and ideas that endure. In a world where AI reshapes execution, the value of iki-ideas is skyrocketing. When humans blend their Ikigai with a tech spirit, ideas become the currency of an AI-driven economy.",
+      description: "Inspired by the concept of Ikigai, we explore emerging trends to uncover opportunities that shape the future and ideas that endure. In a world where AI reshapes execution, the value of fast iki-ideas is skyrocketing. When humans blend their Ikigai with a tech spirit, ideas become the currency of an AI-driven economy.",
       icon: <Lightbulb className="h-8 w-8 text-studio-lightgray" />,
       link: "#ikivibe"
     },

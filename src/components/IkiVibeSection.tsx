@@ -79,7 +79,7 @@ export default function IkiVibeSection() {
     },
     {
       title: "Rocket MVPs",
-      description: "We build simple, fun digital solutions that solve pain points, foster connection, enhance well-being, and drive personal growth. By seamlessly blending AI technology with thoughtful, human-centered design, we ensure our platforms evolve alongside humanity's ever-changing needs, delivering a bright new future for all.",
+      description: "We build simple, fun rapid MVPs that solve pain points, foster connection and ignite thoughts. By seamlessly blending AI technology with thoughtful, human-centered design, we ensure our products evolve alongside humanity's ever-changing needs.",
       icon: <Code className="h-8 w-8 text-studio-lightgray" />,
       link: "#ikivibe"
     },

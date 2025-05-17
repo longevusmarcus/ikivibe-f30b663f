@@ -8,9 +8,6 @@ export default function ContactSection() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-6">
               Let's Connect
             </h2>
-            <p className="text-studio-lightgray max-w-lg mb-6">
-              Interested in collaborating or learning more about our approach to building enduring ideas, optimizing human potential, or creating sustainable wealth?
-            </p>
             <div className="flex items-center">
               <span className="text-sm uppercase tracking-wider mr-4">Follow us</span>
               <div className="flex space-x-4">
@@ -69,4 +66,3 @@ export default function ContactSection() {
     </section>
   );
 }
-

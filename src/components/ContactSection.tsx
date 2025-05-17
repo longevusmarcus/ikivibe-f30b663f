@@ -11,9 +11,6 @@ export default function ContactSection() {
             <p className="text-studio-lightgray max-w-lg mb-6">
               Interested in collaborating or learning more about our approach to building enduring ideas, optimizing human potential, or creating sustainable wealth?
             </p>
-            <p className="text-studio-lightgray mb-8">
-              Reach out to us at <a href="mailto:info@ikivibechokalabs.com" className="underline hover:text-studio-white transition-colors">info@ikivibechokalabs.com</a>
-            </p>
             <div className="flex items-center">
               <span className="text-sm uppercase tracking-wider mr-4">Follow us</span>
               <div className="flex space-x-4">
@@ -72,3 +69,4 @@ export default function ContactSection() {
     </section>
   );
 }
+

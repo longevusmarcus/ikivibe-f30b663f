@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 export default function IkiVibeSection() {
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
-  const textToType = "We bring ideas to life in days—beyond the mind and into the world—by tapping into lasting trends that spark human connection and meaningful growth. Along the way, we accelerate bold concepts and guide young talents and startups toward their core purpose, helping them launch fast and grow with a mindset rooted in longevity.";
+  const textToType = "We bring ideas to life in days, by tapping into lasting trends that spark human connection and meaningful growth. We help young talents and startups launch fast and grow with longevity in mind. Our priority: backing under-23 visionaries with raw talent and a clear sense of purpose.";
   const typingSpeed = 30; // milliseconds per character
   const textRef = useRef<HTMLParagraphElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);

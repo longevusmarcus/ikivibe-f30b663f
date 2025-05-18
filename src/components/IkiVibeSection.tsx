@@ -78,8 +78,8 @@ export default function IkiVibeSection() {
       link: "#ikivibe"
     },
     {
-      title: "Rocket Ideas",
-      description: "We build simple, fun rapid MVPs that solve pain points, foster connection and ignite thoughts. By seamlessly blending AI technology with thoughtful, human-centered design, we ensure our products evolve alongside humanity's ever-changing needs.",
+      title: "Rocket Vibes",
+      description: "We build simple, fun and rapid MVPs that solve unmet pain points, spark connection, and provoke thought. By blending AI with human-centered design, we continuously test bold ideas that move in sync with humanity's evolving needs.",
       icon: <Code className="h-8 w-8 text-studio-lightgray" />,
       link: "#ikivibe"
     },

@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from "react";
 import { ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
@@ -7,7 +8,7 @@ import { Link } from "react-router-dom";
 export default function ChokaSection() {
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
-  const textToType = "Wellness is the foundation of human evolution. Powered by IkiVibe Collective and produced by Chōka Crew, we offer unique solutions that accelerate holistic wellbeing and a health-first society.";
+  const textToType = "Wellness is the foundation of human evolution. Powered by Rocket Labs and produced by the Chōka Crew, we offer unique solutions that accelerate holistic wellbeing and a health-first society.";
   const typingSpeed = 30; // milliseconds per character
   const textRef = useRef<HTMLParagraphElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);

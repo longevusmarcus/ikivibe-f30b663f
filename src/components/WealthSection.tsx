@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from "react";
 import { Clock, Users, DollarSign, Heart, Brain, ExternalLink, Zap } from "lucide-react";
 import { Button } from "./ui/button";
@@ -10,7 +11,7 @@ export default function WealthSection() {
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
   const [hasStartedTyping, setHasStartedTyping] = useState(false);
-  const textToType = "We dissect the essence of who we are, crafting solutions and communities that support a journey of intentional living. At the heart of our mission is investing in visionary ideators—especially those under 23—empowered by innate talent and guided by ikigai. Our goal is to cultivate 360-degree wealth: a holistic integration of time, relationships, wellbeing, and financial prosperity, forging the path toward lasting abundance and meaningful legacy.";
+  const textToType = "We dissect the essence of who we are, crafting solutions and communities that support a journey of intentional living. Our goal is to cultivate 360-degree wealth: a holistic integration of time, relationships, wellbeing, and financial prosperity, forging the path toward lasting abundance and meaningful legacy.";
   const typingSpeed = 20; // milliseconds per character - faster typing speed
   const textRef = useRef<HTMLParagraphElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);

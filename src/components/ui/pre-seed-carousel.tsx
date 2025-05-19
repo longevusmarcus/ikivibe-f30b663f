@@ -22,7 +22,7 @@ const preSeedInvestments: PreSeedInvestment[] = Array.from({ length: 10 }).map((
   if (index % 5 === 0) {
     return {
       name: "StarCy",
-      url: "https://starcyindustries.com"
+      url: "https://starcy.ai"
     };
   } else {
     return {

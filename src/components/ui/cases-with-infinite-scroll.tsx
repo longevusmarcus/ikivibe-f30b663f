@@ -74,7 +74,7 @@ function Case() {
               <div className="flex items-center justify-center gap-2">
                 <h3 className="text-lg font-medium">StarCy</h3>
                 <a 
-                  href="https://starcyindustries.com" 
+                  href="https://starcy.ai" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-studio-lightgray hover:text-white transition-colors"

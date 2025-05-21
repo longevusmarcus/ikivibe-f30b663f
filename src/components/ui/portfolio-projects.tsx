@@ -16,7 +16,7 @@ const projects: Project[] = [
   {
     name: "Wellchat",
     description: "Chatroulette Meets BetterHelp",
-    url: "wellchat.me",
+    url: "meyouzeno.com",
     category: 'core'
   },
   {
@@ -34,7 +34,7 @@ const projects: Project[] = [
   {
     name: "Path",
     description: "The AI Career Strategist (demo)",
-    url: "https://careerjobs.app",
+    url: "https://zeno.careers",
     category: 'core'
   },
   

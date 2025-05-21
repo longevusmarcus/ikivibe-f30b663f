@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { Clock, Users, DollarSign, Heart, Brain, ExternalLink, Zap } from "lucide-react";
 import { Button } from "./ui/button";
@@ -157,7 +156,7 @@ export default function WealthSection() {
             asChild
           >
             <Link to="/portfolio" className="flex items-center">
-              <span>Explore Zeno Wealth</span>
+              <span>Explore Zeno</span>
               <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>

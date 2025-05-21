@@ -11,7 +11,7 @@ export default function WealthSection() {
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
   const [hasStartedTyping, setHasStartedTyping] = useState(false);
-  const textToType = "We dissect the essence of who we are, crafting solutions and communities that support a journey of intentional living. Powered by Rocket Labs and produced by the 360 Crew, our goal is to cultivate 360-degree wealth: a holistic integration of time, relationships, wellbeing, and financial prosperity, forging the path toward lasting abundance and meaningful legacy.";
+  const textToType = "We dissect the essence of who we are, crafting solutions and communities that support a journey of intentional living. Powered by Rocket Labs and produced by the Zeno Crew, our goal is to cultivate 360-degree wealth: a holistic integration of time, relationships, wellbeing, and financial prosperity, forging the path toward lasting abundance and meaningful legacy.";
   const typingSpeed = 20; // milliseconds per character - faster typing speed
   const textRef = useRef<HTMLParagraphElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -134,7 +134,7 @@ export default function WealthSection() {
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <div className="section-number">03</div>
-          <h2 className="section-title">360 Labs</h2>
+          <h2 className="section-title">Zeno Labs</h2>
           <p className="section-subtitle">Building full-circle sustainable abundance and legacy: temporal, social, physical, mental, financial</p>
         </div>
         
@@ -157,7 +157,7 @@ export default function WealthSection() {
             asChild
           >
             <Link to="/portfolio" className="flex items-center">
-              <span>Explore 360 Wealth</span>
+              <span>Explore Zeno Wealth</span>
               <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>

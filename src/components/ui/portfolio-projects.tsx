@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -63,8 +64,8 @@ const projects: Project[] = [
     category: 'mid'
   },
   {
-    name: "360 Wealth Labs",
-    description: "360 Wealth Discord Community",
+    name: "Zeno Wealth Labs",
+    description: "Zeno Wealth Discord Community",
     url: "https://discord.com/invite/MV8g7HTbCG",
     category: 'mid'
   },

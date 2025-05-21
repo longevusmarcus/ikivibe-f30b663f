@@ -14,6 +14,12 @@ interface Project {
 const projects: Project[] = [
   // CORE Projects
   {
+    name: "Zeno",
+    description: "The AI Video Alchemist",
+    url: "zeno.media",
+    category: 'core'
+  },
+  {
     name: "Wellchat",
     description: "Chatroulette Meets BetterHelp",
     url: "meyouzeno.com",

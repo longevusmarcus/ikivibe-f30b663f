@@ -26,6 +26,12 @@ const projects: Project[] = [
     category: 'core'
   },
   {
+    name: "Zeno Careers (Path)",
+    description: "The AI Career Strategist (demo)",
+    url: "https://zeno.careers",
+    category: 'core'
+  },
+  {
     name: "Chōka",
     description: "RTD longevity chocolate",
     url: "longevitychocolate.ch",
@@ -35,12 +41,6 @@ const projects: Project[] = [
     name: "Chōka Café",
     description: "Longevity café concept",
     url: "chohkah.com",
-    category: 'core'
-  },
-  {
-    name: "Zeno Careers (Path)",
-    description: "The AI Career Strategist (demo)",
-    url: "https://zeno.careers",
     category: 'core'
   },
   

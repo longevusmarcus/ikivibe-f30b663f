@@ -46,6 +46,12 @@ const projects: Project[] = [
     category: 'mid'
   },
   {
+    name: "Zeno Money",
+    description: "Opensource, free, next-gen wealth tracker in the making",
+    url: "https://zenomoney.lovable.app/",
+    category: 'mid'
+  },
+  {
     name: "Chōwa",
     description: "Courses To Unlock Your Epigenetic Potential",
     url: "chowacourses.com",

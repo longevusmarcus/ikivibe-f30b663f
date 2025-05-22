@@ -40,12 +40,6 @@ const projects: Project[] = [
   
   // Mid Priority & Communities
   {
-    name: "FUCK MIRROR",
-    description: "Clothing That Only Speaks In Reflection",
-    url: "fuckmirror.com",
-    category: 'mid'
-  },
-  {
     name: "Million Dollar Vibe",
     description: "A pixel-made, permanent directory of founder projects",
     url: "milliondollarvibe.ai",
@@ -85,6 +79,12 @@ const projects: Project[] = [
     name: "HomoiDeus",
     description: "Mint Ideas, Predictions, Thoughts, Visions & Vibes",
     url: "https://zora.co/@homoideus",
+    category: 'mid'
+  },
+  {
+    name: "FUCK MIRROR",
+    description: "Clothing That Only Speaks In Reflection",
+    url: "fuckmirror.com",
     category: 'mid'
   }
 ];

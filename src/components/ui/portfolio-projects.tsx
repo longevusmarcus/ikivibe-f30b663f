@@ -9,7 +9,6 @@ interface Project {
   description: string;
   url?: string;
   category: 'core' | 'mid';
-  subtext?: string;
 }
 
 const projects: Project[] = [
@@ -44,8 +43,7 @@ const projects: Project[] = [
     name: "Million Dollar Vibe",
     description: "A pixel-made, permanent directory of founder projects",
     url: "milliondollarvibe.ai",
-    category: 'mid',
-    subtext: "Zeno Money - Opensource, free, next-gen wealth tracker in the making"
+    category: 'mid'
   },
   {
     name: "Chōwa",
@@ -163,26 +161,19 @@ export const PortfolioProjects = ({ category }: PortfolioProjectsProps) => {
                 )}
               </div>
               {isMobile ? (
-                <>
-                  <p className="text-studio-lightgray">{project.description}</p>
-                  {project.subtext && (
-                    <p className="text-sm text-studio-lightgray/70 mt-2 italic">{project.subtext}</p>
-                  )}
-                </>
+                <p className="text-studio-lightgray">{project.description}</p>
               ) : (
                 <AnimatePresence>
                   {hoveredIndex === index ? (
-                    <motion.div
+                    <motion.p 
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.2 }}
+                      className="text-studio-lightgray"
                     >
-                      <p className="text-studio-lightgray">{project.description}</p>
-                      {project.subtext && (
-                        <p className="text-sm text-studio-lightgray/70 mt-2 italic">{project.subtext}</p>
-                      )}
-                    </motion.div>
+                      {project.description}
+                    </motion.p>
                   ) : (
                     <div className="h-[24px]" /> // Empty space placeholder for layout stability
                   )}

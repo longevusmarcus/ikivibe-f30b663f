@@ -15,20 +15,20 @@ const projects: Project[] = [
   // CORE Projects
   {
     name: "Zeno",
-    description: "The AI Video Alchemist",
-    url: "zeno.media",
-    category: 'core'
-  },
-  {
-    name: "MeYouZeno (Wellchat)",
-    description: "Chatroulette Meets BetterHelp",
-    url: "meyouzeno.com",
+    description: "The AI Alchemist",
+    url: "youzeno.com",
     category: 'core'
   },
   {
     name: "Zeno Careers (Path)",
     description: "The AI Career Strategist (demo)",
     url: "https://zeno.careers",
+    category: 'core'
+  },
+  {
+    name: "MeYouZeno (Wellchat)",
+    description: "Chatroulette Meets BetterHelp",
+    url: "meyouzeno.com",
     category: 'core'
   },
   {

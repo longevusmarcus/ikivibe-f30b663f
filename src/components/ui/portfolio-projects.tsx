@@ -40,9 +40,9 @@ const projects: Project[] = [
   
   // Mid Priority & Communities
   {
-    name: "Million Dollar Vibe",
-    description: "A pixel-made, permanent directory of founder projects",
-    url: "milliondollarvibe.ai",
+    name: "Neko Ft. Zeno",
+    description: "First AI Feet Reader & Reflexologist",
+    url: "aifootreader.com",
     category: 'mid'
   },
   {

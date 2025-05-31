@@ -78,7 +78,7 @@ const projects: Project[] = [
   {
     name: "Homolongevus",
     description: "Wellbeing Coach",
-    url: "https://designrr.page/?id=389570&token=2939920265&type=FP&h=3198",
+    url: "homolongevus.life",
     category: 'mid'
   },
   {

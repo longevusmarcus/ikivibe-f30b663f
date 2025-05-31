@@ -40,7 +40,7 @@ const projects: Project[] = [
   
   // Mid Priority & Communities
   {
-    name: "Neko Ft. Zeno",
+    name: "Neko (by Zeno)",
     description: "First AI Feet Reader & Reflexologist",
     url: "aifootreader.com",
     category: 'mid'

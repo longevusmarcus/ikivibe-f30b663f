@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -46,9 +45,9 @@ const projects: Project[] = [
     category: 'mid'
   },
   {
-    name: "Zeno Money",
+    name: "Yofi (by Zeno)",
     description: "Opensource, free, next-gen wealth tracker in the making",
-    url: "https://zenomoney.lovable.app/",
+    url: "zeno.wtf",
     category: 'mid'
   },
   {

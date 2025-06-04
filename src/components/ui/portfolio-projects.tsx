@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -19,13 +20,13 @@ const projects: Project[] = [
     category: 'core'
   },
   {
-    name: "Zeno Careers (Path)",
+    name: "Path (by Zeno)",
     description: "The AI Career Strategist (demo)",
     url: "https://zeno.careers",
     category: 'core'
   },
   {
-    name: "MeYouZeno (Wellchat)",
+    name: "Wellchat (by Zeno)",
     description: "Chatroulette Meets BetterHelp",
     url: "meyouzeno.com",
     category: 'core'

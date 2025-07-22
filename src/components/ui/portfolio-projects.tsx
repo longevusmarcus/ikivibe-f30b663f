@@ -92,6 +92,18 @@ const projects: Project[] = [
     description: "Clothing That Only Speaks In Reflection",
     url: "fuckmirror.com",
     category: 'mid'
+  },
+  {
+    name: "Batch",
+    description: "Accelerating startups with hands-on support",
+    url: "batch.global",
+    category: 'mid'
+  },
+  {
+    name: "The Izzy Brew",
+    description: "Specialty coffee and brewing experience",
+    url: "theizzybrew.com",
+    category: 'mid'
   }
 ];
 

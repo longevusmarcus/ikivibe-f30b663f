@@ -32,11 +32,12 @@ function Case() {
     return () => clearTimeout(timer);
   }, [api, current]);
 
-  // Create an array of 15 items where every 5th item is ANote Music, every 6th item is Feedel, and every 7th is StarCy
   const carouselItems = Array.from({ length: 15 }).map((_, index) => {
     const isANoteMusic = index % 5 === 0;
     const isFeedel = index % 5 === 1;
     const isStarCy = index % 5 === 2;
+    const isBatch = index % 5 === 3;
+    const isIzzyBrew = index % 5 === 4;
     
     return (
       <CarouselItem className="basis-1/2 md:basis-1/3 lg:basis-1/6" key={index}>
@@ -75,6 +76,34 @@ function Case() {
                 <h3 className="text-lg font-medium">StarCy</h3>
                 <a 
                   href="https://starcy.ai" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-studio-lightgray hover:text-white transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          ) : isBatch ? (
+            <div className="flex flex-col items-center text-center">
+              <div className="flex items-center justify-center gap-2">
+                <h3 className="text-lg font-medium">Batch</h3>
+                <a 
+                  href="https://batch.global" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-studio-lightgray hover:text-white transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          ) : isIzzyBrew ? (
+            <div className="flex flex-col items-center text-center">
+              <div className="flex items-center justify-center gap-2">
+                <h3 className="text-lg font-medium">The Izzy Brew</h3>
+                <a 
+                  href="https://theizzybrew.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-studio-lightgray hover:text-white transition-colors"

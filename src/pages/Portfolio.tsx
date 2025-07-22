@@ -85,38 +85,6 @@ export default function Portfolio() {
                 </Tooltip>
               </TooltipProvider>
               
-              <div className="grid gap-6 md:grid-cols-2 mb-12">
-                <div className="p-6 rounded-lg bg-studio-gray/10 backdrop-blur-sm border border-studio-gray/20 hover:border-studio-gray/40 transition-all duration-300">
-                  <div className="flex items-start justify-between">
-                    <h3 className="text-xl font-bold mb-2">Batch</h3>
-                    <a 
-                      href="https://batch.global" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-studio-lightgray hover:text-white transition-colors"
-                    >
-                      <ArrowUpRight className="w-5 h-5" />
-                    </a>
-                  </div>
-                  <p className="text-studio-lightgray">Global batch startup program</p>
-                </div>
-                
-                <div className="p-6 rounded-lg bg-studio-gray/10 backdrop-blur-sm border border-studio-gray/20 hover:border-studio-gray/40 transition-all duration-300">
-                  <div className="flex items-start justify-between">
-                    <h3 className="text-xl font-bold mb-2">The Izzy Brew</h3>
-                    <a 
-                      href="https://theizzybrew.com" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-studio-lightgray hover:text-white transition-colors"
-                    >
-                      <ArrowUpRight className="w-5 h-5" />
-                    </a>
-                  </div>
-                  <p className="text-studio-lightgray">Premium coffee experience</p>
-                </div>
-              </div>
-              
               <CaseDemo />
             </div>
           </div>

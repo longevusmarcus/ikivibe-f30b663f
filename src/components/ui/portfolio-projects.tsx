@@ -29,7 +29,7 @@ const projects: Project[] = [
     name: "Wellchat (by Zeno)",
     description: "Chatroulette Meets BetterHelp",
     url: "meyouzeno.com",
-    category: 'core'
+    category: 'mid'
   },
   {
     name: "Chōka",

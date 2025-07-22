@@ -32,12 +32,13 @@ function Case() {
     return () => clearTimeout(timer);
   }, [api, current]);
 
-  const carouselItems = Array.from({ length: 15 }).map((_, index) => {
-    const isANoteMusic = index % 5 === 0;
-    const isFeedel = index % 5 === 1;
-    const isStarCy = index % 5 === 2;
-    const isBatch = index % 5 === 3;
-    const isIzzyBrew = index % 5 === 4;
+  const carouselItems = Array.from({ length: 18 }).map((_, index) => {
+    const isANoteMusic = index % 8 === 0;
+    const isFeedel = index % 8 === 1;
+    const isStarCy = index % 8 === 2;
+    const isBatch = index % 8 === 3;
+    const isIzzyBrew = index % 8 === 4;
+    const isStealthMode = index % 8 === 5 || index % 8 === 6 || index % 8 === 7;
     
     return (
       <CarouselItem className="basis-1/2 md:basis-1/3 lg:basis-1/6" key={index}>
@@ -111,6 +112,11 @@ function Case() {
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
+            </div>
+          ) : isStealthMode ? (
+            <div className="flex flex-col items-center text-center">
+              <Lock className="w-8 h-8 mb-2 text-studio-lightgray/70" />
+              <span className="text-sm text-center text-studio-lightgray">Stealth Mode</span>
             </div>
           ) : (
             <div className="flex flex-col items-center text-center">

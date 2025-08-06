@@ -26,13 +26,13 @@ const projects: Project[] = [
     category: 'core'
   },
   {
-    name: "Path (by Zeno)",
+    name: "Path",
     description: "The AI Career Strategist (demo)",
     url: "https://zeno.careers",
     category: 'core'
   },
   {
-    name: "Wellchat (by Zeno)",
+    name: "Wellchat",
     description: "Chatroulette Meets BetterHelp",
     url: "meyouzeno.com",
     category: 'mid'
@@ -46,13 +46,13 @@ const projects: Project[] = [
   
   // Mid Priority & Communities
   {
-    name: "Neko (by Zeno)",
+    name: "Neko",
     description: "First AI Feet Reader & Reflexologist",
     url: "aifootreader.com",
     category: 'mid'
   },
   {
-    name: "Yofi (by Zeno)",
+    name: "Yofi",
     description: "Opensource, free, next-gen wealth tracker in the making",
     url: "zeno.wtf",
     category: 'mid'

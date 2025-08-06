@@ -14,6 +14,12 @@ interface Project {
 const projects: Project[] = [
   // CORE Projects
   {
+    name: "Portalio",
+    description: "The Shopify + AI Companion For Modern Freelancers & Agencies",
+    url: "portalio.app",
+    category: 'core'
+  },
+  {
     name: "Zeno",
     description: "The AI Alchemist",
     url: "youzeno.com",

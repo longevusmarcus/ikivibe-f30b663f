@@ -69,15 +69,6 @@ export default function Navbar() {
                 Portfolio
               </Link>
               <a 
-                href="https://milliondollarvibe.ai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="py-4 text-white"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Pixel Portfolio
-              </a>
-              <a 
                 href="#rocket-minds"
                 className="py-4 text-white"
                 onClick={handleRocketMindsClick}
@@ -134,14 +125,6 @@ export default function Navbar() {
               <Link to="/portfolio" className="text-studio-lightgray hover:text-studio-white transition-colors">
                 Portfolio
               </Link>
-              <a 
-                href="https://milliondollarvibe.ai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-studio-lightgray hover:text-studio-white transition-colors"
-              >
-                Pixel Portfolio
-              </a>
               <a 
                 href="#rocket-minds"
                 className="text-studio-lightgray hover:text-studio-white transition-colors"

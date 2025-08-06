@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { CaseDemo } from "@/components/ui/demo";
 import { PortfolioProjects } from "@/components/ui/portfolio-projects";
+import { PortfolioMiniProjects } from "@/components/ui/portfolio-mini-projects";
 import { InvestmentCarousel } from "@/components/ui/investment-carousel";
 import { PreSeedCarousel } from "@/components/ui/pre-seed-carousel";
 import { Button } from "@/components/ui/button";
@@ -42,6 +43,11 @@ export default function Portfolio() {
             <div className="mb-20">
               <h2 className="text-2xl md:text-3xl font-bold mb-8">Core</h2>
               <PortfolioProjects category="core" />
+              
+              <div className="mt-12">
+                <h3 className="text-xl md:text-2xl font-bold mb-6 text-studio-lightgray">In Progress</h3>
+                <PortfolioMiniProjects category="core-progress" />
+              </div>
             </div>
             
             <div className="mb-20">

@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -12,100 +11,19 @@ interface Project {
 }
 
 const projects: Project[] = [
-  // CORE Projects
-  {
-    name: "Portalio",
-    description: "The Shopify + AI Companion For Modern Freelancers & Agencies",
-    url: "portalio.app",
-    category: 'core'
-  },
-  {
-    name: "Zeno",
-    description: "The AI Alchemist",
-    url: "youzeno.com",
-    category: 'core'
-  },
   {
     name: "Path",
     description: "The AI Career Strategist (demo)",
     url: "https://zeno.careers",
     category: 'core-progress'
   },
-  {
-    name: "Wellchat",
-    description: "Chatroulette Meets BetterHelp",
-    url: "meyouzeno.com",
-    category: 'mid'
-  },
-  {
-    name: "Chōka",
-    description: "RTD longevity chocolate + Longevity café concept",
-    url: "longevitychocolate.ch",
-    category: 'core'
-  },
-  
-  // Mid Priority & Communities
-  {
-    name: "Neko",
-    description: "First AI Feet Reader & Reflexologist",
-    url: "aifootreader.com",
-    category: 'mid'
-  },
-  {
-    name: "Yofi",
-    description: "Opensource, free, next-gen wealth tracker in the making",
-    url: "zeno.wtf",
-    category: 'mid'
-  },
-  {
-    name: "Chōwa",
-    description: "Courses To Unlock Your Epigenetic Potential",
-    url: "chowacourses.com",
-    category: 'mid'
-  },
-  {
-    name: "Chōka Path",
-    description: "Directory of wellness-focused anti-burnout workspaces",
-    url: "chokapath.com",
-    category: 'mid'
-  },
-  {
-    name: "360 Wealth Labs",
-    description: "360 Wealth Discord Community",
-    url: "https://discord.com/invite/MV8g7HTbCG",
-    category: 'mid'
-  },
-  {
-    name: "Homocryptus",
-    description: "Predictions, TA Ideas, TA Scripts, Web3 Advisory For Startups",
-    url: "homocryptus.life",
-    category: 'mid'
-  },
-  {
-    name: "Homolongevus",
-    description: "Wellbeing Coach",
-    url: "homolongevus.life",
-    category: 'mid'
-  },
-  {
-    name: "HomoiDeus",
-    description: "Mint Ideas, Predictions, Thoughts, Visions & Vibes",
-    url: "https://zora.co/@homoideus",
-    category: 'mid'
-  },
-  {
-    name: "FUCK MIRROR",
-    description: "Clothing That Only Speaks In Reflection",
-    url: "fuckmirror.com",
-    category: 'mid'
-  }
 ];
 
-interface PortfolioProjectsProps {
-  category: 'core' | 'mid';
+interface PortfolioMiniProjectsProps {
+  category: 'core-progress';
 }
 
-export const PortfolioProjects = ({ category }: PortfolioProjectsProps) => {
+export const PortfolioMiniProjects = ({ category }: PortfolioMiniProjectsProps) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
   const isMobile = useIsMobile();
@@ -150,17 +68,17 @@ export const PortfolioProjects = ({ category }: PortfolioProjectsProps) => {
   return (
     <div className="w-full py-6">
       <div className="container mx-auto px-4">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-4">
           {filteredProjects.map((project, index) => (
             <div 
               key={index}
-              className="p-6 rounded-lg bg-studio-gray/10 backdrop-blur-sm border border-studio-gray/20 hover:border-studio-gray/40 transition-all duration-300 relative"
+              className="p-4 rounded-lg bg-studio-gray/10 backdrop-blur-sm border border-studio-gray/20 hover:border-studio-gray/40 transition-all duration-300 relative"
               onMouseEnter={() => !isMobile && setHoveredIndex(index)}
               onMouseLeave={() => !isMobile && setHoveredIndex(null)}
               ref={(el) => projectRefs.current[index] = el}
             >
               <div className="flex items-start justify-between">
-                <h3 className="text-xl font-bold mb-2">{project.name}</h3>
+                <h3 className="text-lg font-bold mb-2">{project.name}</h3>
                 {project.url && (
                   <a 
                     href={project.url.startsWith('http') ? project.url : `https://${project.url}`} 
@@ -168,12 +86,12 @@ export const PortfolioProjects = ({ category }: PortfolioProjectsProps) => {
                     rel="noopener noreferrer"
                     className="text-studio-lightgray hover:text-white transition-colors"
                   >
-                    <ArrowUpRight className="w-5 h-5" />
+                    <ArrowUpRight className="w-4 h-4" />
                   </a>
                 )}
               </div>
               {isMobile ? (
-                <p className="text-studio-lightgray">{project.description}</p>
+                <p className="text-sm text-studio-lightgray">{project.description}</p>
               ) : (
                 <AnimatePresence>
                   {hoveredIndex === index ? (
@@ -182,12 +100,12 @@ export const PortfolioProjects = ({ category }: PortfolioProjectsProps) => {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="text-studio-lightgray"
+                      className="text-sm text-studio-lightgray"
                     >
                       {project.description}
                     </motion.p>
                   ) : (
-                    <div className="h-[24px]" /> // Empty space placeholder for layout stability
+                    <div className="h-[20px]" /> // Empty space placeholder for layout stability
                   )}
                 </AnimatePresence>
               )}

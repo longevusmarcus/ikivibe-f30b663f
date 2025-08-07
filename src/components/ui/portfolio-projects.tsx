@@ -32,12 +32,6 @@ const projects: Project[] = [
     category: 'core-progress'
   },
   {
-    name: "Wellchat",
-    description: "Chatroulette Meets BetterHelp",
-    url: "meyouzeno.com",
-    category: 'mid'
-  },
-  {
     name: "Chōka",
     description: "RTD longevity chocolate + Longevity café concept",
     url: "longevitychocolate.ch",

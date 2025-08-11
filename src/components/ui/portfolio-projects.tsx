@@ -15,7 +15,7 @@ const projects: Project[] = [
   // CORE Projects
   {
     name: "Portalio",
-    description: "The Shopify + AI Companion For Modern Freelancers & Agencies",
+    description: "Airtable + Cursor For Modern Freelancers & Boutique Agencies",
     url: "portalio.app",
     category: 'core'
   },

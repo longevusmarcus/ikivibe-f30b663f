@@ -15,7 +15,7 @@ const projects: Project[] = [
   // CORE Projects
   {
     name: "Path",
-    description: "The AI Career Strategist (demo)",
+    description: "Portalio - Airtable + Cursor For Modern Freelancers & Boutique Agencies",
     url: "https://zeno.careers",
     category: 'core-progress'
   },
@@ -27,7 +27,7 @@ const projects: Project[] = [
   },
   {
     name: "Portalio",
-    description: "Airtable + Cursor For Modern Freelancers & Boutique Agencies",
+    description: "Path Genius : AI Personal Career Copilot",
     url: "portalio.app",
     category: 'core'
   },

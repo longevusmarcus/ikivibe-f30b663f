@@ -14,10 +14,10 @@ interface Project {
 const projects: Project[] = [
   // CORE Projects
   {
-    name: "Portalio",
-    description: "Airtable + Cursor For Modern Freelancers & Boutique Agencies",
-    url: "portalio.app",
-    category: 'core'
+    name: "Path",
+    description: "The AI Career Strategist (demo)",
+    url: "https://zeno.careers",
+    category: 'core-progress'
   },
   {
     name: "Zeno",
@@ -26,10 +26,10 @@ const projects: Project[] = [
     category: 'core'
   },
   {
-    name: "Path",
-    description: "The AI Career Strategist (demo)",
-    url: "https://zeno.careers",
-    category: 'core-progress'
+    name: "Portalio",
+    description: "Airtable + Cursor For Modern Freelancers & Boutique Agencies",
+    url: "portalio.app",
+    category: 'core'
   },
   {
     name: "Chōka",

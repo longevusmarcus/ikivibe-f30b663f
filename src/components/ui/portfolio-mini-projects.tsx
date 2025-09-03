@@ -12,9 +12,9 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "Path",
-    description: "The AI Career Strategist (demo)",
-    url: "https://zeno.careers",
+    name: "Portalio",
+    description: "Airtable + Cursor For Modern Freelancers & Boutique Agencies",
+    url: "portalio.app",
     category: 'core-progress'
   },
 ];

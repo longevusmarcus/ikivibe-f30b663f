@@ -14,21 +14,15 @@ interface Project {
 const projects: Project[] = [
   // CORE Projects
   {
-    name: "Path",
-    description: "The AI Career Strategist (demo)",
-    url: "https://zeno.careers",
-    category: 'core-progress'
+    name: "Path Genius",
+    description: "The AI Career Strategist",
+    url: "pathgenius.app",
+    category: 'core'
   },
   {
     name: "Zeno",
     description: "The AI Alchemist",
     url: "youzeno.com",
-    category: 'core'
-  },
-  {
-    name: "Portalio",
-    description: "Airtable + Cursor For Modern Freelancers & Boutique Agencies",
-    url: "portalio.app",
     category: 'core'
   },
   {

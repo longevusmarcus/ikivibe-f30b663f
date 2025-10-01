@@ -84,7 +84,7 @@ export default function Navbar() {
                 className="py-4 text-white"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Agent
+                Agency
               </a>
             </nav>
           </div>
@@ -150,7 +150,7 @@ export default function Navbar() {
                 rel="noopener noreferrer"
                 className="text-studio-lightgray hover:text-studio-white transition-colors"
               >
-                Agent
+                Agency
               </a>
             </nav>
           </div>

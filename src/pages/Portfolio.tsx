@@ -75,22 +75,6 @@ export default function Portfolio() {
                 We help young talents and startups stay true to their purpose while building with a long-term vision. With hands-on support, we turn unique ideas into real products—often in just days—and guide them toward sustainable growth. By aligning passion, skill, mission, and market need, we help both visionary executers and pre-series B ventures grow with purpose and a mindset rooted in longevity.
               </p>
               
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Button 
-                      variant="outline" 
-                      className="border-studio-gray/30 hover:bg-studio-gray/20 text-studio-lightgray hover:text-white mb-12"
-                    >
-                      Website Soon
-                    </Button>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Our dedicated website is coming soon!</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-              
               <CaseDemo />
             </div>
           </div>

@@ -69,9 +69,11 @@ export default function Navbar() {
                 Portfolio
               </Link>
               <a 
-                href="#rocket-minds"
+                href="https://www.rocketminds.io/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="py-4 text-white"
-                onClick={handleRocketMindsClick}
+                onClick={() => setIsMenuOpen(false)}
               >
                 Rocket Minds
               </a>
@@ -135,9 +137,10 @@ export default function Navbar() {
                 Portfolio
               </Link>
               <a 
-                href="#rocket-minds"
+                href="https://www.rocketminds.io/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-studio-lightgray hover:text-studio-white transition-colors"
-                onClick={handleRocketMindsClick}
               >
                 Rocket Minds
               </a>

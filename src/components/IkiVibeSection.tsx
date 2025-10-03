@@ -115,10 +115,10 @@ export default function IkiVibeSection() {
             className="group border border-blue-500/40 bg-studio-black/50 hover:bg-blue-950/30 hover:border-blue-500/70 text-blue-400 hover:text-blue-300 transition-all duration-300 backdrop-blur-sm rounded-2xl"
             asChild
           >
-            <Link to="/portfolio" className="flex items-center">
+            <a href="https://www.rocketminds.io/" target="_blank" rel="noopener noreferrer" className="flex items-center">
               <span>Explore Rocket</span>
               <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
           </Button>
         </div>
       </div>

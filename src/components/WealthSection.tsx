@@ -10,7 +10,7 @@ export default function WealthSection() {
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
   const [hasStartedTyping, setHasStartedTyping] = useState(false);
-  const textToType = "We dissect the essence of who we are, crafting solutions and communities that support a journey of intentional living. Powered by Rocket Labs and produced by the Zeno Crew, our goal is to cultivate 360-degree wealth: a holistic integration of time, relationships, wellbeing, and financial prosperity, forging the path toward lasting abundance and meaningful legacy.";
+  const textToType = "We dissect the essence of who we are, crafting solutions and communities that support a journey of intentional living. Powered by Rocket Minds and produced by Zeno Hub, our goal is to cultivate 360-degree wealth: a holistic integration of time, relationships, wellbeing, and financial prosperity, forging the path toward lasting abundance and meaningful legacy.";
   const typingSpeed = 20; // milliseconds per character - faster typing speed
   const textRef = useRef<HTMLParagraphElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);

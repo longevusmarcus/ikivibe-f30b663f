@@ -75,7 +75,7 @@ export default function Navbar() {
                 className="py-4 text-white"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Rocket Minds
+                Launchpad
               </a>
               <a 
                 href="https://swissagent.me"
@@ -142,7 +142,7 @@ export default function Navbar() {
                 rel="noopener noreferrer"
                 className="text-studio-lightgray hover:text-studio-white transition-colors"
               >
-                Rocket Minds
+                Launchpad
               </a>
               <a 
                 href="https://swissagent.me"

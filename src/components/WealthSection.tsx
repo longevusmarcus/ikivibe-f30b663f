@@ -133,7 +133,7 @@ export default function WealthSection() {
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <div className="section-number">03</div>
-          <h2 className="section-title">Zeno Labs</h2>
+          <h2 className="section-title">Zeno Hub</h2>
           <p className="section-subtitle">Building full-circle sustainable abundance and legacy: temporal, social, physical, mental, financial</p>
         </div>
         

@@ -96,7 +96,7 @@ export default function IkiVibeSection() {
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <div className="section-number">01</div>
-          <h2 className="section-title">Rocket Labs</h2>
+          <h2 className="section-title">Rocket Minds</h2>
           <p className="section-subtitle">Igniting and preserving ideas, talents, and ventures via fast, creative execution, guided by ikigai, built for longevity</p>
         </div>
         

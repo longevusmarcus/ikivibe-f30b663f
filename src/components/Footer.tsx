@@ -37,17 +37,17 @@ export default function Footer() {
             <ul className="space-y-2 text-studio-lightgray">
               <li className="transition-colors">
                 <a href="#ikivibe" className="hover:text-studio-white flex items-center">
-                  <span className="mr-2">・</span> Rocket Labs
+                  <span className="mr-2">・</span> Rocket Minds
                 </a>
               </li>
               <li className="transition-colors">
                 <a href="#choka" className="hover:text-studio-white flex items-center">
-                  <span className="mr-2">・</span> Chōka Labs
+                  <span className="mr-2">・</span> Chōka Crew
                 </a>
               </li>
               <li className="transition-colors">
                 <a href="#wealth" className="hover:text-studio-white flex items-center">
-                  <span className="mr-2">・</span> Zeno Labs
+                  <span className="mr-2">・</span> Zeno Hub
                 </a>
               </li>
             </ul>

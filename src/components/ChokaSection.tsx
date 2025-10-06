@@ -65,12 +65,12 @@ export default function ChokaSection() {
       link: "#choka"
     },
     {
-      title: "R&D/EXPERIENCES",
-      description: "Chōka - We design healthy solutions like Longevity Chocolate, and one-of-a-kind spaces such as Chōka Cafe, each deliberately crafted to support cellular health, mental clarity, and vibrant living.",
+      title: "R&D",
+      description: "Chōka - We research and develop indulgent healthy solutions like Longevity Chocolate,, each deliberately crafted to support cellular health and mental clarity.",
       link: "#choka"
     },
     {
-      title: "DIRECTORIES",
+      title: "EXPERIENCES",
       description: "Chōka House - We design one-of-a-kind spaces such as Chōka Cafe, where you can enjoy indulgent, supplement-packed drinks and connect with other health enthusiasts.",
       link: "#choka"
     }

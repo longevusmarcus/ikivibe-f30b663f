@@ -71,7 +71,7 @@ export default function ChokaSection() {
     },
     {
       title: "DIRECTORIES",
-      description: "Chōka Path - A digital platform that guides individuals to workplaces that prioritize health, balance, and long-term well-being.",
+      description: "Chōka House - We design one-of-a-kind spaces such as Chōka Cafe, where you can enjoy indulgent, supplement-packed drinks and connect with other health enthusiasts.",
       link: "#choka"
     }
   ];

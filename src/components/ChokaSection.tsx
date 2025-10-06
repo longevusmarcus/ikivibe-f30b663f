@@ -66,7 +66,7 @@ export default function ChokaSection() {
     },
     {
       title: "R&D",
-      description: "Chōka - We research and develop indulgent healthy solutions like Longevity Chocolate,, each deliberately crafted to support cellular health and mental clarity.",
+      description: "Chōka - We research and develop indulgent healthy solutions like Longevity Chocolate, each deliberately crafted to support cellular health and mental clarity.",
       link: "#choka"
     },
     {

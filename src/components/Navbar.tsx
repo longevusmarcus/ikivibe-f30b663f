@@ -49,7 +49,7 @@ export default function Navbar() {
                 <div className="absolute inset-0 before:absolute before:w-[70%] before:h-[70%] before:border-r before:border-white/30 before:rotate-[15deg] before:origin-top-right"></div>
               </div>
               <span className="text-xl font-display font-bold tracking-tight text-white">
-                IkiVibe Labs
+                IkiVibe Chōka Labs
               </span>
             </div>
             
@@ -114,7 +114,7 @@ export default function Navbar() {
                   <div className="absolute inset-0 before:absolute before:w-[70%] before:h-[70%] before:border-r before:border-white/30 before:rotate-[15deg] before:origin-top-right"></div>
                 </div>
                 <span className="text-xl md:text-2xl font-display font-bold tracking-tight">
-                  IkiVibe Labs
+                  IkiVibe Chōka Labs
                 </span>
               </Link>
             </div>

@@ -7,7 +7,7 @@ import './index.css'
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "IkiVibe Labs",
+  "name": "IkiVibe Chōka Labs",
   "url": "https://ikivibechokalabs.com",
   "logo": "https://ikivibechokalabs.com/lovable-uploads/b04d8c9f-1545-4590-bd72-8ecdfa194d9e.png",
   "description": "Building a world where ideas survive, humans thrive, and wealth endures across generations.",

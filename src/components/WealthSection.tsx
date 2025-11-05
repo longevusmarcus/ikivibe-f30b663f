@@ -10,7 +10,7 @@ export default function WealthSection() {
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
   const [hasStartedTyping, setHasStartedTyping] = useState(false);
-  const textToType = "We dissect the essence of who we are, crafting solutions and communities that support a journey of intentional living. Powered by Rocket Minds and produced by Zeno Hub, our goal is to cultivate 360-degree wealth: a holistic integration of time, relationships, wellbeing, and financial prosperity, forging the path toward lasting abundance and meaningful legacy.";
+  const textToType = "We dissect the essence of who we are, crafting solutions and communities that support a journey of intentional living. Powered by Rocket Minds and produced by 360 Hub, our goal is to cultivate 360-degree wealth: a holistic integration of time, relationships, wellbeing, and financial prosperity, forging the path toward lasting abundance and meaningful legacy.";
   const typingSpeed = 20; // milliseconds per character - faster typing speed
   const textRef = useRef<HTMLParagraphElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -109,7 +109,7 @@ export default function WealthSection() {
       link: "#wealth"
     },
     {
-      title: "Mental Wealth",
+      title: "Mental/Spiritual/Intellectual Wealth",
       description: "More stillness = more clarity. More clarity = sharper decisions. Sharper decisions = a better future. Master your inner world before anything else. Train the mind. Expand awareness. Your mind is your first environment.",
       icon: <Brain className="h-8 w-8 text-studio-lightgray" />,
       link: "#wealth"
@@ -133,8 +133,8 @@ export default function WealthSection() {
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <div className="section-number">03</div>
-          <h2 className="section-title">Zeno Hub</h2>
-          <p className="section-subtitle">Building full-circle sustainable abundance and legacy: temporal, social, physical, mental, financial</p>
+          <h2 className="section-title">360 Hub</h2>
+          <p className="section-subtitle">Building full-circle sustainable abundance and legacy: temporal, social, physical, Mental/Spiritual/Intellectual, financial</p>
         </div>
         
         <div className="mb-16 max-w-3xl">

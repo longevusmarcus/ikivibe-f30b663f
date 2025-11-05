@@ -14,15 +14,9 @@ interface Project {
 const projects: Project[] = [
   // CORE Projects
   {
-    name: "Path Genius",
-    description: "The AI Career Strategist",
-    url: "pathgenius.app",
-    category: 'core'
-  },
-  {
-    name: "Zeno",
-    description: "The AI Alchemist",
-    url: "youzeno.com",
+    name: "Naru",
+    description: "The world's first database of human potential",
+    url: "trustnaru.com",
     category: 'core'
   },
   {
@@ -34,9 +28,21 @@ const projects: Project[] = [
   
   // Mid Priority & Communities
   {
+    name: "Zeno",
+    description: "The AI Alchemist",
+    url: "youzeno.com",
+    category: 'mid'
+  },
+  {
     name: "Neko",
     description: "First AI Feet Reader & Reflexologist",
     url: "aifootreader.com",
+    category: 'mid'
+  },
+  {
+    name: "Portalio",
+    description: "Airtable + Cursor For Modern Freelancers & Boutique Agencies",
+    url: "portalio.app",
     category: 'mid'
   },
   {

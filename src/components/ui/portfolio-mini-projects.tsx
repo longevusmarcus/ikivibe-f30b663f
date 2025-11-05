@@ -10,14 +10,7 @@ interface Project {
   category: 'core' | 'core-progress' | 'mid';
 }
 
-const projects: Project[] = [
-  {
-    name: "Portalio",
-    description: "Airtable + Cursor For Modern Freelancers & Boutique Agencies",
-    url: "portalio.app",
-    category: 'core-progress'
-  },
-];
+const projects: Project[] = [];
 
 interface PortfolioMiniProjectsProps {
   category: 'core-progress';

@@ -35,7 +35,7 @@ const projects: Project[] = [
   // Mid Priority & Communities
   {
     name: "Zeno",
-    description: "The AI Alchemist",
+    description: "The AI YouTube Curator",
     url: "youzeno.com",
     category: 'mid'
   },

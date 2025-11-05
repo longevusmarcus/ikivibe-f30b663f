@@ -72,7 +72,7 @@ export default function LongevitySection() {
           </h2>
           
           <p className="text-xl sm:text-2xl font-light mb-6 max-w-3xl text-center text-studio-lightgray">
-            We don't just chase time—we reshape it.
+            We don't just chase time, we reshape it.
           </p>
           
           <div className="h-0.5 w-24 bg-gradient-to-r from-blue-500 to-purple-500"></div>
@@ -129,7 +129,7 @@ export default function LongevitySection() {
                         </div>
                         
                         <p className="text-lg leading-relaxed mb-8">
-                          By fusing <span className="text-blue-400">Idea Incubation</span>, <span className="text-purple-400">Human Optimization</span>, and <span className="text-pink-400">Wealth Manifestation</span>, we're building a world where longevity isn't a trend—it's a culture.
+                          Awaken the full spectrum of human potential through the power of generalism over specialization, the courage of uniqueness, the cultivation of holistic wealth, the extension of life, the pursuit of enduring greatness, and the illumination of truth.
                         </p>
                         
                         <h4 className="font-mono uppercase tracking-wider text-blue-400 mb-3 text-sm">A future where:</h4>

@@ -20,6 +20,12 @@ const projects: Project[] = [
     category: 'core'
   },
   {
+    name: "Hara",
+    description: "App for intuitive decision-making and self-trust",
+    url: "trusthara.com",
+    category: 'core'
+  },
+  {
     name: "Chōka",
     description: "RTD longevity chocolate + Longevity café concept",
     url: "longevitychocolate.ch",

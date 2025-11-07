@@ -22,7 +22,7 @@ const preSeedInvestments: PreSeedInvestment[] = Array.from({ length: 10 }).map((
   if (index % 5 === 0) {
     return {
       name: "StarCy",
-      url: "https://starcy.ai"
+      url: "https://apps.apple.com/us/app/starcy/id6754289546"
     };
   } else {
     return {

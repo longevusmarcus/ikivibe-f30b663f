@@ -10,7 +10,13 @@ interface Project {
   category: 'core' | 'core-progress' | 'mid';
 }
 
-const projects: Project[] = [];
+const projects: Project[] = [
+  {
+    name: "Yofi",
+    description: "Not your average wealth tracker",
+    category: 'core-progress'
+  }
+];
 
 interface PortfolioMiniProjectsProps {
   category: 'core-progress';

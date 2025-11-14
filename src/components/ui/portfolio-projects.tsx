@@ -46,12 +46,6 @@ const projects: Project[] = [
     category: 'mid'
   },
   {
-    name: "Yofi",
-    description: "Opensource, free, next-gen wealth tracker in the making",
-    url: "zeno.wtf",
-    category: 'mid'
-  },
-  {
     name: "Chōwa",
     description: "Courses To Unlock Your Epigenetic Potential",
     url: "chowacourses.com",

@@ -46,12 +46,6 @@ const projects: Project[] = [
     category: 'mid'
   },
   {
-    name: "Portalio",
-    description: "Airtable + Cursor For Modern Freelancers & Boutique Agencies",
-    url: "portalio.app",
-    category: 'mid'
-  },
-  {
     name: "Yofi",
     description: "Opensource, free, next-gen wealth tracker in the making",
     url: "zeno.wtf",

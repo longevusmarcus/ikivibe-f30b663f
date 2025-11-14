@@ -31,6 +31,12 @@ const projects: Project[] = [
     url: "longevitychocolate.ch",
     category: 'core'
   },
+  {
+    name: "Batch",
+    description: "Sperm health App",
+    url: "spermaxxing.com",
+    category: 'core'
+  },
   
   // Mid Priority & Communities
   {

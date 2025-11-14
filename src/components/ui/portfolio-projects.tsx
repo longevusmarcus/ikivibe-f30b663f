@@ -15,7 +15,7 @@ const projects: Project[] = [
   // CORE Projects
   {
     name: "Naru",
-    description: "The world's first database of human potential",
+    description: "Career Dreamer & Copilot",
     url: "trustnaru.com",
     category: 'core'
   },

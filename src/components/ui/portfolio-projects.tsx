@@ -14,6 +14,12 @@ interface Project {
 const projects: Project[] = [
   // CORE Projects
   {
+    name: "Chōka",
+    description: "RTD longevity chocolate + Longevity café concept",
+    url: "https://choka.health/",
+    category: 'core'
+  },
+  {
     name: "Naru",
     description: "Career Dreamer & Copilot",
     url: "trustnaru.com",
@@ -23,12 +29,6 @@ const projects: Project[] = [
     name: "Hara",
     description: "App for intuitive decision-making and self-trust",
     url: "trusthara.com",
-    category: 'core'
-  },
-  {
-    name: "Chōka",
-    description: "RTD longevity chocolate + Longevity café concept",
-    url: "longevitychocolate.ch",
     category: 'core'
   },
   {

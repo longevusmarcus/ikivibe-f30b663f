@@ -47,7 +47,7 @@ export default function Footer() {
               </li>
               <li className="transition-colors">
                 <a href="#wealth" className="hover:text-studio-white flex items-center">
-                  <span className="mr-2">・</span> 360 Hub
+                  <span className="mr-2">・</span> 360 Hub (Naru Labs)
                 </a>
               </li>
             </ul>

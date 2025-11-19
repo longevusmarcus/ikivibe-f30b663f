@@ -139,7 +139,7 @@ export default function WealthSection() {
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <div className="section-number">03</div>
-          <h2 className="section-title">360 Hub</h2>
+          <h2 className="section-title">360 Hub (Naru Labs)</h2>
           <p className="section-subtitle">
             Building full-circle sustainable abundance and legacy: temporal, social, physical, mental, spiritual,
             intellectual, financial

@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { ExternalLink, Lightbulb, Code, Users } from "lucide-react";
 import { Button } from "./ui/button";
@@ -8,7 +7,8 @@ import { Link } from "react-router-dom";
 export default function IkiVibeSection() {
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
-  const textToType = "We bring ideas to life in days by tapping into lasting trends that spark human connection and meaningful growth. We help talents and startups build fast-&-slow, and execute with longevity in mind. Our priority: backing under-23 visionaries with raw talent and a clear sense of purpose, and pre-series B ventures with proven execution and minimum ARR.";
+  const textToType =
+    "We bring ideas to life in days by tapping into lasting trends that spark human connection and meaningful growth. We help talents and startups build fast-&-slow, and execute with longevity in mind. Our priority: backing under-23 visionaries with raw talent and a clear sense of purpose, and pre-series A ventures with proven execution and minimum ARR.";
   const typingSpeed = 30; // milliseconds per character
   const textRef = useRef<HTMLParagraphElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -20,7 +20,7 @@ export default function IkiVibeSection() {
           startTyping();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     if (sectionRef.current) {
@@ -49,7 +49,7 @@ export default function IkiVibeSection() {
 
     // Blinking cursor effect
     const cursorInterval = setInterval(() => {
-      setShowCursor(prev => !prev);
+      setShowCursor((prev) => !prev);
     }, 500);
 
     return () => {
@@ -60,35 +60,42 @@ export default function IkiVibeSection() {
 
   const renderTextWithHighlight = (text: string) => {
     if (!text) return null;
-    
+
     const parts = text.split(/(days)/);
-    
-    return parts.map((part, index) => 
-      part === "days" 
-        ? <span key={index} className="text-purple-500 font-semibold">{part}</span> 
-        : <span key={index}>{part}</span>
+
+    return parts.map((part, index) =>
+      part === "days" ? (
+        <span key={index} className="text-purple-500 font-semibold">
+          {part}
+        </span>
+      ) : (
+        <span key={index}>{part}</span>
+      ),
     );
   };
 
   const ikiVibeCards = [
     {
       title: "Rocket Research",
-      description: "Inspired by the concept of Ikigai, we explore emerging trends to uncover opportunities that shape the future and ideas that endure. In a world where AI accelerates execution, the value of deep, original thinking is rising fast. When humans blend their Ikigai with a tech spirit, ideas become the currency of an AI-driven economy.",
+      description:
+        "Inspired by the concept of Ikigai, we explore emerging trends to uncover opportunities that shape the future and ideas that endure. In a world where AI accelerates execution, the value of deep, original thinking is rising fast. When humans blend their Ikigai with a tech spirit, ideas become the currency of an AI-driven economy.",
       icon: <Lightbulb className="h-8 w-8 text-studio-lightgray" />,
-      link: "#ikivibe"
+      link: "#ikivibe",
     },
     {
       title: "Rocket Vibes",
-      description: "We build simple, fun and rapid MVPs that solve unmet pain points, spark connection, and provoke thought. By blending AI with human-centered design, we continuously test bold ideas that move in sync with humanity's evolving needs.",
+      description:
+        "We build simple, fun and rapid MVPs that solve unmet pain points, spark connection, and provoke thought. By blending AI with human-centered design, we continuously test bold ideas that move in sync with humanity's evolving needs.",
       icon: <Code className="h-8 w-8 text-studio-lightgray" />,
-      link: "#ikivibe"
+      link: "#ikivibe",
     },
     {
       title: "Rocket Minds | For Partners",
-      description: "We help young talents and startups stay true to their purpose while building with a long-term vision. With hands-on support, we turn unique ideas into real products, often in just days, and guide them toward sustainable growth. By aligning passion, skill, mission, and market need, we help both visionary executers and pre-series A ventures grow with purpose and a mindset rooted in longevity.",
+      description:
+        "We help young talents and startups stay true to their purpose while building with a long-term vision. With hands-on support, we turn unique ideas into real products, often in just days, and guide them toward sustainable growth. By aligning passion, skill, mission, and market need, we help both visionary executers and pre-series A ventures grow with purpose and a mindset rooted in longevity.",
       icon: <Users className="h-8 w-8 text-studio-lightgray" />,
-      link: "#ikivibe"
-    }
+      link: "#ikivibe",
+    },
   ];
 
   return (
@@ -97,25 +104,33 @@ export default function IkiVibeSection() {
         <div className="mb-16">
           <div className="section-number">01</div>
           <h2 className="section-title">Rocket Minds</h2>
-          <p className="section-subtitle">Igniting and preserving ideas, talents, and ventures via fast, creative execution, guided by ikigai, built for longevity</p>
+          <p className="section-subtitle">
+            Igniting and preserving ideas, talents, and ventures via fast, creative execution, guided by ikigai, built
+            for longevity
+          </p>
         </div>
-        
+
         <div className="mb-16 max-w-3xl">
           <p ref={textRef} className="text-lg leading-relaxed mb-8">
             {renderTextWithHighlight(typedText)}
             {showCursor && <span className="typing-cursor">|</span>}
           </p>
         </div>
-        
+
         <HoverEffect items={ikiVibeCards} />
 
         <div className="mt-12 flex justify-center">
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             className="group border border-blue-500/40 bg-studio-black/50 hover:bg-blue-950/30 hover:border-blue-500/70 text-blue-400 hover:text-blue-300 transition-all duration-300 backdrop-blur-sm rounded-2xl"
             asChild
           >
-            <a href="https://www.rocketminds.io/" target="_blank" rel="noopener noreferrer" className="flex items-center">
+            <a
+              href="https://www.rocketminds.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center"
+            >
               <span>Explore Rocket</span>
               <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>

@@ -100,7 +100,7 @@ export default function ChokaSection() {
             className="group border border-purple-500/40 bg-studio-black/50 hover:bg-purple-950/30 hover:border-purple-500/70 text-purple-400 hover:text-purple-300 transition-all duration-300 backdrop-blur-sm rounded-2xl"
             asChild
           >
-            <a href="https://chokacrew.com" target="_blank" rel="noopener noreferrer" className="flex items-center">
+            <a href="https://choka.health" target="_blank" rel="noopener noreferrer" className="flex items-center">
               <span>Explore Chōka</span>
               <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>

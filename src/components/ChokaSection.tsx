@@ -84,7 +84,7 @@ export default function ChokaSection() {
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <div className="section-number">02</div>
-          <h2 className="section-title">Chōka Crew</h2>
+          <h2 className="section-title">Chōka Labs</h2>
           <p className="section-subtitle">
             Designing social rituals, spaces and experiences for lasting health and human optimization
           </p>

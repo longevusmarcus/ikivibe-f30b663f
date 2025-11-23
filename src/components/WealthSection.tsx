@@ -139,7 +139,7 @@ export default function WealthSection() {
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <div className="section-number">03</div>
-          <h2 className="section-title">360 Hub (Naru Labs)</h2>
+          <h2 className="section-title">Naru Labs</h2>
           <p className="section-subtitle">
             Building full-circle sustainable abundance and legacy: temporal, social, physical, mental, spiritual,
             intellectual, financial
@@ -161,13 +161,8 @@ export default function WealthSection() {
             className="group border border-pink-500/40 bg-studio-black/50 hover:bg-pink-950/30 hover:border-pink-500/70 text-pink-400 hover:text-pink-300 transition-all duration-300 backdrop-blur-sm rounded-2xl"
             asChild
           >
-            <a
-              href="https://discord.com/invite/MV8g7HTbCG"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center"
-            >
-              <span>Explore 360</span>
+            <a href="https://trustnaru.com" target="_blank" rel="noopener noreferrer" className="flex items-center">
+              <span>Explore Naru</span>
               <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>

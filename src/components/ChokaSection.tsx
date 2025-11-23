@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
@@ -8,7 +7,8 @@ import { Link } from "react-router-dom";
 export default function ChokaSection() {
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
-  const textToType = "Health is the foundation of human evolution. Powered by Rocket Minds and produced by the Chōka Crew, we create unique solutions that shape a truly health-first society.";
+  const textToType =
+    "Health is the foundation of human evolution. Powered by Rocket Labs and produced by Chōka Labs, we create unique solutions that shape a truly health-first society.";
   const typingSpeed = 30; // milliseconds per character
   const textRef = useRef<HTMLParagraphElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -20,7 +20,7 @@ export default function ChokaSection() {
           startTyping();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     if (sectionRef.current) {
@@ -49,7 +49,7 @@ export default function ChokaSection() {
 
     // Blinking cursor effect
     const cursorInterval = setInterval(() => {
-      setShowCursor(prev => !prev);
+      setShowCursor((prev) => !prev);
     }, 500);
 
     return () => {
@@ -61,19 +61,22 @@ export default function ChokaSection() {
   const chokaCards = [
     {
       title: "KNOWLEDGE",
-      description: "Chōwa - Mini Courses To Unlock Your Epigenetic Potential: discover how to optimize your genetic blueprint, and align with your Ikigai to attract abundance.",
-      link: "#choka"
+      description:
+        "Chōwa - Mini Courses To Unlock Your Epigenetic Potential: discover how to optimize your genetic blueprint, and align with your Ikigai to attract abundance.",
+      link: "#choka",
     },
     {
       title: "R&D",
-      description: "Chōka - We research and develop indulgent healthy solutions like Longevity Chocolate, each deliberately crafted to support cellular health and mental clarity.",
-      link: "#choka"
+      description:
+        "Chōka - We research and develop indulgent healthy solutions like Longevity Chocolate, each deliberately crafted to support cellular health and mental clarity.",
+      link: "#choka",
     },
     {
       title: "EXPERIENCES",
-      description: "Chōka House - We design one-of-a-kind spaces such as Chōka Cafe, where you can enjoy indulgent, supplement-packed drinks and connect with other health enthusiasts.",
-      link: "#choka"
-    }
+      description:
+        "Chōka House - We design one-of-a-kind spaces such as Chōka Cafe, where you can enjoy indulgent, supplement-packed drinks and connect with other health enthusiasts.",
+      link: "#choka",
+    },
   ];
 
   return (
@@ -82,21 +85,23 @@ export default function ChokaSection() {
         <div className="mb-16">
           <div className="section-number">02</div>
           <h2 className="section-title">Chōka Crew</h2>
-          <p className="section-subtitle">Designing social rituals, spaces and experiences for lasting health and human optimization</p>
+          <p className="section-subtitle">
+            Designing social rituals, spaces and experiences for lasting health and human optimization
+          </p>
         </div>
-        
+
         <div className="mb-16 max-w-3xl">
           <p ref={textRef} className="text-lg leading-relaxed">
             {typedText}
             {showCursor && <span className="typing-cursor">|</span>}
           </p>
         </div>
-        
+
         <HoverEffect items={chokaCards} />
 
         <div className="mt-12 flex justify-center">
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             className="group border border-purple-500/40 bg-studio-black/50 hover:bg-purple-950/30 hover:border-purple-500/70 text-purple-400 hover:text-purple-300 transition-all duration-300 backdrop-blur-sm rounded-2xl"
             asChild
           >

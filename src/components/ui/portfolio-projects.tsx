@@ -32,7 +32,7 @@ const projects: Project[] = [
     category: 'core'
   },
   {
-    name: "Batch",
+    name: "Batch (Private Beta)",
     description: "Sperm health app",
     category: 'core'
   },

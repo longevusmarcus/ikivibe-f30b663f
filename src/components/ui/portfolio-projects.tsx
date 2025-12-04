@@ -32,8 +32,9 @@ const projects: Project[] = [
     category: 'core'
   },
   {
-    name: "Batch (Private Beta)",
+    name: "Batch",
     description: "Sperm health app",
+    url: "spermaxxing.com",
     category: 'core'
   },
   

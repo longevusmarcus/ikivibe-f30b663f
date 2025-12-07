@@ -36,7 +36,7 @@ export default function Hero() {
             <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">Ideas • Humans • Legacies</span>
             <br />
             <span className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-studio-lightgray whitespace-nowrap">
-              unlock human potential
+              Unlock human potential
             </span>
           </h1>
 

@@ -33,7 +33,7 @@ export default function Hero() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col space-y-6 max-w-4xl">
           <h1 className="font-display font-bold tracking-tighter animate-fade-in">
-            <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">Ideas • Humans • Legacies</span>
+            <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">Ideas • People • Legacies</span>
             <br />
             <span className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-studio-lightgray whitespace-nowrap">
               Unlock human potential

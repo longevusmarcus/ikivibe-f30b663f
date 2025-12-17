@@ -62,7 +62,7 @@ export default function Footer() {
             </h4>
             <div className="flex items-center mb-3">
               <Twitter className="w-4 h-4 text-studio-lightgray mr-2" />
-              <p className="text-studio-lightgray">@limitlessmarcoo</p>
+              <p className="text-studio-lightgray">@limitlessmarco</p>
             </div>
             <div className="mt-4">
               <a

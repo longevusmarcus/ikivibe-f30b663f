@@ -170,9 +170,10 @@ export const PortfolioProjects = ({ category }: PortfolioProjectsProps) => {
                       href={link.url.startsWith('http') ? link.url : `https://${link.url}`} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-xs text-studio-lightgray hover:text-white transition-colors underline"
+                      className="text-studio-lightgray hover:text-white transition-colors"
+                      title={link.label}
                     >
-                      {link.label}
+                      <ArrowUpRight className="w-5 h-5" />
                     </a>
                   ))}
                 </div>

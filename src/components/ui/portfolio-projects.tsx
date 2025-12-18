@@ -33,7 +33,7 @@ const projects: Project[] = [
     category: 'core'
   },
   {
-    name: "Batch",
+    name: "Batch/Spermaxxing",
     description: "Sperm health app",
     urls: [
       { label: "batch.global", url: "batch.global" },

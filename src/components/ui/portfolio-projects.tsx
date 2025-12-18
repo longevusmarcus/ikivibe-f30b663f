@@ -8,6 +8,7 @@ interface Project {
   name: string;
   description: string;
   url?: string;
+  urls?: { label: string; url: string }[];
   category: 'core' | 'core-progress' | 'mid';
 }
 
@@ -34,7 +35,10 @@ const projects: Project[] = [
   {
     name: "Batch",
     description: "Sperm health app",
-    url: "spermaxxing.com",
+    urls: [
+      { label: "batch.global", url: "batch.global" },
+      { label: "spermaxxing.com", url: "spermaxxing.com" }
+    ],
     category: 'core'
   },
   
@@ -149,16 +153,29 @@ export const PortfolioProjects = ({ category }: PortfolioProjectsProps) => {
             >
               <div className="flex items-start justify-between">
                 <h3 className="text-xl font-bold mb-2">{project.name}</h3>
-                {project.url && (
-                  <a 
-                    href={project.url.startsWith('http') ? project.url : `https://${project.url}`} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-studio-lightgray hover:text-white transition-colors"
-                  >
-                    <ArrowUpRight className="w-5 h-5" />
-                  </a>
-                )}
+                <div className="flex gap-2">
+                  {project.url && (
+                    <a 
+                      href={project.url.startsWith('http') ? project.url : `https://${project.url}`} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-studio-lightgray hover:text-white transition-colors"
+                    >
+                      <ArrowUpRight className="w-5 h-5" />
+                    </a>
+                  )}
+                  {project.urls && project.urls.map((link, linkIdx) => (
+                    <a 
+                      key={linkIdx}
+                      href={link.url.startsWith('http') ? link.url : `https://${link.url}`} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-xs text-studio-lightgray hover:text-white transition-colors underline"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
               </div>
               {isMobile ? (
                 <p className="text-studio-lightgray">{project.description}</p>

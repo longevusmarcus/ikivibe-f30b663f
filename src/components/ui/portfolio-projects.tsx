@@ -16,7 +16,7 @@ const projects: Project[] = [
   // CORE Projects
   {
     name: "Chōka",
-    description: "RTD longevity chocolate + Longevity café concept",
+    description: "Redefining how society engages with healthy longevity",
     url: "https://choka.health/",
     category: 'core'
   },

@@ -6,7 +6,7 @@ import { CaseDemo } from "@/components/ui/demo";
 import { PortfolioProjects } from "@/components/ui/portfolio-projects";
 import { PortfolioMiniProjects } from "@/components/ui/portfolio-mini-projects";
 import { InvestmentCarousel } from "@/components/ui/investment-carousel";
-import { PreSeedCarousel } from "@/components/ui/pre-seed-carousel";
+
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { ArrowUpRight } from "lucide-react";
@@ -53,11 +53,6 @@ export default function Portfolio() {
             <div className="mb-20">
               <h2 className="text-2xl md:text-3xl font-bold mb-8">Directories, Communities & Fun Experiments</h2>
               <PortfolioProjects category="mid" />
-            </div>
-            
-            <div className="mt-20">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8">Pre-Seed Investments</h2>
-              <PreSeedCarousel />
             </div>
             
             <div className="mt-20">

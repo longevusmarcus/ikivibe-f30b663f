@@ -13,7 +13,7 @@ interface Project {
 const projects: Project[] = [
   {
     name: "Mothership",
-    description: "A social market intelligence platform and hackathon arena empowering builders to ship useful products and win prizes every day.",
+    description: "A social market intelligence platform and hackathon arena empowering builders to ship useful products and win prizes every day",
     url: "https://mothership.io/",
     category: 'core-progress'
   },

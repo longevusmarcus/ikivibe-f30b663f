@@ -21,6 +21,11 @@ const projects: Project[] = [
     name: "Yofi",
     description: "Not your average wealth tracker",
     category: 'core-progress'
+  },
+  {
+    name: "Stealth",
+    description: "Boost property appeal and close deals faster.",
+    category: 'core-progress'
   }
 ];
 

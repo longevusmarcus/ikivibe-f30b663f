@@ -24,7 +24,7 @@ const projects: Project[] = [
   },
   {
     name: "Stealth",
-    description: "Boost property appeal and close deals faster.",
+    description: "Boost property appeal and close deals faster",
     category: 'core-progress'
   }
 ];

@@ -70,7 +70,7 @@ const projects: Project[] = [
   {
     name: "Homocryptus",
     description: "Predictions, TA Ideas, TA Scripts, Web3 Advisory For Startups",
-    url: "homocryptus.life",
+    url: "https://homocryptus.com",
     category: 'mid'
   },
   {

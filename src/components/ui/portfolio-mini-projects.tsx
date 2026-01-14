@@ -19,7 +19,7 @@ const projects: Project[] = [
     category: "core-progress",
   },
   {
-    name: "Yofi",
+    name: "Years",
     description: "Not your average wealth tracker",
     category: "core-progress",
   },

@@ -7,30 +7,32 @@ interface Project {
   name: string;
   description: string;
   url?: string;
-  category: 'core' | 'core-progress' | 'mid';
+  category: "core" | "core-progress" | "mid";
 }
 
 const projects: Project[] = [
   {
     name: "Mothership",
-    description: "A social market intelligence platform and hackathon arena empowering builders to ship useful products and win prizes every day",
+    description:
+      "A social market intelligence platform and hackathon arena empowering builders to ship useful products and win prizes every day",
     url: "https://mothership.io/",
-    category: 'core-progress'
+    category: "core-progress",
   },
   {
     name: "Yofi",
     description: "Not your average wealth tracker",
-    category: 'core-progress'
+    category: "core-progress",
   },
   {
-    name: "Stealth",
-    description: "Boost property appeal and close deals faster",
-    category: 'core-progress'
-  }
+    name: "Project30",
+    description:
+      "A all-in-one productivity tool that helps you clarify your identity, manifest intentions, set goals, and track habits and actions across your life.",
+    category: "core-progress",
+  },
 ];
 
 interface PortfolioMiniProjectsProps {
-  category: 'core-progress';
+  category: "core-progress";
 }
 
 export const PortfolioMiniProjects = ({ category }: PortfolioMiniProjectsProps) => {
@@ -39,8 +41,8 @@ export const PortfolioMiniProjects = ({ category }: PortfolioMiniProjectsProps) 
   const isMobile = useIsMobile();
 
   // Filter projects based on category
-  const filteredProjects = projects.filter(project => project.category === category);
-  
+  const filteredProjects = projects.filter((project) => project.category === category);
+
   useEffect(() => {
     if (isMobile) {
       // Set up Intersection Observer for mobile scroll activation
@@ -57,7 +59,7 @@ export const PortfolioMiniProjects = ({ category }: PortfolioMiniProjectsProps) 
               }
             });
           },
-          { threshold: 0.7 } // Trigger when 70% of the element is visible
+          { threshold: 0.7 }, // Trigger when 70% of the element is visible
         );
 
         observer.observe(ref);
@@ -74,25 +76,25 @@ export const PortfolioMiniProjects = ({ category }: PortfolioMiniProjectsProps) 
       };
     }
   }, [isMobile, hoveredIndex]);
-  
+
   return (
     <div className="w-full py-6">
       <div className="container mx-auto px-4">
         <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-4">
           {filteredProjects.map((project, index) => (
-            <div 
+            <div
               key={index}
               className="p-4 rounded-lg bg-studio-gray/10 backdrop-blur-sm border border-studio-gray/20 hover:border-studio-gray/40 transition-all duration-300 relative"
               onMouseEnter={() => !isMobile && setHoveredIndex(index)}
               onMouseLeave={() => !isMobile && setHoveredIndex(null)}
-              ref={(el) => projectRefs.current[index] = el}
+              ref={(el) => (projectRefs.current[index] = el)}
             >
               <div className="flex items-start justify-between">
                 <h3 className="text-lg font-bold mb-2">{project.name}</h3>
                 {project.url && (
-                  <a 
-                    href={project.url.startsWith('http') ? project.url : `https://${project.url}`} 
-                    target="_blank" 
+                  <a
+                    href={project.url.startsWith("http") ? project.url : `https://${project.url}`}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-studio-lightgray hover:text-white transition-colors"
                   >
@@ -105,7 +107,7 @@ export const PortfolioMiniProjects = ({ category }: PortfolioMiniProjectsProps) 
               ) : (
                 <AnimatePresence>
                   {hoveredIndex === index ? (
-                    <motion.p 
+                    <motion.p
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}

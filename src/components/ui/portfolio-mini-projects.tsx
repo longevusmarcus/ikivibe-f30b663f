@@ -13,7 +13,7 @@ interface Project {
 const projects: Project[] = [
   {
     name: "Hara",
-    description: "App for intuitive decision-making and self-trust",
+    description: "Not your average spiritual app",
     url: "https://trusthara.com",
     category: "core-progress",
   },
@@ -25,8 +25,7 @@ const projects: Project[] = [
   },
   {
     name: "Project30",
-    description:
-      "A all-in-one productivity tool that helps you clarify your identity, manifest intentions, set goals, and track habits and actions across your life.",
+    description: "Not your average productivity app",
     url: "https://projectwealth2030.lovable.app/",
     category: "core-progress",
   },

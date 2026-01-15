@@ -15,18 +15,20 @@ const projects: Project[] = [
     name: "Mothership",
     description:
       "A social market intelligence platform and hackathon arena empowering builders to ship useful products and win prizes every day",
-    url: "https://mothership.io/",
+    url: "https://superlovable.dev",
     category: "core-progress",
   },
   {
     name: "Years",
     description: "Not your average wealth tracker",
+    url: "https://years.money",
     category: "core-progress",
   },
   {
     name: "Project30",
     description:
       "A all-in-one productivity tool that helps you clarify your identity, manifest intentions, set goals, and track habits and actions across your life.",
+    url: "https://projectwealth2030.com",
     category: "core-progress",
   },
 ];

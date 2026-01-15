@@ -12,10 +12,9 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "Mothership",
-    description:
-      "A social market intelligence platform and hackathon arena empowering builders to ship useful products and win prizes every day",
-    url: "https://superlovable.dev",
+    name: "Hara",
+    description: "App for intuitive decision-making and self-trust",
+    url: "https://trusthara.com",
     category: "core-progress",
   },
   {

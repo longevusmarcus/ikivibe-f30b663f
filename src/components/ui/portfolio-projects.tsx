@@ -27,9 +27,9 @@ const projects: Project[] = [
     category: 'core'
   },
   {
-    name: "Hara",
-    description: "App for intuitive decision-making and self-trust",
-    url: "trusthara.com",
+    name: "Mothership",
+    description: "A social market intelligence platform and hackathon arena empowering builders to ship useful products and win prizes every day",
+    url: "https://superlovable.dev",
     category: 'core'
   },
   {

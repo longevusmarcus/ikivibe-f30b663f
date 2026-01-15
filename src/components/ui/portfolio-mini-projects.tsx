@@ -28,7 +28,7 @@ const projects: Project[] = [
     name: "Project30",
     description:
       "A all-in-one productivity tool that helps you clarify your identity, manifest intentions, set goals, and track habits and actions across your life.",
-    url: "https://projectwealth2030.com",
+    url: "https://projectwealth2030.lovable.app/",
     category: "core-progress",
   },
 ];

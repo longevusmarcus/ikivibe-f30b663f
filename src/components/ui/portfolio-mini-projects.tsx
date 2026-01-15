@@ -20,7 +20,7 @@ const projects: Project[] = [
   },
   {
     name: "Years",
-    description: "Not your average wealth tracker",
+    description: "Not your average financial app",
     url: "https://years.money",
     category: "core-progress",
   },

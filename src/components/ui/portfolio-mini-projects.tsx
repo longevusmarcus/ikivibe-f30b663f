@@ -26,7 +26,7 @@ const projects: Project[] = [
   {
     name: "Project30",
     description: "Not your average productivity app",
-    url: "https://projectwealth2030.lovable.app/",
+    url: "https://projectwealth2030.com/",
     category: "core-progress",
   },
 ];

@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -9,92 +8,95 @@ interface Project {
   description: string;
   url?: string;
   urls?: { label: string; url: string }[];
-  category: 'core' | 'core-progress' | 'mid';
+  category: "core" | "core-progress" | "mid";
 }
 
 const projects: Project[] = [
   // CORE Projects
   {
     name: "Chōka",
-    description: "Redefining how society engages with healthy longevity",
+    description: "A healthtech startup redefining how society engages with healthy longevity",
     url: "https://choka.health/",
-    category: 'core'
+    category: "core",
   },
   {
     name: "Naru",
-    description: "Career Dreamer & Copilot",
+    description:
+      "A career OS that helps grad students and career explorers discover their future professional identity and guides them step by step to grow into it.",
     url: "trustnaru.com",
-    category: 'core'
+    category: "core",
   },
   {
     name: "Mothership",
-    description: "A social market intelligence platform and hackathon arena empowering builders to ship useful products and win prizes every day",
+    description:
+      "A market intelligence platform that helps builders compete to serve pre-validated market demand—and earn rewards validated by real market outcomes.",
     url: "https://superlovable.dev",
-    category: 'core'
+    category: "core",
   },
   {
     name: "Batch/Spermaxxing",
-    description: "Sperm health app",
+    description:
+      "A sperm health app that helps men understand their fertility, learn the value of their sperm, and explore donor opportunities.",
     urls: [
       { label: "batch.global", url: "batch.global" },
-      { label: "spermaxxing.com", url: "spermaxxing.com" }
+      { label: "spermaxxing.com", url: "spermaxxing.com" },
     ],
-    category: 'core'
+    category: "core",
   },
-  
+
   // Mid Priority & Communities
   {
     name: "Zeno",
     description: "The AI YouTube Curator",
     url: "youzeno.com",
-    category: 'mid'
+    category: "mid",
   },
   {
     name: "Neko",
     description: "First AI Feet Reader & Reflexologist",
     url: "aifootreader.com",
-    category: 'mid'
+    category: "mid",
   },
   {
     name: "Chōwa",
     description: "Courses To Unlock Your Epigenetic Potential",
     url: "chowacourses.com",
-    category: 'mid'
+    category: "mid",
   },
   {
     name: "360 Wealth Labs",
     description: "360 Wealth Discord Community",
     url: "https://discord.com/invite/MV8g7HTbCG",
-    category: 'mid'
+    category: "mid",
   },
   {
     name: "Homocryptus",
     description: "Predictions, TA Ideas, TA Scripts, Web3 Advisory For Startups",
     url: "https://homocryptus.com",
-    category: 'mid'
+    category: "mid",
   },
   {
     name: "Homolongevus",
     description: "Wellbeing Coach",
     url: "homolongevus.life",
-    category: 'mid'
+    category: "mid",
   },
   {
     name: "HomoiDeus",
     description: "Mint Ideas, Predictions, Thoughts, Visions & Vibes",
     url: "https://zora.co/@homoideus",
-    category: 'mid'
+    category: "mid",
   },
   {
     name: "FUCK MIRROR",
     description: "Clothing That Only Speaks In Reflection",
     url: "fuckmirror.com",
-    category: 'mid'
-  }
+    category: "mid",
+  },
 ];
 
 interface PortfolioProjectsProps {
-  category: 'core' | 'mid';
+  category: "core" | "mid";
 }
 
 export const PortfolioProjects = ({ category }: PortfolioProjectsProps) => {
@@ -103,8 +105,8 @@ export const PortfolioProjects = ({ category }: PortfolioProjectsProps) => {
   const isMobile = useIsMobile();
 
   // Filter projects based on category
-  const filteredProjects = projects.filter(project => project.category === category);
-  
+  const filteredProjects = projects.filter((project) => project.category === category);
+
   useEffect(() => {
     if (isMobile) {
       // Set up Intersection Observer for mobile scroll activation
@@ -121,7 +123,7 @@ export const PortfolioProjects = ({ category }: PortfolioProjectsProps) => {
               }
             });
           },
-          { threshold: 0.7 } // Trigger when 70% of the element is visible
+          { threshold: 0.7 }, // Trigger when 70% of the element is visible
         );
 
         observer.observe(ref);
@@ -138,44 +140,45 @@ export const PortfolioProjects = ({ category }: PortfolioProjectsProps) => {
       };
     }
   }, [isMobile, hoveredIndex]);
-  
+
   return (
     <div className="w-full py-6">
       <div className="container mx-auto px-4">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredProjects.map((project, index) => (
-            <div 
+            <div
               key={index}
               className="p-6 rounded-lg bg-studio-gray/10 backdrop-blur-sm border border-studio-gray/20 hover:border-studio-gray/40 transition-all duration-300 relative"
               onMouseEnter={() => !isMobile && setHoveredIndex(index)}
               onMouseLeave={() => !isMobile && setHoveredIndex(null)}
-              ref={(el) => projectRefs.current[index] = el}
+              ref={(el) => (projectRefs.current[index] = el)}
             >
               <div className="flex items-start justify-between">
                 <h3 className="text-xl font-bold mb-2">{project.name}</h3>
                 <div className="flex gap-2">
                   {project.url && (
-                    <a 
-                      href={project.url.startsWith('http') ? project.url : `https://${project.url}`} 
-                      target="_blank" 
+                    <a
+                      href={project.url.startsWith("http") ? project.url : `https://${project.url}`}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-studio-lightgray hover:text-white transition-colors"
                     >
                       <ArrowUpRight className="w-5 h-5" />
                     </a>
                   )}
-                  {project.urls && project.urls.map((link, linkIdx) => (
-                    <a 
-                      key={linkIdx}
-                      href={link.url.startsWith('http') ? link.url : `https://${link.url}`} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-studio-lightgray hover:text-white transition-colors"
-                      title={link.label}
-                    >
-                      <ArrowUpRight className="w-5 h-5" />
-                    </a>
-                  ))}
+                  {project.urls &&
+                    project.urls.map((link, linkIdx) => (
+                      <a
+                        key={linkIdx}
+                        href={link.url.startsWith("http") ? link.url : `https://${link.url}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-studio-lightgray hover:text-white transition-colors"
+                        title={link.label}
+                      >
+                        <ArrowUpRight className="w-5 h-5" />
+                      </a>
+                    ))}
                 </div>
               </div>
               {isMobile ? (
@@ -183,7 +186,7 @@ export const PortfolioProjects = ({ category }: PortfolioProjectsProps) => {
               ) : (
                 <AnimatePresence>
                   {hoveredIndex === index ? (
-                    <motion.p 
+                    <motion.p
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}

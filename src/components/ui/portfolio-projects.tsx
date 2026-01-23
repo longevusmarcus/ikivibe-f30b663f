@@ -27,7 +27,7 @@ const projects: Project[] = [
     category: "core",
   },
   {
-    name: "Mothership",
+    name: "MothershipX",
     description:
       "A market intelligence platform that helps builders compete to serve pre-validated market demand—and earn rewards validated by real market outcomes.",
     url: "https://superlovable.dev",

@@ -15,21 +15,21 @@ const projects: Project[] = [
   // CORE Projects
   {
     name: "Chōka",
-    description: "A healthtech startup redefining how society engages with healthy longevity",
+    description: "A healthtech startup building new ways for people to live longer, healthier lives.",
     url: "https://choka.health/",
     category: "core",
   },
   {
     name: "Naru",
     description:
-      "A career OS that helps grad students and career explorers discover their future professional identity and guides them step by step to grow into it.",
+      "A career OS for grad students and conscious professionals to discover their future professional identity and grow into it.",
     url: "trustnaru.com",
     category: "core",
   },
   {
     name: "MothershipX",
     description:
-      "A market intelligence platform that helps builders compete to serve pre-validated market demand—and earn rewards validated by real market outcomes.",
+      "A market intelligence platform that helps builders identify what the market already wants, compete to ship the best solution, and earn rewards.",
     url: "https://superlovable.dev",
     category: "core",
   },

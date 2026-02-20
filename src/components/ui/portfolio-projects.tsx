@@ -28,7 +28,7 @@ const projects: Project[] = [
   },
   {
     name: "MothershipX",
-    description: "AI Startup Factory that helps builders ship useful products and make a living doing it.",
+    description: "Agent-native startup factory that helps builders ship useful products and make a living doing it.",
     url: "https://mothershipx.dev",
     category: "core",
   },

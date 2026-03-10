@@ -19,7 +19,7 @@ const projects: Project[] = [
   },
   {
     name: "Batch/Spermaxxing",
-    description: "A sperm health app that helps men understand their fertility and explore donor opportunities.",
+    description: "Not your average fertility and sperm health app",
     url: "https://batch.global",
     category: "core-progress",
   },

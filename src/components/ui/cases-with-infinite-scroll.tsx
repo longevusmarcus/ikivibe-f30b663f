@@ -72,6 +72,34 @@ function Case() {
             </div>
           ) : isBatch ? (
             <div className="flex flex-col items-center text-center">
+              <div className="flex items-center justify-center gap-2">
+                <h3 className="text-lg font-medium">Batch</h3>
+                <a 
+                  href="https://batch.global" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-studio-lightgray hover:text-white transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          ) : isIzzyBrew ? (
+            <div className="flex flex-col items-center text-center">
+              <div className="flex items-center justify-center gap-2">
+                <h3 className="text-lg font-medium">The Izzy Brew</h3>
+                <a 
+                  href="https://theizzybrew.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-studio-lightgray hover:text-white transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          ) : isStealthMode ? (
+            <div className="flex flex-col items-center text-center">
               <Lock className="w-8 h-8 mb-2 text-studio-lightgray/70" />
               <span className="text-sm text-center text-studio-lightgray">Stealth Mode</span>
             </div>

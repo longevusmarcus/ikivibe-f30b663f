@@ -41,6 +41,11 @@ const projects: Project[] = [
     url: "https://projectwealth2030.com/",
     category: "core-progress",
   },
+  {
+    name: "Stealth",
+    description: "Boost property appeal and close deals faster",
+    category: "core-progress",
+  },
 ];
 
 interface PortfolioMiniProjectsProps {

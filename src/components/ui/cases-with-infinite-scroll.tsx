@@ -33,13 +33,11 @@ function Case() {
   }, [api, current]);
 
   const carouselItems = Array.from({ length: 21 }).map((_, index) => {
-    const isANoteMusic = index % 9 === 0;
-    const isFeedel = index % 9 === 1;
-    const isStarCy = index % 9 === 2;
-    const isBatch = index % 9 === 3;
-    const isIzzyBrew = index % 9 === 4;
-    const isGraceAI = index % 9 === 5;
-    const isStealthMode = index % 9 === 6 || index % 9 === 7 || index % 9 === 8;
+    const isANoteMusic = index % 7 === 0;
+    const isFeedel = index % 7 === 1;
+    const isBatch = index % 7 === 2;
+    const isIzzyBrew = index % 7 === 3;
+    const isStealthMode = index % 7 === 4 || index % 7 === 5 || index % 7 === 6;
     
     return (
       <CarouselItem className="basis-1/2 md:basis-1/3 lg:basis-1/6" key={index}>

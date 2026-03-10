@@ -13,7 +13,7 @@ interface Project {
 const projects: Project[] = [
   {
     name: "Naru",
-    description: "Career Dreamer & Copilot",
+    description: "Not your average career dreamer & copilot",
     url: "https://trustnaru.com",
     category: "core-progress",
   },

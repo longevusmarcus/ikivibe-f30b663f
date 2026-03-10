@@ -33,13 +33,11 @@ function Case() {
   }, [api, current]);
 
   const carouselItems = Array.from({ length: 21 }).map((_, index) => {
-    const isANoteMusic = index % 9 === 0;
-    const isFeedel = index % 9 === 1;
-    const isStarCy = index % 9 === 2;
-    const isBatch = index % 9 === 3;
-    const isIzzyBrew = index % 9 === 4;
-    const isGraceAI = index % 9 === 5;
-    const isStealthMode = index % 9 === 6 || index % 9 === 7 || index % 9 === 8;
+    const isANoteMusic = index % 7 === 0;
+    const isFeedel = index % 7 === 1;
+    const isBatch = index % 7 === 2;
+    const isIzzyBrew = index % 7 === 3;
+    const isStealthMode = index % 7 === 4 || index % 7 === 5 || index % 7 === 6;
     
     return (
       <CarouselItem className="basis-1/2 md:basis-1/3 lg:basis-1/6" key={index}>
@@ -72,63 +70,7 @@ function Case() {
                 </a>
               </div>
             </div>
-          ) : isStarCy ? (
-            <div className="flex flex-col items-center text-center">
-              <div className="flex items-center justify-center gap-2">
-                <h3 className="text-lg font-medium">StarCy</h3>
-                <a 
-                  href="https://apps.apple.com/us/app/starcy/id6754289546" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-studio-lightgray hover:text-white transition-colors"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
           ) : isBatch ? (
-            <div className="flex flex-col items-center text-center">
-              <div className="flex items-center justify-center gap-2">
-                <h3 className="text-lg font-medium">Batch</h3>
-                <a 
-                  href="https://batch.global" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-studio-lightgray hover:text-white transition-colors"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
-          ) : isIzzyBrew ? (
-            <div className="flex flex-col items-center text-center">
-              <div className="flex items-center justify-center gap-2">
-                <h3 className="text-lg font-medium">The Izzy Brew</h3>
-                <a 
-                  href="https://theizzybrew.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-studio-lightgray hover:text-white transition-colors"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
-          ) : isGraceAI ? (
-            <div className="flex flex-col items-center text-center">
-              <div className="flex items-center justify-center gap-2">
-                <h3 className="text-lg font-medium">Grace AI</h3>
-                <a 
-                  href="https://grace.wellbands.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-studio-lightgray hover:text-white transition-colors"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
-          ) : isStealthMode ? (
             <div className="flex flex-col items-center text-center">
               <Lock className="w-8 h-8 mb-2 text-studio-lightgray/70" />
               <span className="text-sm text-center text-studio-lightgray">Stealth Mode</span>

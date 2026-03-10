@@ -12,6 +12,18 @@ interface Project {
 
 const projects: Project[] = [
   {
+    name: "Naru",
+    description: "Career Dreamer & Copilot",
+    url: "https://trustnaru.com",
+    category: "core-progress",
+  },
+  {
+    name: "Batch/Spermaxxing",
+    description: "A sperm health app that helps men understand their fertility and explore donor opportunities.",
+    url: "https://batch.global",
+    category: "core-progress",
+  },
+  {
     name: "Hara",
     description: "Not your average spiritual app",
     url: "https://trusthara.com",

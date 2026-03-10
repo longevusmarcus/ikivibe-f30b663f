@@ -20,26 +20,9 @@ const projects: Project[] = [
     category: "core",
   },
   {
-    name: "Naru",
-    description:
-      "A career OS for grad students and conscious professionals to discover their future professional identity and grow into it.",
-    url: "trustnaru.com",
-    category: "core",
-  },
-  {
     name: "MothershipX (MSX)",
     description: "Agent-native startup factory that helps builders ship useful products and make a living doing it.",
     url: "https://mothershipx.dev",
-    category: "core",
-  },
-  {
-    name: "Batch/Spermaxxing",
-    description:
-      "A sperm health app that helps men understand their fertility, learn the value of their sperm, and explore donor opportunities.",
-    urls: [
-      { label: "batch.global", url: "batch.global" },
-      { label: "spermaxxing.com", url: "spermaxxing.com" },
-    ],
     category: "core",
   },
 

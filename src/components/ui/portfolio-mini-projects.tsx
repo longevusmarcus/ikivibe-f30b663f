@@ -12,6 +12,12 @@ interface Project {
 
 const projects: Project[] = [
   {
+    name: "Years",
+    description: "Not your average financial app",
+    url: "https://years.money",
+    category: "core-progress",
+  },
+  {
     name: "Naru",
     description: "Not your average career dreamer & copilot",
     url: "https://trustnaru.com",
@@ -27,12 +33,6 @@ const projects: Project[] = [
     name: "Hara",
     description: "Not your average spiritual app",
     url: "https://trusthara.com",
-    category: "core-progress",
-  },
-  {
-    name: "Years",
-    description: "Not your average financial app",
-    url: "https://years.money",
     category: "core-progress",
   },
   {

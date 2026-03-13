@@ -24,6 +24,12 @@ const projects: Project[] = [
     category: "core-progress",
   },
   {
+    name: "La Sua Storia",
+    description: "Legacy book",
+    url: "https://lasuastoria.com",
+    category: "core-progress",
+  },
+  {
     name: "Batch/Spermaxxing",
     description: "Not your average fertility and sperm health app",
     url: "https://batch.global",
@@ -39,11 +45,6 @@ const projects: Project[] = [
     name: "Hara",
     description: "Not your average spiritual app",
     url: "https://trusthara.com",
-    category: "core-progress",
-  },
-  {
-    name: "Stealth",
-    description: "Legacy book",
     category: "core-progress",
   },
 ];

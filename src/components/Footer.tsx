@@ -86,7 +86,6 @@ export default function Footer() {
               <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
             </div>
           </div>
-          </div>
 
           <p className="text-xs opacity-80 text-studio-lightgray text-center mb-4 md:mb-0 md:w-1/2">
             Powered by MBH CHE-344.214.080

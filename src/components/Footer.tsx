@@ -50,7 +50,7 @@ export default function Footer() {
               </li>
               <li className="transition-colors">
                 <a href="#wealth" className="hover:text-studio-white flex items-center">
-                  <span className="mr-2">・</span> Naru Labs
+                  <span className="mr-2">・</span> Legacy Labs
                 </a>
               </li>
             </ul>

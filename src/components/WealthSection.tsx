@@ -11,7 +11,7 @@ export default function WealthSection() {
   const [showCursor, setShowCursor] = useState(true);
   const [hasStartedTyping, setHasStartedTyping] = useState(false);
   const textToType =
-    "We dissect the essence of who we are, crafting solutions and communities that support a journey of intentional living. Powered by Rocket Labs and produced by Naru Labs, our goal is to cultivate 360-degree wealth: a holistic integration of time, relationships, wellbeing, and financial abundance, forging the path toward lasting prosperity and meaningful legacy.";
+    "We dissect the essence of who we are, crafting solutions and communities that support a journey of intentional living. Powered by Rocket Labs and produced by Legacy Labs, our goal is to cultivate 360-degree wealth: a holistic integration of time, relationships, wellbeing, and financial abundance, forging the path toward lasting prosperity and meaningful legacy.";
   const typingSpeed = 20; // milliseconds per character - faster typing speed
   const textRef = useRef<HTMLParagraphElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -139,7 +139,7 @@ export default function WealthSection() {
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <div className="section-number">03</div>
-          <h2 className="section-title">Naru Labs</h2>
+          <h2 className="section-title">Legacy Labs</h2>
           <p className="section-subtitle">
             Building full-circle sustainable abundance and legacy: temporal, social, physical, mental, spiritual,
             intellectual, financial

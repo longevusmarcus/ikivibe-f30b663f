@@ -43,7 +43,7 @@ const projects: Project[] = [
   },
   {
     name: "Stealth",
-    description: "Boost property appeal and close deals faster",
+    description: "Legacy book",
     category: "core-progress",
   },
 ];

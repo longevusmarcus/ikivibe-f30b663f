@@ -30,15 +30,15 @@ const projects: Project[] = [
     category: "core-progress",
   },
   {
-    name: "Hara",
-    description: "Not your average spiritual app",
-    url: "https://trusthara.com",
-    category: "core-progress",
-  },
-  {
     name: "Project30",
     description: "Not your average life-designer app",
     url: "https://projectwealth2030.com/",
+    category: "core-progress",
+  },
+  {
+    name: "Hara",
+    description: "Not your average spiritual app",
+    url: "https://trusthara.com",
     category: "core-progress",
   },
   {

@@ -1,15 +1,8 @@
-import { ArrowUp, Sparkles, Twitter, Mail, ExternalLink } from "lucide-react";
+import { Sparkles, Twitter, Mail, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { SplashCursor } from "./ui/splash-cursor";
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <footer className="relative py-20 pb-10 z-10 overflow-hidden">
       <SplashCursor
@@ -87,18 +80,10 @@ export default function Footer() {
             Powered by MBH CHE-344.214.080
           </p>
 
-          <button
-            onClick={scrollToTop}
-            className="flex items-center space-x-2 text-sm uppercase tracking-wider hover:text-studio-lightgray transition-colors group md:w-1/4 md:justify-end"
-          >
-            <span>Back to top</span>
-            <ArrowUp className="ml-1 w-4 h-4 group-hover:-translate-y-1 transition-transform" />
-          </button>
-        </div>
-
-        <div className="flex justify-center gap-6 pt-6 text-xs text-studio-lightgray">
-          <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-          <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+          <div className="flex items-center gap-6 text-xs text-studio-lightgray md:w-1/4 md:justify-end">
+            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+          </div>
         </div>
       </div>
     </footer>

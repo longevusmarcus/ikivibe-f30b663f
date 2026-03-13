@@ -3,13 +3,6 @@ import { Link } from "react-router-dom";
 import { SplashCursor } from "./ui/splash-cursor";
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <footer className="relative py-20 pb-10 z-10 overflow-hidden">
       <SplashCursor

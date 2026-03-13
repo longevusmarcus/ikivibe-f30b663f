@@ -13,12 +13,12 @@ export default function ContactSection() {
               <span className="text-sm uppercase tracking-wider mr-4">Follow us</span>
               <div className="flex space-x-4">
                 <a
-                  href="https://twitter.com/limitlessmarco"
+                  href="https://twitter.com/keepgoingmarco"
                   className="hover:text-studio-lightgray transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  @limitlessmarco
+                  @keepgoingmarco
                 </a>
               </div>
             </div>

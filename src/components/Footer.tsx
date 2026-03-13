@@ -1,4 +1,4 @@
-import { ArrowUp, Sparkles, Twitter, Mail, ExternalLink } from "lucide-react";
+import { Sparkles, Twitter, Mail, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { SplashCursor } from "./ui/splash-cursor";
 

@@ -1,4 +1,5 @@
 import { ArrowUp, Sparkles, Twitter, Mail, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 import { SplashCursor } from "./ui/splash-cursor";
 
 export default function Footer() {
@@ -80,6 +81,10 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-studio-gray/20 backdrop-blur-md bg-studio-black/30">
           <div className="text-studio-lightgray text-xs mb-4 md:mb-0 md:w-1/4">
             <p className="whitespace-nowrap">© {new Date().getFullYear()} IkiVibe Chōka Labs. All rights reserved.</p>
+            <div className="flex gap-4 mt-2">
+              <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+            </div>
           </div>
 
           <p className="text-xs opacity-80 text-studio-lightgray text-center mb-4 md:mb-0 md:w-1/2">

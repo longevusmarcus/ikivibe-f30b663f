@@ -30,7 +30,7 @@ const projects: Project[] = [
   {
     name: "The Izzi Brew/Kokocha",
     description: "Tea media and event company",
-    url: "https://theeasybrew.com",
+    url: "https://theizzybrew.com",
     category: "human-first",
   },
 

@@ -86,7 +86,7 @@ const projects: Project[] = [
 ];
 
 interface PortfolioProjectsProps {
-  category: "core" | "mid";
+  category: "alpha" | "human-first" | "mid";
 }
 
 export const PortfolioProjects = ({ category }: PortfolioProjectsProps) => {

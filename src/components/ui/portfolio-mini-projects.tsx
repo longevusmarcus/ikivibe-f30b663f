@@ -7,50 +7,52 @@ interface Project {
   name: string;
   description: string;
   url?: string;
-  category: "core" | "core-progress" | "mid";
+  category: "beta" | "gamma";
 }
 
 const projects: Project[] = [
-  {
-    name: "Years",
-    description: "Not your average financial app",
-    url: "https://years.money",
-    category: "core-progress",
-  },
+  // Beta
   {
     name: "Naru",
     description: "Not your average career dreamer & copilot",
     url: "https://trustnaru.com",
-    category: "core-progress",
+    category: "beta",
   },
   {
     name: "La Sua Storia",
     description: "Legacy book",
     url: "https://lasuastoria.com",
-    category: "core-progress",
+    category: "beta",
   },
   {
     name: "Batch/Spermaxxing",
     description: "Not your average fertility and sperm health app",
     url: "https://batch.global",
-    category: "core-progress",
+    category: "beta",
+  },
+  // Gamma
+  {
+    name: "Years",
+    description: "Not your average financial app",
+    url: "https://years.money",
+    category: "gamma",
   },
   {
     name: "Project30",
     description: "Not your average life-designer app",
     url: "https://projectwealth2030.com/",
-    category: "core-progress",
+    category: "gamma",
   },
   {
     name: "Hara",
     description: "Not your average spiritual app",
     url: "https://trusthara.com",
-    category: "core-progress",
+    category: "gamma",
   },
 ];
 
 interface PortfolioMiniProjectsProps {
-  category: "core-progress";
+  category: "beta" | "gamma";
 }
 
 export const PortfolioMiniProjects = ({ category }: PortfolioMiniProjectsProps) => {

@@ -28,7 +28,7 @@ const projects: Project[] = [
     category: "human-first",
   },
   {
-    name: "The Easy Brew/Cococia",
+    name: "The Izzi Brew/Kokocha",
     description: "Not your average brew experience",
     url: "https://theeasybrew.com",
     category: "human-first",

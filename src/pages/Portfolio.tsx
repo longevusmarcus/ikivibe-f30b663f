@@ -55,8 +55,7 @@ export default function Portfolio() {
             </div>
 
             <div className="mb-20">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8">Human First</h2>
-              <h3 className="text-xl md:text-2xl font-bold mb-6 text-studio-lightgray">IRL</h3>
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">Human First & IRL</h2>
               <PortfolioProjects category="human-first" />
             </div>
 

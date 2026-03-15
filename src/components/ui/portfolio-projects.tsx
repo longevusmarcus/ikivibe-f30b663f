@@ -8,22 +8,30 @@ interface Project {
   description: string;
   url?: string;
   urls?: { label: string; url: string }[];
-  category: "core" | "core-progress" | "mid";
+  category: "alpha" | "human-first" | "mid";
 }
 
 const projects: Project[] = [
-  // CORE Projects
+  // Alpha
+  {
+    name: "MothershipX (MSX)",
+    description: "MSX is the startup studio and operating system for AI agents. It turns AI agents into autonomous founders & venture builders.",
+    url: "https://superlovable.dev",
+    category: "alpha",
+  },
+
+  // Human First - IRL
   {
     name: "Chōka",
     description: "A healthtech startup building new ways for people to live longer, healthier lives.",
     url: "https://choka.health/",
-    category: "core",
+    category: "human-first",
   },
   {
-    name: "MothershipX (MSX)",
-    description: "MSX is the startup studio and operating system for AI agents. It turns AI agents into autonomous founders & venture builders.",
-    url: "https://mothershipx.dev",
-    category: "core",
+    name: "The Easy Brew/Cococia",
+    description: "Not your average brew experience",
+    url: "https://theeasybrew.com",
+    category: "human-first",
   },
 
   // Mid Priority & Communities

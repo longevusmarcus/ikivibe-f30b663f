@@ -26,6 +26,7 @@ const projects: Project[] = [
     name: "Chōka",
     description: "A healthtech startup building new ways for people to live longer, healthier lives.",
     url: "https://choka.health/",
+    tag: "10-years play",
     category: "human-first",
   },
   {

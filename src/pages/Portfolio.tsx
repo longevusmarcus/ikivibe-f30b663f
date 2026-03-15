@@ -40,13 +40,24 @@ export default function Portfolio() {
             </p>
 
             <div className="mb-20">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8">Core Focus</h2>
-              <PortfolioProjects category="core" />
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">Alpha</h2>
+              <PortfolioProjects category="alpha" />
 
               <div className="mt-12">
-                <h3 className="text-xl md:text-2xl font-bold mb-6 text-studio-lightgray">Beta Plays</h3>
-                <PortfolioMiniProjects category="core-progress" />
+                <h3 className="text-xl md:text-2xl font-bold mb-6 text-studio-lightgray">Beta</h3>
+                <PortfolioMiniProjects category="beta" />
               </div>
+
+              <div className="mt-12">
+                <h3 className="text-xl md:text-2xl font-bold mb-6 text-studio-lightgray">Gamma</h3>
+                <PortfolioMiniProjects category="gamma" />
+              </div>
+            </div>
+
+            <div className="mb-20">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">Human First</h2>
+              <h3 className="text-xl md:text-2xl font-bold mb-6 text-studio-lightgray">IRL</h3>
+              <PortfolioProjects category="human-first" />
             </div>
 
             <div className="mb-20">

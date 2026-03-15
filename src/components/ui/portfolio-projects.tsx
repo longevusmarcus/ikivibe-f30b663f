@@ -8,6 +8,7 @@ interface Project {
   description: string;
   url?: string;
   urls?: { label: string; url: string }[];
+  tag?: string;
   category: "alpha" | "human-first" | "mid";
 }
 
@@ -25,12 +26,14 @@ const projects: Project[] = [
     name: "Chōka",
     description: "A healthtech startup building new ways for people to live longer, healthier lives.",
     url: "https://choka.health/",
+    tag: "10-years play",
     category: "human-first",
   },
   {
     name: "The Izzi Brew/Kokocha",
     description: "Tea media and event company",
     url: "https://theizzybrew.com",
+    tag: "10-years play",
     category: "human-first",
   },
 
@@ -144,7 +147,12 @@ export const PortfolioProjects = ({ category }: PortfolioProjectsProps) => {
               ref={(el) => (projectRefs.current[index] = el)}
             >
               <div className="flex items-start justify-between">
-                <h3 className="text-xl font-bold mb-2">{project.name}</h3>
+                <div>
+                  <h3 className="text-xl font-bold mb-1">{project.name}</h3>
+                  {project.tag && (
+                    <span className="text-xs text-muted-foreground">{project.tag}</span>
+                  )}
+                </div>
                 <div className="flex gap-2">
                   {project.url && (
                     <a

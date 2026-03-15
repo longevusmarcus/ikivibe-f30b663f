@@ -8,6 +8,7 @@ interface Project {
   description: string;
   url?: string;
   urls?: { label: string; url: string }[];
+  tag?: string;
   category: "alpha" | "human-first" | "mid";
 }
 

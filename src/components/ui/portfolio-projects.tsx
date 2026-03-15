@@ -33,6 +33,7 @@ const projects: Project[] = [
     name: "The Izzi Brew/Kokocha",
     description: "Tea media and event company",
     url: "https://theizzybrew.com",
+    tag: "10-years play",
     category: "human-first",
   },
 

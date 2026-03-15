@@ -32,12 +32,13 @@ function Case() {
     return () => clearTimeout(timer);
   }, [api, current]);
 
-  const carouselItems = Array.from({ length: 21 }).map((_, index) => {
-    const isANoteMusic = index % 7 === 0;
-    const isFeedel = index % 7 === 1;
-    const isBatch = index % 7 === 2;
-    const isIzzyBrew = index % 7 === 3;
-    const isStealthMode = index % 7 === 4 || index % 7 === 5 || index % 7 === 6;
+  const carouselItems = Array.from({ length: 24 }).map((_, index) => {
+    const isANoteMusic = index % 8 === 0;
+    const isFeedel = index % 8 === 1;
+    const isBatch = index % 8 === 2;
+    const isIzzyBrew = index % 8 === 3;
+    const isStarCy = index % 8 === 4;
+    const isStealthMode = index % 8 === 5 || index % 8 === 6 || index % 8 === 7;
     
     return (
       <CarouselItem className="basis-1/2 md:basis-1/3 lg:basis-1/6" key={index}>
@@ -90,6 +91,20 @@ function Case() {
                 <h3 className="text-lg font-medium">The Izzy Brew</h3>
                 <a 
                   href="https://theizzybrew.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-studio-lightgray hover:text-white transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          ) : isStarCy ? (
+            <div className="flex flex-col items-center text-center">
+              <div className="flex items-center justify-center gap-2">
+                <h3 className="text-lg font-medium">StarCy</h3>
+                <a 
+                  href="https://starcy.ai" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-studio-lightgray hover:text-white transition-colors"

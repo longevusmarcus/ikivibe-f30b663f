@@ -17,29 +17,19 @@ interface Investment {
   isSecret?: boolean;
 }
 
-// Create an array of 15 items where every 5th item is a real investment
-const investments: Investment[] = Array.from({ length: 15 }).map((_, index) => {
-  if (index % 5 === 0) {
-    return {
-      name: "Bittensor",
-      url: "https://bittensor.com"
-    };
-  } else if (index % 5 === 1) {
-    return {
-      name: "Ethereum",
-      url: "https://ethereum.org"
-    };
-  } else if (index % 5 === 2) {
-    return {
-      name: "BIO",
-      url: "https://www.bio.xyz/"
-    };
+const investments: Investment[] = Array.from({ length: 18 }).map((_, index) => {
+  if (index % 6 === 0) {
+    return { name: "Bittensor", url: "https://bittensor.com" };
+  } else if (index % 6 === 1) {
+    return { name: "Ethereum", url: "https://ethereum.org" };
+  } else if (index % 6 === 2) {
+    return { name: "BIO", url: "https://www.bio.xyz/" };
+  } else if (index % 6 === 3) {
+    return { name: "NIO", url: "https://nio.com" };
+  } else if (index % 6 === 4) {
+    return { name: "NMRA", url: "https://neumoratx.com" };
   } else {
-    return {
-      name: "?",
-      description: "Stealth",
-      isSecret: true
-    };
+    return { name: "?", description: "Stealth", isSecret: true };
   }
 });
 

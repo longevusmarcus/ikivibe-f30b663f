@@ -147,7 +147,12 @@ export const PortfolioProjects = ({ category }: PortfolioProjectsProps) => {
               ref={(el) => (projectRefs.current[index] = el)}
             >
               <div className="flex items-start justify-between">
-                <h3 className="text-xl font-bold mb-2">{project.name}</h3>
+                <div>
+                  <h3 className="text-xl font-bold mb-1">{project.name}</h3>
+                  {project.tag && (
+                    <span className="text-xs text-muted-foreground">{project.tag}</span>
+                  )}
+                </div>
                 <div className="flex gap-2">
                   {project.url && (
                     <a

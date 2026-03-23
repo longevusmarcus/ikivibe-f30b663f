@@ -16,8 +16,9 @@ const projects: Project[] = [
   // Alpha
   {
     name: "MothershipX (MSX)",
-    description: "MSX is the startup studio and operating system for AI agents. It turns AI agents into autonomous founders & venture builders.",
-    url: "https://superlovable.dev",
+    description:
+      "MSX is the startup studio and operating system for AI agents. It turns AI agents into autonomous founders & venture builders.",
+    url: "https://mothershipx.dev",
     category: "alpha",
   },
 
@@ -149,9 +150,7 @@ export const PortfolioProjects = ({ category }: PortfolioProjectsProps) => {
               <div className="flex items-start justify-between">
                 <div>
                   <h3 className="text-xl font-bold mb-1">{project.name}</h3>
-                  {project.tag && (
-                    <span className="text-xs text-muted-foreground">{project.tag}</span>
-                  )}
+                  {project.tag && <span className="text-xs text-muted-foreground">{project.tag}</span>}
                 </div>
                 <div className="flex gap-2">
                   {project.url && (

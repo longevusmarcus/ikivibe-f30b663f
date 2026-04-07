@@ -15,10 +15,10 @@ interface Project {
 const projects: Project[] = [
   // Alpha
   {
-    name: "MothershipX (MSX)",
+    name: "Mothership",
     description:
       "MSX is the agent-native startup studio and OS that helps builders turn market signals into profitable companies with autonomous AI agents—turning agents into formidable founders and humans into creative orchestrators.",
-    url: "https://mothershipx.dev",
+    url: "https://mothership.io",
     category: "alpha",
   },
 

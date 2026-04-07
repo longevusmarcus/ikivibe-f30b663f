@@ -17,7 +17,7 @@ const projects: Project[] = [
   {
     name: "Mothership",
     description:
-      "MSX is the agent-native startup studio and OS that helps builders turn market signals into profitable companies with autonomous AI agents—turning agents into formidable founders and humans into creative orchestrators.",
+      "Mothership is the agent-native startup studio and OS for agent-led companies.",
     url: "https://mothership.io",
     category: "alpha",
   },

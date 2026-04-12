@@ -161,10 +161,10 @@ export default function WealthSection() {
             className="group border border-pink-500/40 bg-studio-black/50 hover:bg-pink-950/30 hover:border-pink-500/70 text-pink-400 hover:text-pink-300 transition-all duration-300 backdrop-blur-sm rounded-2xl"
             asChild
           >
-            <a href="https://trustnaru.com" target="_blank" rel="noopener noreferrer" className="flex items-center">
-              <span>Explore Naru</span>
+            <Link to="/portfolio" className="flex items-center">
+              <span>Explore Legacy</span>
               <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </Link>
           </Button>
         </div>
       </div>

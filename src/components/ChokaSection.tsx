@@ -106,7 +106,7 @@ export default function ChokaSection() {
             asChild
           >
             <a href="https://choka.health" target="_blank" rel="noopener noreferrer" className="flex items-center">
-              <span>Explore Chōka</span>
+              <span>choka.health</span>
               <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>

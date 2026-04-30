@@ -16,8 +16,7 @@ const projects: Project[] = [
   // Alpha
   {
     name: "Mothership",
-    description:
-      "The startup studio that launches autonomous micro-ventures at scale.",
+    description: "Spotify for apps",
     url: "https://mothership.io",
     category: "alpha",
   },

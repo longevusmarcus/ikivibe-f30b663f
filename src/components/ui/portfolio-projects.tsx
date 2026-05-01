@@ -20,6 +20,12 @@ const projects: Project[] = [
     url: "https://mothership.io",
     category: "alpha",
   },
+  {
+    name: "MothershipX",
+    description: "Market intelligence built for agents",
+    url: "https://mothershipx.dev",
+    category: "alpha",
+  },
 
   // Human First - IRL
   {

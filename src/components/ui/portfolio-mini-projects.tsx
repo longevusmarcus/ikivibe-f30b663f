@@ -20,7 +20,7 @@ const projects: Project[] = [
   },
   {
     name: "La Sua Storia",
-    description: "Not your average book of your parents' memories",
+    description: "Not your average biographer",
     url: "https://lasuastoria.com",
     category: "beta",
   },

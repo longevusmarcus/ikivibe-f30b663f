@@ -40,6 +40,11 @@ export default function Portfolio() {
             </p>
 
             <div className="mb-20">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">Human First & IRL</h2>
+              <PortfolioProjects category="human-first" />
+            </div>
+
+            <div className="mb-20">
               <h2 className="text-2xl md:text-3xl font-bold mb-8">Tech Focus</h2>
               <h3 className="text-xl md:text-2xl font-bold mb-6 text-studio-lightgray">Alpha</h3>
               <PortfolioProjects category="alpha" />
@@ -53,11 +58,6 @@ export default function Portfolio() {
                 <h3 className="text-xl md:text-2xl font-bold mb-6 text-studio-lightgray">Gamma</h3>
                 <PortfolioMiniProjects category="gamma" />
               </div>
-            </div>
-
-            <div className="mb-20">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8">Human First & IRL</h2>
-              <PortfolioProjects category="human-first" />
             </div>
 
             <div className="mb-20">

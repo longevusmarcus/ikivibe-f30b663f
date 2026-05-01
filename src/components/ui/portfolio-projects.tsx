@@ -30,7 +30,7 @@ const projects: Project[] = [
   // Human First - IRL
   {
     name: "Chōka",
-    description: "A healthtech startup building new ways for people to live longer, healthier lives.",
+    description: "A brand reimagining the way people experience health and longevity.",
     url: "https://choka.health/",
     tag: "10-years play",
     category: "human-first",

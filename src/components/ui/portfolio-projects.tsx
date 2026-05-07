@@ -42,6 +42,13 @@ const projects: Project[] = [
     tag: "10-years play",
     category: "human-first",
   },
+  {
+    name: "Albae",
+    description: "AI WhatsApp concierge for meaningful meetups",
+    url: "https://albae.app",
+    tag: "10-years play",
+    category: "human-first",
+  },
 
   // Mid Priority & Communities
   {

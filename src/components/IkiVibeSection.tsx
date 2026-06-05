@@ -92,7 +92,7 @@ export default function IkiVibeSection() {
     {
       title: "Rocket Minds | For Partners",
       description:
-        "We help young talents and startups stay true to their purpose while building with a long-term vision. With hands-on support, we turn unique ideas into real products, often in just days, and guide them toward sustainable growth. By aligning passion, skill, mission, and market need, we help both visionary executers and pre-series A ventures grow with purpose and a mindset rooted in longevity.",
+        "We help when you need senior judgment, sharper focus, and hands-on support to move.",
       icon: <Users className="h-8 w-8 text-studio-lightgray" />,
       link: "#ikivibe",
     },

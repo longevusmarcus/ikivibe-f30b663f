@@ -53,7 +53,7 @@ const projects: Project[] = [
   {
     name: "Zeno",
     description: "The AI YouTube Curator",
-    url: "youzeno.com",
+    url: "zeno.media",
     category: "mid",
   },
   {

@@ -21,9 +21,9 @@ const projects: Project[] = [
     category: "alpha",
   },
   {
-    name: "MothershipX",
-    description: "Market intelligence built for agents",
-    url: "https://mothershipx.dev",
+    name: "Tegy",
+    description: "AI Strategy OS",
+    url: "https://tegy.io",
     category: "alpha",
   },
 

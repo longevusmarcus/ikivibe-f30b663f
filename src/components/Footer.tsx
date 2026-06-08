@@ -1,4 +1,4 @@
-import { Sparkles, Twitter, Mail, ExternalLink } from "lucide-react";
+import { HelpCircle, Twitter, Mail, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { SplashCursor } from "./ui/splash-cursor";
 
@@ -17,9 +17,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-16">
           <div className="backdrop-blur-md bg-studio-black/30 p-6 border border-blue-500/20 rounded-2xl">
             <div className="flex items-center space-x-2 mb-4">
-              <Sparkles className="w-5 h-5 text-blue-400" />
+              <HelpCircle className="w-5 h-5 text-blue-400" />
               <h4 className="text-2xl font-display font-bold bg-gradient-to-r from-blue-400 to-blue-300 text-transparent bg-clip-text">
-                AI Summary
+                What is IKVCL
               </h4>
             </div>
             <p className="text-studio-lightgray">

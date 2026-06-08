@@ -13,18 +13,6 @@ interface Project {
 const projects: Project[] = [
   // Beta
   {
-    name: "Naru",
-    description: "Not your average career dreamer & copilot",
-    url: "https://trustnaru.com",
-    category: "beta",
-  },
-  {
-    name: "La Sua Storia",
-    description: "Not your average biographer",
-    url: "https://lasuastoria.com",
-    category: "beta",
-  },
-  {
     name: "Batch/Spermaxxing",
     description: "Not your average fertility and sperm health app",
     url: "https://batch.global",
@@ -47,6 +35,18 @@ const projects: Project[] = [
     name: "Hara",
     description: "Not your average spiritual app",
     url: "https://trusthara.com",
+    category: "gamma",
+  },
+  {
+    name: "Naru",
+    description: "Not your average career dreamer & copilot",
+    url: "https://trustnaru.com",
+    category: "gamma",
+  },
+  {
+    name: "La Sua Storia",
+    description: "Not your average biographer",
+    url: "https://lasuastoria.com",
     category: "gamma",
   },
 ];

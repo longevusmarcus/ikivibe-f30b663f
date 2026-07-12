@@ -15,12 +15,6 @@ interface Project {
 const projects: Project[] = [
   // Alpha
   {
-    name: "Mothership",
-    description: "Spotify for agent-run apps",
-    url: "https://mothership.io",
-    category: "alpha",
-  },
-  {
     name: "Tegy",
     description: "AI Strategy OS",
     url: "https://tegy.io",
@@ -50,6 +44,18 @@ const projects: Project[] = [
   },
 
   // Mid Priority & Communities
+  {
+    name: "MothershipX",
+    description: "Validated Market Demand from Social Signals",
+    url: "https://mothershipx.dev",
+    category: "mid",
+  },
+  {
+    name: "MSX",
+    description: "Market intelligence for AI agents",
+    url: "https://msx.dev",
+    category: "mid",
+  },
   {
     name: "Zeno",
     description: "The AI YouTube Curator",

@@ -18,20 +18,11 @@ interface PreSeedInvestment {
 }
 
 // Create an array of pre-seed investments
-const preSeedInvestments: PreSeedInvestment[] = Array.from({ length: 10 }).map((_, index) => {
-  if (index % 5 === 0) {
-    return {
-      name: "StarCy",
-      url: "https://apps.apple.com/us/app/starcy/id6754289546"
-    };
-  } else {
-    return {
-      name: "?",
-      description: "Stealth",
-      isSecret: true
-    };
-  }
-});
+const preSeedInvestments: PreSeedInvestment[] = Array.from({ length: 10 }).map(() => ({
+  name: "?",
+  description: "Stealth",
+  isSecret: true
+}));
 
 export function PreSeedCarousel() {
   const [api, setApi] = useState<CarouselApi>();

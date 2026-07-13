@@ -37,15 +37,15 @@ const projects: Project[] = [
     category: "human-first",
   },
   {
-    name: "Albae",
-    description: "AI WhatsApp concierge for meaningful meetups",
-    url: "https://albae.app",
-    category: "human-first",
-  },
-  {
     name: "Sprinta",
     description: "The home for ambitious amateur athletes",
     url: "https://gosprinta.com",
+    category: "human-first",
+  },
+  {
+    name: "Albae",
+    description: "AI WhatsApp concierge for meaningful meetups",
+    url: "https://albae.app",
     category: "human-first",
   },
 

@@ -63,12 +63,6 @@ const projects: Project[] = [
     category: "mid",
   },
   {
-    name: "Sprinta",
-    description: "The home for ambitious amateur athletes",
-    url: "https://gosprinta.com",
-    category: "mid",
-  },
-  {
     name: "Neko",
     description: "First AI Feet Reader & Reflexologist",
     url: "aifootreader.com",

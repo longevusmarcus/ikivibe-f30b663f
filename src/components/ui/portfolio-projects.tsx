@@ -65,7 +65,7 @@ const projects: Project[] = [
   {
     name: "Zeno",
     description: "The AI YouTube Curator",
-    url: "zeno.media",
+    url: "https://www.producthunt.com/products/zeno-2",
     category: "mid",
   },
   {

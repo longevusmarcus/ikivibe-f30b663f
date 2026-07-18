@@ -43,12 +43,6 @@ const projects: Project[] = [
     url: "https://trustnaru.com",
     category: "gamma",
   },
-  {
-    name: "La Sua Storia",
-    description: "Not your average biographer",
-    url: "https://lasuastoria.com",
-    category: "gamma",
-  },
 ];
 
 interface PortfolioMiniProjectsProps {

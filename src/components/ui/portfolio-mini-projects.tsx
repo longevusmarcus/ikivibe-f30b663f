@@ -32,12 +32,6 @@ const projects: Project[] = [
     category: "gamma",
   },
   {
-    name: "Hara",
-    description: "Not your average spiritual app",
-    url: "https://trusthara.com",
-    category: "gamma",
-  },
-  {
     name: "Naru",
     description: "Not your average career dreamer & copilot",
     url: "https://trustnaru.com",

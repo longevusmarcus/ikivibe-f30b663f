@@ -27,7 +27,7 @@ export default function Terms() {
             <section>
               <h2 className="text-xl font-bold text-white mb-3">2. Definitions</h2>
               <ul className="list-disc list-inside space-y-2 ml-2">
-                <li><strong className="text-white">"Services"</strong> refers to our website, digital products (including Naru, Batch, Hara, Years, Project30, and other portfolio products), advisory services, communities, and any related offerings.</li>
+                <li><strong className="text-white">"Services"</strong> refers to our website, digital products (including Naru, Batch, Years, Project30, and other portfolio products), advisory services, communities, and any related offerings.</li>
                 <li><strong className="text-white">"User," "you," or "your"</strong> refers to any individual or entity accessing or using our Services.</li>
                 <li><strong className="text-white">"Content"</strong> refers to all text, graphics, images, code, data, and other materials available through our Services.</li>
               </ul>

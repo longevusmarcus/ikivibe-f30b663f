@@ -26,7 +26,7 @@ export default function Privacy() {
               <p>
                 This Privacy Policy applies to all personal data processed through our website
                 (ikivibe.lovable.app and any associated domains), our portfolio products (including but not limited to
-                Naru, Batch, Hara, Years, Project30), and any related services or communications.
+                Naru, Batch, Years, Project30), and any related services or communications.
               </p>
             </section>
 

@@ -75,12 +75,6 @@ const projects: Project[] = [
     category: "mid",
   },
   {
-    name: "Chōwa",
-    description: "Courses To Unlock Your Epigenetic Potential",
-    url: "chowacourses.com",
-    category: "mid",
-  },
-  {
     name: "360 Wealth Labs",
     description: "360 Wealth Discord Community",
     url: "https://discord.com/invite/MV8g7HTbCG",

@@ -77,15 +77,13 @@ export default function Navbar() {
               >
                 Launchpad
               </a>
-              <a 
-                href="https://swissagent.me"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link 
+                to="/agency" 
                 className="py-4 text-white"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Agency
-              </a>
+              </Link>
             </nav>
           </div>
           
@@ -144,14 +142,9 @@ export default function Navbar() {
               >
                 Launchpad
               </a>
-              <a 
-                href="https://swissagent.me"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-studio-lightgray hover:text-studio-white transition-colors"
-              >
+              <Link to="/agency" className="text-studio-lightgray hover:text-studio-white transition-colors">
                 Agency
-              </a>
+              </Link>
             </nav>
           </div>
         </header>

@@ -31,12 +31,6 @@ const projects: Project[] = [
     url: "https://projectwealth2030.com/",
     category: "gamma",
   },
-  {
-    name: "Naru",
-    description: "Not your average career dreamer & copilot",
-    url: "https://trustnaru.com",
-    category: "gamma",
-  },
 ];
 
 interface PortfolioMiniProjectsProps {

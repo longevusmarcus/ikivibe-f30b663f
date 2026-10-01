@@ -49,6 +49,7 @@ const projects: Project[] = [
     category: "human-first",
   },
   {
+    name: "Albae",
     description: "AI WhatsApp concierge for meaningful meetups",
     url: "https://meetalbae.com",
     category: "human-first",

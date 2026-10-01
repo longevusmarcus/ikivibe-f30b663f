@@ -21,7 +21,7 @@ const projects: Project[] = [
     category: "alpha",
   },
   {
-    name: "InfluenDr",
+    name: "Influendr",
     description: "",
     url: "https://influendr.com",
     category: "alpha",

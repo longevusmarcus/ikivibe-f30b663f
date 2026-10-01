@@ -42,7 +42,13 @@ const projects: Project[] = [
     category: "human-first",
   },
   {
-    name: "Albae",
+    name: "The Izzi Brew/Kokocha",
+    description: "Tea media and event company",
+    url: "https://theizzybrew.com",
+    tag: "10-years play",
+    category: "human-first",
+  },
+  {
     description: "AI WhatsApp concierge for meaningful meetups",
     url: "https://meetalbae.com",
     category: "human-first",

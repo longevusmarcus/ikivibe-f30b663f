@@ -29,23 +29,16 @@ const projects: Project[] = [
 
   // Human First - IRL
   {
+    name: "Sprinta",
+    description: "The home for ambitious amateur athletes",
+    url: "https://gosprinta.com",
+    category: "human-first",
+  },
+  {
     name: "Chōka",
     description: "A brand reimagining the way people experience health and longevity.",
     url: "https://choka.health/",
     tag: "10-years play",
-    category: "human-first",
-  },
-  {
-    name: "The Izzi Brew/Kokocha",
-    description: "Tea media and event company",
-    url: "https://theizzybrew.com",
-    tag: "10-years play",
-    category: "human-first",
-  },
-  {
-    name: "Sprinta",
-    description: "The home for ambitious amateur athletes",
-    url: "https://gosprinta.com",
     category: "human-first",
   },
   {

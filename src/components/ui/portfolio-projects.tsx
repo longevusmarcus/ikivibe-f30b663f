@@ -20,6 +20,12 @@ const projects: Project[] = [
     url: "https://tegy.io",
     category: "alpha",
   },
+  {
+    name: "InfluenDr",
+    description: "",
+    url: "https://influendr.com",
+    category: "alpha",
+  },
 
   // Human First - IRL
   {
